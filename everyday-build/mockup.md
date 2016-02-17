@@ -1,10 +1,10 @@
 ### Everyday Build page mockup
 #### Wireframe:
-![page wireframe](/microblogger-imgs/wireframe-blog-index.jpg)
+![page wireframe](/everyday-build/imgs/wireframe-blog-index.jpg)
 Same layout as my blog index: for visual and stylistic consistency. 
 
 #### Mood board:
-![page mood board](/microblogger-imgs/moodboard.jpg)
+![page mood board](/everyday-build/imgs/moodboard.jpg)
 Mood board for the page, with some of the potential nav section backgrounds
 and a potential color palette. 
 
