@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MicroBlogger</title>
+</head>
+
+<body>
+    <nav>
+      <table border="3" style="width:100%">
+        <tr>
+          <td><a href="../blog/index.html">Blog</a></td>
+          <td><a href="../index.html">Home</a></td>
+          <td><a href="../contact_me.html">Contact Me</a></td>
+          <td><a href="../projects.html">Projects</a></td>      
+          <td><a href="../resume.html">Resume</a></td>
+        </tr>
+      </table>
+    </nav>
+	
+  <header>
+      <h2><a href="../index.html">Everyday Build</a></h2>
+      <h2>New MicroBlogger feature: Bitly link shortener</h2>
+      <p>Added a feature where the bitly gem automatically shortens any links.</p>
+  </header>
+  
+  <main>
+    <p>This was a project to add a feature to my <a href="microblogger.html">MicroBlogger</a> client. 
+      It uses the Bitly gem to shorten links automatically by recognizing 'http' and 'www'. Here's 
+      the code:</p>
+    <p><img src="../imgs/bitly.jpg"></p>
+    <p>This was its own little challenge. First I had to understand why Bitly.new required two
+    arguments, and after a bit of researching realized those were the API authenticators, so I 
+    set up my own. Then, because I'm rusty, I forgot that #select returns an array; I kept having errors 
+    because I tried to feed Bitly the urls as an array. Then there was the 
+    challenge of having multiple urls in a tweet because I only realized 
+    belatedly that this wouldn't support having more than one url in a tweet.</p>
+    <p>Finally I had a problem when I didn't realize that the gem couldn't recognize
+    a link if it didn't come with 'http' or 'https' in front of it, so I had to 
+    fix that.</p>
+    <p>It was really nice to finally see the bitly-shortened link popping up in my
+    Twitter feed, though!</p>
+    
+    <br />
+  </main>
+</body>
+
+</html>
