@@ -59,6 +59,7 @@ nav {
   font-family: "Source Sans Pro";
   padding: 4%;
   background-color: white;
+  overflow: hidden;
 }
 
 .links {
