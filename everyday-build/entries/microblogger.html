@@ -2,31 +2,27 @@
 <html>
 <head>
   <title>MicroBlogger</title>
+  <link rel="stylesheet" href="../../css/index.css">
 </head>
 
 <body>
     <nav>
-      <table border="3" style="width:100%">
-        <tr>
-          <td><a href="../../blog/index.html">Blog</a></td>
-          <td><a href="../../index.html">Home</a></td>
-          <td><a href="../../contact_me.html">Contact Me</a></td>
-          <td><a href="../../projects.html">Projects</a></td>      
-          <td><a href="../../resume.html">Resume</a></td>
-        </tr>
-      </table>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../contact_me.html">Contact Me</a></li>
+          <li><a href="../../blog/index.html">Blog</a></li>
+          <li><a href="../index.html">Everyday Build</a></li>
+          <li><a href="../../projects.html">Projects</a></li>      
+          <li><a href="../../resume.html">Resume</a></li>
+        </ul>
     </nav>
-	
-  <header>
+  <main class="section">
       <h2><a href="../index.html">Everyday Build</a></h2>
-      <h2>MicroBlogger:</h2>
-      <p>A Twitter client that runs from the shell,
+      <h3 class="headings">MicroBlogger</h3>
+      <h4 class="headings">February 16, 2016</h4>
+      <p class="headings">A Twitter client that runs from the shell,
         with ability to tweet, send direct message, and pull
-        friend tweets for a saved user.
-      </p>
-  </header>
-  
-  <main>
+        friend tweets for a saved user.</p>
     <h3>The Project</h3>
     <p>This is a Ruby project from <a href="http://tutorials.jumpstartlab.com/">Jumpstart Labs</a>.
       I wanted to try building something to work on what I have learned: dynamic classes, IO,
@@ -45,7 +41,6 @@
       Ruby's #respond_to? and #send methods. Those were really useful in making the user interface
       code short and very easy to add more commands for the user and more modular-designed services
       in the program.</p>
-    <br />
 
     <h3>The Work</h3>
     <p>MicroBlogger class and methods:</p>
