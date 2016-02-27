@@ -32,9 +32,15 @@ a:link {
   font-weight: normal;
 }
 
-a:hover, a:visited {
+a:visited {
   text-decoration: none;
   color: orange;
+  font-weight: normal;
+}
+
+a:hover {
+  text-decoration: none;
+  color: red;
   font-weight: normal;
 }
 
