@@ -29,7 +29,7 @@
       with the previous one. If the previous object is larger than the current object, the current object is 
       extracted from the array. A search is done from [0..(current object's original index)] to find the smallest 
       item that is larger than the object, and the object is inserted back into the array to the left of the found object.</p>
-      <p><img src="../imgs/sort-insertion.png"></p>
+      <script src="https://gist.github.com/mindplace/92d6a2dbc74ff596b1ab.js"></script>
       <p>Its Big-O notation is fairly awful at O(n2), but this is primarily the case with large data sets; at smaller sets, 
       or sets that are already close to sorted, it is adaptive, with a Big-O notation of O(n).</p>
       <p>My original design for this algorithm was quite strange; I actually had the current element comparing itself with 
@@ -39,8 +39,6 @@
       <a href="https://en.wikipedia.org/wiki/Insertion_sort#/media/File:Insertion-sort-example-300px.gif">this awesome animation</a>
       that made it much more clear to me what was supposed to be happening inside my algorithm. Lesson learned: first think, 
       then write. :) </p>
-      
-      <p></p>
     </main>
 </body>
 </html>

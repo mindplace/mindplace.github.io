@@ -22,11 +22,11 @@
       <h3 class="headings">New MicroBlogger feature: Bitly link shortener</h3>
       <h4 class="headings">February 18, 2016</h4>
       <p class="headings"><i>Added a feature where the bitly gem automatically shortens any links.</i></p>
-    <br />
+
     <p>This was a project to add a feature to my <a href="microblogger.html">MicroBlogger</a> client. 
       It uses the Bitly gem to shorten links automatically by recognizing 'http' and 'www'. Here's 
       the code:</p>
-    <p><img src="../imgs/bitly.jpg"></p>
+    <script src="https://gist.github.com/mindplace/3bbe7bfa9193eed87e76.js"></script>
     <p>This was its own little challenge. First I had to understand why Bitly.new required two
     arguments, and after a bit of researching realized those were the API authenticators, so I 
     set up my own. Then, because I'm rusty, I forgot that #select returns an array; I kept having errors 
