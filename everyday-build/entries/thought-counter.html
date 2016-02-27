@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Thought counter, pt 1</title>
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+   
+<body>
+    <nav>
+        <ul class="navbar">
+          <li class="navbar-li"><a href="../../index.html">Home</a></li>
+          <li class="navbar-li"><a href="../../contact_me.html">Contact Me</a></li>
+          <li class="navbar-li"><a href="../../blog/index.html">Blog</a></li>
+          <li class="navbar-li"><a href="../index.html">Everyday Build</a></li>
+          <li class="navbar-li"><a href="../../projects.html">Projects</a></li>      
+          <li class="navbar-li"><a href="../../resume.html">Resume</a></li>
+        </ul>
+    </nav>
+    
+    <main class="section">
+      <h2 class="headings">Meditation thought counter, part 1</h2>
+      <h3 class="headings">February 28, 2016</h3>
+      <p>I'm a long-term self-development geek, although not in necessarily the standard self-help book 
+      kind of way. My personal development tends more towards Zen and mindfulness practices. One of the 
+      concepts I've grown to feel affinity for is the concept of the witness: a form of meditation where 
+      you simply witness your own thoughts, like ripples accross your mind, without judging or responding
+      or interacting with them, just watching.</p>
+      <p>I also like data. So I wrote up a thought counter, whose job is to see how many times per meditation session
+      I have thoughts popping up.</p> 
+      <p>This first part of the project is just to get the basic logic of the 
+      program down, and to handle much of the user experience portion. This initial version is primarily 
+      missing the data parsing that I'll be adding as a feature later on. Here it is.</p>
+      <script src="https://gist.github.com/mindplace/62465d15c942f4f9c6b3.js"></script>
+      <p>The entire program relies heavily on Ruby's built-in <a href="http://ruby-doc.org/core-2.2.0/Time.html">Time</a>
+      class. When the counter initializes, it educates the user on how to use the program and when to give input, then 
+      starts the clock for total session time when <code>gets</code> recieves input.</p>
+      <p>Then it pushes into <code>@thoughts</code> a new thought instance every time the user
+      says they've had a thought. I originally had <code>@thoughts</code> initialize as an array, 
+      but this turned out to be a silly idea because it made it harder to both print onto the screen
+      in a way that would be nice for the user and be available to the program to parse as data. So 
+      instead I chose to have the data and the user-view per data point be key-value pairs in my
+      <code>@thoughts</code> instances.</p>
+      <p>Data parsing coming soon!</p>
+    </main>
+</body>
+</html>
