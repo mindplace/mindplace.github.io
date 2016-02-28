@@ -14,7 +14,7 @@ body {
 .navbar {
     overflow: hidden;
     margin: 5px 0 10px 0;
-    width: 100%;
+    max-width: 100%;
     text-align: left;
 }
 
@@ -73,9 +73,16 @@ a:hover {
   overflow: hidden;
 }
 
-.links {
+.social-links {
   display: block;
+  float: left;
+  width: 64%;
+}
+
+.link-li {
   float: right;
+  display: block;
+  padding: 0 10px;
 }
 
 .image-right {
