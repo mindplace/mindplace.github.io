@@ -8,22 +8,40 @@ body {
   margin: auto;
   max-width: 800px;
   height: 400px;
+  font-family: "Source Sans Pro";
 }
 
 .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
+    margin: 5px 0 10px 0;
+    width: 100%;
+    text-align: left;
 }
 
 .navbar-li {
     float: left;
     display: block;
-    color: white;
+    background-color: white;
     text-align: center;
-    padding: 6px 6px;
+    padding: 10px;
     text-decoration: none;
+    width: 103px;
+    font-weight: bold;
+    margin-right: 1.553819%;
+    font-size: 18px;
+}
+
+.navbar-li-last {
+    float: left;
+    display: block;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    width: 103px;
+    font-weight: bold;
+    margin-right: 0;
+    font-size: 18px;
 }
 
 a:link {
@@ -42,14 +60,6 @@ a:hover {
   text-decoration: none;
   color: red;
   font-weight: normal;
-}
-
-nav {
-  font-size: 16px;
-  font-family: "Source Sans Pro";
-  background-color: white;
-  padding: 2px 13px 2px;
-  margin: 0px 0px 10px;
 }
 
 .headings {
