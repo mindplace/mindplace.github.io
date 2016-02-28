@@ -34,7 +34,13 @@
     <p>I struggled with this algorithm until I understood that it really does rest entirely 
     on partitioning. I thought at first I could write two methods for this, one to hold the basic
     program and one to partition sub-arrays, but when I started working on the helper method, 
-    I tried my hand at making it recursive, and it worked quite well.</p> 
+    I tried my hand at making it recursive, and it worked.</p> 
+    <p>A bug that I didn't catch originally though was one that I only realized to look for
+    after I started reading about a different quicksort form, the one that makes 3 partitions 
+    instead of 2, where the 3rd holds items whose values are equal to the pivot. When I read 
+    about that version of the algorithm, I realized that my version doesn't preserve
+    duplicates, so I added the third partition. Not sure if this still counts as the standard 
+    quicksort with this change, but hey, at least I caught a major bug.</p>
     <p>Recursion is another difficult concept for me, and this algorithm really helped 
     me strengthen my grasp of it. I debugged with <code>puts</code> to see how the recursion was 
     working, and it showed me that it kept drilling down smaller and smaller partitions until 
