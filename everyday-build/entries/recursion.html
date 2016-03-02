@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Recursion</title>
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+   
+<body>
+  <div class="navbar">
+    <span class="navbar-li"><a href="../../index.html">Home</a></span>
+    <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
+    <span class="navbar-li"><a href="../../blog/index.html">Blog</a></span>
+    <span class="navbar-li"><a href="../index.html">Everyday Build</a></span>
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>      
+    <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
+  </div>
+    
+  <main class="section">
+    <h2 class="headings">Recursion</h2>
+    <h3 class="headings">March 1, 2016</h3>
+    
+    <p>I encountered recursion a few months ago for the first time in a problem I don't recall 
+    anymore. What I do remember is that I found this wonderful video that really helped drive 
+    home two essential recursion concepts for me: the concept of the stack, and the fact that 
+    recursive programs wait to complete their individual runs until they have the information 
+    they need from their base case. Here it is:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Mv9NEXX1VHc" frameborder="0" allowfullscreen></iframe>
+    <p>At the time I watched this video, my mind was completely blown to think about solving 
+    a factorial problem with recursion. I had felt so proud of a one-line factorial solution I came 
+    up with after learning about ranges
+    -- <code>(1..num).to_a.inject(:*)</code> -- and it made me feel pretty silly to see something like 
+    this instead. I wrote my own recursive factorial for practice:</p>
+    <script src="https://gist.github.com/mindplace/7509f5781db14380efec.js"></script>
+    <p>The concept came up again for me <a href="sorts-quick.html">when I was working on my quicksort post</a>, when 
+    a stray comment on a YouTube quicksort algorithm tutorial made me realize that quicksort is better written 
+    recursively than iteratively. It was difficult to grasp until I gave it a proper base case and added 
+    <code>puts</code> statements to see how it was creating and dealing with the recursive stack (not sure
+    what to properly call it). The output made me notice that it looked a bit like a tree: branches and subbranches. 
+    Understanding that kind of data structure is next on my list, but back to recursion.</p>
+    <p>In a video on algorithms and recursion that Dev Bootcamp made avaiable to my cohort today, I noticed that 
+    instead of writing a sorting or factorial algorithm to explain recursion, the instructor talked about palindromes. This was 
+    another confusion-inducing moment for me: how did the program know to stop at a case that tested false? How did 
+    it trickle down the results to the rest of the stack? Then I realized that it worked by making smaller and smaller 
+    slices of the original word, with a base case of a single letter being its own palindrome. Here's my attempt at it:</p>
+    <script src="https://gist.github.com/mindplace/8ca39d99335dae69fe29.js"></script>
+    <p>To summarize the essential qualities of recursion, I think this explanation is particularly simple and well written:</p>
+    <img src="../imgs/recursion.png">
+    <figcaption><i><a href="http://www.cs.iit.edu/~oaldawud/CS201/Slides/pdf/Chapter13_.pdf">Source</a></i></figcaption>
+  </main>
+</body>
+</html>
