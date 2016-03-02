@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Deadline counter</title>
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+   
+<body>
+  <div class="navbar">
+    <span class="navbar-li"><a href="../../index.html">Home</a></span>
+    <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
+    <span class="navbar-li"><a href="../../blog/index.html">Blog</a></span>
+    <span class="navbar-li"><a href="../index.html">Everyday Build</a></span>
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>      
+    <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
+  </div>
+    
+  <main class="section">
+    <h2 class="headings">Deadline counter</h2>
+    <h3 class="headings">March 2, 2016</h3>
+    
+    <p>I wanted to spend a bit of time getting familiarized with the built-in <code>Date</code> and <code>Time</code>
+    classes, so I decided to build a deadline counter that counted the days left until a given deadline. After requiring <code>Date</code>
+    and spending some time browsing its methods, I realized it would be easy to create a new deadline date by calling 
+    <code>Date.new</code> and passing it the arguments year, month, and day. My method turned out to be a lot shorter than I anticipated, 
+    which I think really speaks to the awesome built-ins that Ruby ships with:</p>
+    <script src="https://gist.github.com/mindplace/76ea496a6d4ba299ed19.js"></script>
+    <p>Nevertheless I was a bit taken aback by how easy that turned out to be, so I decided to kick it up a notch and write another 
+    deadline counter: student edition! When the clock starts ticking, students don't think in terms of days as much as hours. For that, I needed to rely more on the <code>Time</code>
+    class. Here it is:</p>
+    <script src="https://gist.github.com/mindplace/03d310c111b873a3d249.js"></script>
+    <p>A bit longer, this one! Still, Ruby built-ins made the logic simple. The only extra came 
+    when I realized I needed to create a helper method <code>military</code> to change hours into military time for the 
+    <code>deadline_hour_counter</code> method.</p>
+  </main>
+</body>
+</html>
