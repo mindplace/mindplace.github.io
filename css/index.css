@@ -43,12 +43,6 @@ body {
 
 a:link {
   text-decoration: none;
-  color: brown;
-  font-weight: normal;
-}
-
-a:visited {
-  text-decoration: none;
   color: orange;
   font-weight: normal;
 }
