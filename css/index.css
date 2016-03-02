@@ -41,7 +41,7 @@ body {
   font-size: 18px;
 }
 
-a:link {
+a:link, a:visited {
   text-decoration: none;
   color: orange;
   font-weight: normal;
