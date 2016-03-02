@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Ruby Arrays and Hashes</title>
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+   
+<body>
+  <div class="navbar">
+    <span class="navbar-li"><a href="../../index.html">Home</a></span>
+    <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
+    <span class="navbar-li"><a href="../index.html">Blog</a></span>
+    <span class="navbar-li"><a href="../../everyday-build/index.html">Everyday Build</a></span>
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>      
+    <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
+  </div>
+    
+  <main class="section">
+    <h2 class="headings">Ruby Arrays and Hashes</h2>
+    <h3 class="headings">March 1, 2016</h3>
+    
+    <p>Arrays are like lists: they appear inside of square brackets and elements are divided up by commas. 
+    Arrays are ordered in that each element has an index position. Arrays can contain any 
+    type of object, but conventionally a single array should hold just one type of item: 
+    integers, for example.</p>
+    <p>By contrast, hashes are unsorted lists of keys and values. In order to access a particular value 
+    in a hash, you must query for it using its key. Hashes are by definition unsorted and index-less, 
+    making it important not to have multiple identical keys pointing to variating values. </p>
+    <p>The main difference between arrays and hashes, aside from the fact that hashes 
+    are lists of key-value pairs while arrays are lists of single items, is that hashes cannot be 
+    sorted; to sort a hash is to turn it into an array, where each key-value pair becomes a sub-array 
+    with a length of 2. Arrays are almost always a better choice when you are dealing with one kind of item, 
+    such as strings, that are each unique and ungrouped; hashes are better when you are dealing with
+    bits of information that are linked to other bits of information, like client lists of names and 
+    email addresses.</p>
+    <p>There are some very interesting methods that Ruby comes built-in with for arrays and hashes. Some of
+    my favorite good ones are normal, everyday methods like <code>#each</code> or <code>#map</code> or <code>#sort</code>, 
+    but some are less known. Here are some of my favorite hash and array methods.</p>
+    <br />
+    
+    <h3>Array#<a href="http://ruby-doc.org/core-2.2.0/Array.html#method-i-each_index">each_index</a></h3>
+    <p><code>#each_index</code> is a variation on <code>#each</code> a wonderful iteration method that returns the object itself and is therefore used primarily for its side 
+    effects. <code>#each</code> iterates over a series by picking up each object of the series one at a time. By contrast, 
+    <code>#each_index</code> picks up each consecutive index. This is super helpful when iterating over an array with multiple 
+    similar values. Example:</p>
+    <script src="https://gist.github.com/mindplace/b03585edd955ca2c6804.js"></script>
+    <br />
+    
+    <h3>Array#<a href="http://ruby-doc.org/core-2.3.0/Array.html#method-i-include-3F">include?</a></h3>
+    <p>Here's another super useful method. This <code>#include</code> 
+    method tests to see if a given argument is present in the array. It's a great way to check if an item you're holding is present in 
+    an array, and if so, to do something with it or something else entirely. Example:</p>
+    <script src="https://gist.github.com/mindplace/118d77ce0c30a8149185.js"></script>
+    <br />
+    
+    <h3>Hash#<a href="http://ruby-doc.org/core-2.3.0/Hash.html#method-i-keys">keys</a> or Hash#<a href="http://ruby-doc.org/core-2.3.0/Hash.html#method-i-values">values</a></h3>
+    <p><code>#keys</code> and <code>#values</code> methods do similar things: they produce arrays of the hash's keys 
+    or values, respectively. This is an incredibly useful set of methods because turning these items into arrays 
+    makes it possible to sort them. This example below doesn't make use of this sorting capability, but it does show how it makes it 
+    easy to see if a given key is included in a hash using <code>#keys.include?(object)</code>, and shows how calling <code>#values.flatten</code> can produce 
+    one large array of the hash's values:</p>
+    <script src="https://gist.github.com/mindplace/1ea1c5161c747b130c9b.js"></script>
+    <br />
+
+    <h3>Object#<a href="http://ruby-doc.org/core-2.3.0/Object.html#method-i-itself">itself</a></h3>
+    <p>This last favorite method of mine is not strictly an <code>Array</code> or <code>Hash</code> method, but its functionality is to 
+    produce a hash with array values, so I thought it would be nice to include it here. However, this method seems very silly: 
+    why would it be useful to have a method that just returns the value of the item itself? Well, it takes a bit of thinking, 
+    but at some point you might realize that it 
+    can indeed make your life oddly easier at times...</p>
+    <script src="https://gist.github.com/mindplace/885d1f7ea48d074a1a33.js"></script>
+    <br />
+    
+    <p>Hopefully this has been interesting and curiosity-inducing, and made you think about trying these methods out for yourself. Happy Ruby-ing!</p>
+  </main>
+</body>
+</html>
