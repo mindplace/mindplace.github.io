@@ -1,7 +1,10 @@
+body {
+  margin: 0;
+}
+
 nav {
   width: 90%;
-  top: 1%;
-  margin: 0 5% 0 5%;
+  margin: 40px 5% 40px 5%;
 }
 
 .nav-left {
@@ -14,13 +17,12 @@ nav {
 
 nav span {
   display: inline-block;
-  float: left;
   background-color: white;
   padding: 10px;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 0 0;
   text-align: center;
   border: 1px solid black;
-  width: 100px;
+  width: 200px;
 }
 
 nav span a {
@@ -31,7 +33,7 @@ nav span a {
 header {
   clear: both;
   box-sizing: border-box;
-  width: 100%;
+  margin: 0;
   height: 500px;
   background-image: url("http://cdn.shopify.com/s/files/1/0001/2033/files/Tea_Ceremony_3_Full.jpg?1011");
   background-position: bottom;
@@ -40,9 +42,11 @@ header {
 h1 {
   font-size: 20em;
   color: white;
-  margin: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
   font-family: fantasy;
   text-align: right;
+  margin: 0 10% 0 0;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -50,33 +54,22 @@ h1 {
 
 .box-container {
   width: 90%;
-  margin: auto;
 }
 
-.first-row {
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  background-color: #ccb647;
-  border: 10px solid white;
-  overflow: hidden;
-}
-
-.second-row {
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  background-color: #ccb647;
-  border: 10px solid white;
-  overflow: hidden;
+.row {
+  width: 90%;
+  display: inline-block;
+  margin: 30px auto;
 }
 
 .sub-box {
+  border: 1px solid black;
+  padding: 20px;
   box-sizing: border-box;
-  width: 50%;
+  width: 45%;
   float: left;
   background-color: #ccb647;
-  overflow: hidden;
+  margin: auto;
 }
 
 .sub-box img {
@@ -85,17 +78,27 @@ h1 {
 }
 
 article {
+  border: 1px solid black;
   box-sizing: border-box;
-  clear: both;
-  width: 90%;
-  margin: auto;
+  float: left;
+  width: 50%;
   padding: 20px;
 }
 
+#earl-grey {
+  background-image: url("imgs/opaque_black_tea.jpg");  
+}
+
+#pretty-black-tea img {
+  width: 100%;
+}
+
 footer {
+  clear: both;
   background-color: #d3d3d3;
   padding: 10px 30px;
   font-size: small;
+  margin: 50px 0 0 0;
 }
 
 footer p {
