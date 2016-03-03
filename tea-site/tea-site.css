@@ -1,0 +1,104 @@
+nav {
+  width: 90%;
+  top: 1%;
+  margin: 0 5% 0 5%;
+}
+
+.nav-left {
+  margin: 0 0 0 auto;
+}
+
+.nav-right {
+  float: right;
+}
+
+nav span {
+  display: inline-block;
+  float: left;
+  background-color: white;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  border: 1px solid black;
+  width: 100px;
+}
+
+nav span a {
+  text-decoration: none;
+  color: green;
+}
+
+header {
+  clear: both;
+  box-sizing: border-box;
+  width: 100%;
+  height: 500px;
+  background-image: url("http://cdn.shopify.com/s/files/1/0001/2033/files/Tea_Ceremony_3_Full.jpg?1011");
+  background-position: bottom;
+}
+
+h1 {
+  font-size: 20em;
+  color: white;
+  margin: 0;
+  font-family: fantasy;
+  text-align: right;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.box-container {
+  width: 90%;
+  margin: auto;
+}
+
+.first-row {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  background-color: #ccb647;
+  border: 10px solid white;
+  overflow: hidden;
+}
+
+.second-row {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  background-color: #ccb647;
+  border: 10px solid white;
+  overflow: hidden;
+}
+
+.sub-box {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  background-color: #ccb647;
+  overflow: hidden;
+}
+
+.sub-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+article {
+  box-sizing: border-box;
+  clear: both;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+footer {
+  background-color: #d3d3d3;
+  padding: 10px 30px;
+  font-size: small;
+}
+
+footer p {
+  margin: 0px;
+  text-align: center;
+}
