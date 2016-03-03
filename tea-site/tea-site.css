@@ -3,8 +3,7 @@ body {
 }
 
 nav {
-  width: 90%;
-  margin: 40px 5% 40px 5%;
+  margin: -60px 5% 0 5%;
 }
 
 .nav-left {
@@ -13,6 +12,7 @@ nav {
 
 .nav-right {
   float: right;
+  margin: 0;
 }
 
 nav span {
@@ -35,7 +35,7 @@ header {
   box-sizing: border-box;
   margin: 0;
   height: 500px;
-  background-image: url("http://cdn.shopify.com/s/files/1/0001/2033/files/Tea_Ceremony_3_Full.jpg?1011");
+  background-image: url("imgs/cups-teapot.jpg");
   background-position: bottom;
 }
 
@@ -52,56 +52,64 @@ h1 {
   transform: translateY(-50%);
 }
 
-.box-container {
+.floating-elements {
+  box-sizing: border-box;  
   width: 90%;
+  margin: 0 auto;
 }
 
 .row {
-  width: 90%;
-  display: inline-block;
-  margin: 30px auto;
+  clear: both;
+  margin: 0 auto 0 5%;
+  box-sizing: border-box;
 }
 
-.sub-box {
-  border: 1px solid black;
-  padding: 20px;
+.left-box {
   box-sizing: border-box;
+  border: 1px solid black;
+  margin: 40px 50px 0 0;
+  float: left;
   width: 45%;
-  float: left;
-  background-color: #ccb647;
-  margin: auto;
+  height: 500px;
 }
 
-.sub-box img {
-  max-width: 100%;
-  height: auto;
-}
-
-article {
-  border: 1px solid black;
+.right-box {
   box-sizing: border-box;
+  border: 1px solid black;
   float: left;
-  width: 50%;
+  margin: 40px 0 0 0;
+  width: 45%;
+  height: 500px;
+}
+
+.row span {
+  float: left;
   padding: 20px;
+  box-sizing: border-box;
+  margin: auto auto;
 }
 
 #earl-grey {
-  background-image: url("imgs/opaque_black_tea.jpg");  
 }
 
 #pretty-black-tea img {
   width: 100%;
 }
 
+.spacer {
+  clear: both;
+  padding: 30px;
+  margin: 0;
+}
+
 footer {
   clear: both;
+  padding: 30px 0 30px 0;
   background-color: #d3d3d3;
-  padding: 10px 30px;
   font-size: small;
-  margin: 50px 0 0 0;
 }
 
 footer p {
-  margin: 0px;
   text-align: center;
+  margin: 0;
 }
