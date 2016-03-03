@@ -90,10 +90,29 @@ h1 {
 }
 
 #earl-grey {
+  color: white;
+  padding: 20px;
+  background-image: url("https://teancetea.files.wordpress.com/2011/06/img_1782.jpg");
+  background-size: cover !important;
+  font-size: medium;
+  font-weight: light;
+}
+
+#earl-grey a {
+  text-decoration: none;
+  color: white;
 }
 
 #pretty-black-tea img {
   width: 100%;
+}
+
+#quiz {
+  padding: 5% 0 0 10px;
+  color: orange;
+  background-image: url("http://www.hannahgroesbeck.com/wp-content/uploads/2014/12/bigstock-Cup-of-hot-tea-with-lemon-dres-74651491.jpg");
+  background-size: cover !important;
+  background-repeat: no-repeat;
 }
 
 .spacer {
