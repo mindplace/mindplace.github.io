@@ -66,68 +66,38 @@ h1 {
 
 .left-box {
   box-sizing: border-box;
-  border: 1px solid black;
-  margin: 40px 80px 0 0;
+  margin: 80px 80px 0 0;
   float: left;
   width: 45%;
-  height: 500px;
+  height: auto;
 }
 
 .right-box {
   box-sizing: border-box;
-  border: 1px solid black;
   float: left;
-  margin: 40px 0 0 0;
+  margin: 80px 0 0 0;
+  height: auto;
   width: 45%;
-  height: 500px;
 }
 
 .row span {
   float: left;
-  padding: 20px;
   box-sizing: border-box;
   margin: auto auto;
 }
-#lewis {
-  background-image: url("imgs/lewis.jpg");
-  background-size: cover !important;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-#mia-tea {
-  background-image: url("imgs/mia-tea.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover !important
-}
-
-#alice {
-  background-image: url("imgs/alice.png");
-  background-size: cover !important;
-  background-position: center;
-  font-size: medium;
-}
-
-#home-jasmine {
-  background-image: url("imgs/home-jasmine.jpg");
-  background-size: cover !important;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#genmaicha-barley-sencha {
-  background-image: url("imgs/genmaicha-barley-sencha.jpg");
-  background-repeat: no-repeat;
-  background-size: cover !important;
-  background-position: center;
+#lewis img, #strawberries img, #mia-tea img, #alice img, #home-jasmine img, #glass-teacup img, #genmaicha-barley-sencha img {
+  width: 100%;
+  margin: auto;
 }
 
 #glass-teacup {
-  background-image: url("http://www.unitedpatientsgroup.com/blog/wp-content/uploads/2014/09/bigstock-Transparent-cup-of-green-tea-w-53666293.jpg");
-  background-size: cover !important;
-  background-repeat: no-repeat;
-  background-position: center;
+  text-align: right;
+  font-size: xx-large;
+}
+
+#strawberries {
+  font-size: xx-large;
 }
 
 #quiz {
@@ -137,13 +107,7 @@ h1 {
   background-size: cover !important;
   background-repeat: no-repeat;
   background-position: bottom center;
-}
-
-#strawberries {
-  background-position: center;
-  background-image: url("imgs/strawberries-tea.png");
-  background-size: cover !important;
-  background-repeat: no-repeat;
+  height: inherit;
 }
 
 .spacer {
