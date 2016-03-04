@@ -67,7 +67,7 @@ h1 {
 .left-box {
   box-sizing: border-box;
   border: 1px solid black;
-  margin: 40px 50px 0 0;
+  margin: 40px 80px 0 0;
   float: left;
   width: 45%;
   height: 500px;
@@ -88,29 +88,60 @@ h1 {
   box-sizing: border-box;
   margin: auto auto;
 }
-
-#earl-grey {
-  color: white;
-  padding: 20px;
-  background-image: url("https://teancetea.files.wordpress.com/2011/06/img_1782.jpg");
+#lewis {
+  background-image: url("imgs/lewis.jpg");
   background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#mia-tea {
+  background-image: url("imgs/mia-tea.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover !important
+}
+
+#alice {
+  background-image: url("imgs/alice.png");
+  background-size: cover !important;
+  background-position: center;
   font-size: medium;
-  font-weight: light;
 }
 
-#earl-grey a {
-  text-decoration: none;
-  color: white;
+#home-jasmine {
+  background-image: url("imgs/home-jasmine.jpg");
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#pretty-black-tea img {
-  width: 100%;
+#genmaicha-barley-sencha {
+  background-image: url("imgs/genmaicha-barley-sencha.jpg");
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center;
+}
+
+#glass-teacup {
+  background-image: url("http://www.unitedpatientsgroup.com/blog/wp-content/uploads/2014/09/bigstock-Transparent-cup-of-green-tea-w-53666293.jpg");
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #quiz {
   padding: 5% 0 0 10px;
   color: orange;
   background-image: url("http://www.hannahgroesbeck.com/wp-content/uploads/2014/12/bigstock-Cup-of-hot-tea-with-lemon-dres-74651491.jpg");
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+#strawberries {
+  background-position: center;
+  background-image: url("imgs/strawberries-tea.png");
   background-size: cover !important;
   background-repeat: no-repeat;
 }
