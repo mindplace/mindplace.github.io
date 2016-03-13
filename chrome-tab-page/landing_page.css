@@ -1,5 +1,18 @@
+/*potential backgrounds:
+
+mountain and trees
+background-image: url("https://images.unsplash.com/photo-1454982523318-4b6396f39d3a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=4e47e1875683e075de238e0c5cddf812");
+
+mountain, trees, water
+background-image: url("https://images.unsplash.com/photo-1444136723005-b0f64ef04acc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=4d3578989e74ed05f14d44150f494096");
+
+misty mountains
+background-image: url("https://images.unsplash.com/photo-1443998486566-cc8482a99bfd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c8e0b05d4128a0c34d478fd0f2f1c3c2");
+
+*/
+
 body {
-  background-image: url("https://images.unsplash.com/photo-1454982523318-4b6396f39d3a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=4e47e1875683e075de238e0c5cddf812");
+  background-image: url("https://images.unsplash.com/photo-1443998486566-cc8482a99bfd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c8e0b05d4128a0c34d478fd0f2f1c3c2");
   background-size: cover !important;
   background-attachment: fixed;
   font-family: 'Open Sans', sans-serif;
