@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+}
+
+nav {
+  margin: -60px 5% 0 5%;
+}
+
+.nav-left {
+  margin: 0 0 0 auto;
+}
+
+.nav-right {
+  float: right;
+  margin: 0;
+}
+
+nav span {
+  display: inline-block;
+  background-color: white;
+  padding: 10px;
+  margin: 0 10px 0 0;
+  text-align: center;
+  border: 1px solid black;
+  width: 200px;
+}
+
+nav span a {
+  text-decoration: none;
+  color: green;
+}
+
+header {
+  clear: both;
+  box-sizing: border-box;
+  margin: 0;
+  height: 500px;
+  background-image: url("imgs/cups-teapot.jpg");
+  background-position: bottom;
+}
+
+h1 {
+  font-size: 20em;
+  color: white;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  font-family: cursive;
+  text-align: right;
+  margin: 0 10% 0 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.floating-elements {
+  box-sizing: border-box;  
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row {
+  clear: both;
+  margin: 0 auto 0 5%;
+  box-sizing: border-box;
+}
+
+.left-box {
+  box-sizing: border-box;
+  margin: 80px 80px 0 0;
+  float: left;
+  width: 45%;
+  height: auto;
+}
+
+.right-box {
+  box-sizing: border-box;
+  float: left;
+  margin: 80px 0 0 0;
+  height: auto;
+  width: 45%;
+}
+
+.row span {
+  float: left;
+  box-sizing: border-box;
+  margin: auto auto;
+}
+
+#lewis img, #strawberries img, #mia-tea img, #alice img, #home-jasmine img, #glass-teacup img, #genmaicha-barley-sencha img {
+  width: 100%;
+  margin: auto;
+}
+
+#glass-teacup {
+  text-align: right;
+  font-size: xx-large;
+}
+
+#strawberries {
+  font-size: xx-large;
+}
+
+#quiz {
+  padding: 5% 0 0 10px;
+  color: orange;
+  background-image: url("http://www.hannahgroesbeck.com/wp-content/uploads/2014/12/bigstock-Cup-of-hot-tea-with-lemon-dres-74651491.jpg");
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: inherit;
+}
+
+.spacer {
+  clear: both;
+  padding: 30px;
+  margin: 0;
+}
+
+footer {
+  clear: both;
+  padding: 30px 0 30px 0;
+  background-color: #d3d3d3;
+  font-size: small;
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
+}
+
