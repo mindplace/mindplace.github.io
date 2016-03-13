@@ -3,41 +3,41 @@ body {
   background-position: bottom center;
   background-size: cover !important;
   background-attachment: fixed;
-  padding: 5%;
-  margin: auto;
-  max-width: 800px;
   height: 400px;
 }
 
 .navbar {
-  overflow: hidden;
-  margin: 5px 0 10px 0;
-  max-width: 100%;
-  text-align: left;
+  width: 60%;
+  margin: 1% auto;
 }
 
 .navbar-li {
-  float: left;
-  display: block;
+  display: inline-block;
+  width: 12%;
   background-color: white;
   text-align: center;
-  padding: 8px 23px;
-  text-decoration: none;
+  margin-right: 2%;
+  padding: 1%;
+  text-align: center;
   font-weight: bold;
-  margin-right: 3.2%;
   font-size: 18px;
 }
 
 .navbar-li-last {
-  float: left;
-  display: block;
+  display: inline-block;
+  width: 12%;
   background-color: white;
   text-align: center;
-  padding: 8px 23px;
-  text-decoration: none;
+  padding: 1%;
+  text-align: center;
   font-weight: bold;
-  margin-right: 0;
   font-size: 18px;
+}
+
+main {
+  margin: auto;
+  width: 60%;
+  box-sizing: border-box;
 }
 
 a:link, a:visited {
@@ -58,6 +58,7 @@ a:hover {
 }
 
 .section {
+  clear: both;
   font-size: 16px;
   font-family: "Source Sans Pro";
   padding: 4%;
