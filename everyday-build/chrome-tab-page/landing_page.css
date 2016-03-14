@@ -18,12 +18,12 @@ body {
   background-image: url("https://images.unsplash.com/photo-1443998486566-cc8482a99bfd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c8e0b05d4128a0c34d478fd0f2f1c3c2");
   background-size: cover !important;
   background-attachment: fixed;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Architects Daughter', cursive;
 }
 
 main {
   width: 70%;
-  margin: 5% auto;
+  margin: 4% auto;
 }
 
 a {
@@ -53,7 +53,7 @@ aside {
 
 h1, h2 {
   text-align: right;
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.4);
   padding: 3%;
   font-size: xx-large;
 }
