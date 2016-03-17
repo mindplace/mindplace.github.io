@@ -38,6 +38,7 @@ main {
   margin: auto;
   width: 60%;
   box-sizing: border-box;
+  line-height: 130%;
 }
 
 a:link, a:visited {
