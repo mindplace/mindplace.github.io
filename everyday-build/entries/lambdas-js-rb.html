@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Bootcamp blog: blocks in JavaScript and Ruby</title>
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+   
+<body>
+  <div class="navbar">
+    <span class="navbar-li"><a href="../../index.html">Home</a></span>
+    <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
+    <span class="navbar-li"><a href="../index.html">Everyday Build</a></span>
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>      
+    <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
+  </div>
+    
+  <main class="section">
+    <h2 class="headings">Bootcamp blog: blocks in JavaScript and Ruby</h2>
+    <h3 class="headings">March 23, 2016</h3>
+    
+    <p>There are plenty of differences between JavaScript and Ruby, but I think one thing that 
+    hasn't necessarily been covered too often is the way these two languages treat blocks differently.</p>
+    <p>In Ruby, the most common kinds of blocks are those passed to various Array, Hash, and Enumerable methods, 
+    like <code>map</code> and <code>each</code>. Like this use, on line 12:</p> 
+    <script src="https://gist.github.com/mindplace/91e97e4a8f20c6227ae4.js"></script>
+    <p>Here's sample output when the coinflip is heads: </p>
+    <script src="https://gist.github.com/mindplace/7e47e6e553154b5d0ee9.js"></script>
+    <p>The important thing about these kinds of blocks is that these blocks, as in the block that I passed to the <code>Enumerable#inject</code> method, 
+    are not formal: they are not in themselves 
+    objects, they cannot be directly referenced, they cannot be passed as arguments; they're just syntax. But
+    Ruby has so much functionality for blocks: if you formalize a block by turning it into an instance of the Proc class, 
+    or store it in variable form as a lambda, you 
+    can certainly use it as an object. This isn't just Ruby--plenty, if not most, languages have block objects.</p>
+    <p><i>"1970 - Guy Steele and Gerald Sussman create Scheme. Their work leads to a series of "Lambda the Ultimate" 
+    papers culminating in "Lambda the Ultimate Kitchen Utensil." This paper becomes the basis for a long running, 
+    but ultimately unsuccessful run of late night infomercials. Lambdas are relegated to relative obscurity until 
+    Java makes them popular by not having them."</i> ~ from <a href="http://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html">"A Brief, 
+    Incomplete, and Mostly Wrong History of Programming Languages"</a></p>
+    <p>So in Ruby, we can store blocks as lambdas inside of variables, and call on them by invoking
+    the method <code>call</code> onto the variable, and passing it any arguments that it requires. Observe:</p>
+    <script src="https://gist.github.com/mindplace/d46e303bb08814cecc7d.js"></script>
+    <p>What's happening here? We created a lambda object by simply using the keyword <code>lambda</code>, assigned 
+    that to a variable <code>add</code>, and specified the lambda block with the block <code>{|x, y| x + y}</code>.
+    Then, on line 13, we called it using <code>add.call</code> and passing it the two number arguments, which satisfy
+    the requirements for x & y in the lambda block, and x + y (num1 + num2) is produced. Is the output identical?</p>
+    <script src="https://gist.github.com/mindplace/7e47e6e553154b5d0ee9.js"></script>
+    <p>Ok, cool, it totally is identical! Does JavaScript have a similar functionality? Why yes, yes it does:</p>
+    <script src="https://gist.github.com/mindplace/5e3466098c0ce47e1a36.js"></script>
+    <p>Other than no sleep functionality, and struggling to generate a random number to take a random 
+    sample from the coins array, the difference between this script and the Ruby one is the way that function 
+    in <code>add</code> is embedded into the variable. Very cool! Looks a lot like a lambdas!</p>
+    <p>Here's the difference. In Ruby, lambdas are rarely used. It is much more common to 
+    <a href="https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/18-blocks/lessons/55-new-lesson">pass blocks implicitly 
+    or explicitly</a> to a method when calling it to run. When we explicitly pass a block to a method, we have to use an ampersand (&) symbol to 
+    denote to the method that that argument is a block. Alternatively, we can implicitly pass a block to a method, and 
+    don't need to either declare it as an argument when it is passed, nor embed the block in a variable.
+    Here's the same example with an implicit block: notice 
+    how it is being called to run below the method definition, and how it is being called upon: </p>
+    <script src="https://gist.github.com/mindplace/78071290b85bac699732.js"></script>
+    <p>Does JavaScript have something like this? Well, it definitely has explicit blocks, and it calls them <a href="http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/">callback</a>
+    functions. In fact, the JavaScript example used above includes a nameless callback function inside of the <code>add</code> variable. No, it doesn't look 
+    like you can implicitly pass a block the way we're doing with the Ruby example above, but JavaScript's functions are so easily embeddable as 
+    callback functions that there's no reason to pine for Ruby's approach.</p>
+    <p>So here's the takeaway. Ruby thinks pretty seriously about blocks, Procs, and lambdas. It formalizes Procs and lambdas with special rules 
+    like what happens when you use the keyword <code>return</code> inside of one. It allows you to call or run the block and pass it things as well 
+    as making a distinction between that and creating your own external method, running that by passing it an argument, and capturing the result. But JavaScript
+    isn't as demanding of carefulness: it's common practice to create callbacks, embed functions as values for variables, call on them and pass things 
+    to them inside and outside of functions, and more. It's a wonderful, functional free-for-all. Both approaches--and both cultures, really--have their 
+    own history and purpose, and both work great even though they are different. </p>
+  </main>
+</body>
+</html>
