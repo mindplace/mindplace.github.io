@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Castle Game</title>
+  <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <span class="navbar-li"><a href="../../index.html">Home</a></span>
+    <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
+    <span class="navbar-li"><a href="../index.html">Everyday Build</a></span>
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>
+    <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
+  </div>
+
+  <main class="section">
+    <h2 class="headings">The JavaScript Castle Game</h2>
+    <h3 class="headings">March 24, 2016</h3>
+
+    <p>Whew! Just finished it! This is a little command-line game in JavaScript that
+    generates a castle and, over the next '5 days', has random potential denizens show up, who
+    do or do not end up staying for good. If enough good additions stay in the castle, the user
+    wins--else, the user gets rudely booted from their castle, never to return! Here's some sample
+    output:</p>
+    <script src="https://gist.github.com/mindplace/6066681d8cfe6edd9978.js"></script>
+    <p>The most difficul issue I had to overcome with this game was the fact that JavaScript (for
+      very good reasons) doesn't have the kind of sleep functionality that I've come to rely on with
+      Ruby. I had to find a workaround on StackOverflow which I do not think I would be able to
+      write myself at this point. Additionally, the other thing that gave me trouble was generating
+      random numbers, especially those in a specific range. This was a frustrating exercise in
+      trying to get the <code>Math.random()</code> to output something I actually was able to use, as
+      opposed to a decimal.
+    </p>
+    <p>Enough griping! Here's the code!</p>
+    <script src="https://gist.github.com/mindplace/f34f5a424df3b3a68d90.js"></script>
+  </main>
+</body>
+</html>
