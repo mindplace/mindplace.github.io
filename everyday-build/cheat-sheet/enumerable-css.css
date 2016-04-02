@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+header {
+  width: 68%;
+  margin: 2% auto 0 auto;
+  font-size: xx-large;
+  font-family: "Courier", Courier, monospace;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
+h1 {
+  margin: 0 auto;
+  padding: 1%;
+  width: 95%;
+}
+
+table {
+  border-spacing: 10px;
+  margin: 1% auto;
+}
+
+td {
+  border-radius: 5px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 4%;
+  padding: 8px;
+}
+
+table a {
+  text-decoration: none;
+  font-family: "Courier", Courier, monospace;
+  font-weight: bold;
+  color: red;
+}
+
+#explanation {
+  font-style: italic;
+  font-size: small;
+}
+
+td p {
+  margin: 2px;
+}
+
+main {
+  margin: 0 auto;
+  width: 70%;
+  margin: auto;
+  padding: 1%;
+}
+
+footer {
+  min-height: 100%;
+  background-color: #f3f3f3;
+  padding: 1%;
+}
+
+footer p {
+  margin: 3px;
+  text-align: center;
+  font-size: small;
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-style: italic;
+}

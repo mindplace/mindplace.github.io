@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enumerable cheatsheet - Ruby</title>
+  <link rel="stylesheet" href="enumerable-css.css">
+</head>
+<body>
+  <header><h1>Enumerable</h1></header>
+  <main>
+    <table>
+    <tr>
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-all-3F">all?</a></p>
+        <p id="explanation">takes block, returns boolean</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-any-3F">any?</a></p>
+        <p id="explanation">takes block, returns boolean</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-none-3F">none?</a></p>
+        <p id="explanation">returns boolean</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-find">find</a></p>
+        <p id="explanation">returns first item to match block, else nil</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-grep">grep(pattern)</a></p>
+        <p id="explanation">returns array of objs for which pattern === obj</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-group_by">group_by</a></p>
+        <p id="explanation">returns hash of groups grouped by block</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-partition">partition</a></p>
+        <p id="explanation">returns array with sub-arrays partitioned by block</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-reject">reject</a></p>
+        <p id="explanation">returns array without items that conform to block</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-drop_while">drop_while</a></p>
+        <p id="explanation">drops items that conform to block from front of array</p>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-max_by">max_by</a></p>
+        <p id="explanation">returns greatest given block</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-min_by">min_by</a></p>
+        <p id="explanation">returns smallest given block</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-sort_by">sort_by</a></p>
+        <p id="explanation">returns an array sorted by block requirement</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-count">count</a></p>
+        <p id="explanation">takes block or arg, returns num</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-cycle">cycle(num)</a></p>
+        <p id="explanation">executes block on obj num times</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-each_slice">each_slice(num)</a></p>
+        <p id="explanation">breaks into sets of num size, executes block per set</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-include-3F">include?</a></p>
+        <p id="explanation">returns boolean</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-inject">inject</a></p>
+        <p id="explanation">combines objs in array by applying specified operation</p>
+      </td>
+
+      <td>
+        <p id="method"><a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-first">first(n)</a></p>
+        <p id="explanation">returns n items from beginning of array</p>
+      </td>
+    </tr>
+    </table>
+  </main>
+
+  <footer>
+      <p>back to <a href="../../index.html">mindplace.github.io</a></p>
+      <p>copyright Esther Leytush, 2016. all rights reserved. made with love :)</p>
+  </footer>
+
+</body>
+</html>
