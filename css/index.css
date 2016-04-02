@@ -9,14 +9,15 @@ body {
 .navbar {
   width: 60%;
   margin: 1% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .navbar-li {
-  display: inline-block;
-  width: 17%;
+  width: 16%;
   background-color: white;
   text-align: center;
-  margin-right: 2%;
   padding: 1%;
   text-align: center;
   font-weight: bold;
@@ -109,6 +110,6 @@ green background with pinkish blossoms on the tree
 https://images.unsplash.com/photo-1452723311049-05685d7428ce?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=5f2b40f3f09fc43b7feb2ff9534047e0
 
 norway rgreen mountain
-https://images.unsplash.com/photo-1439524970634-649c37a69e5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a2c92beb6008deea628dc2a5d332998c   
+https://images.unsplash.com/photo-1439524970634-649c37a69e5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a2c92beb6008deea628dc2a5d332998c
 
 /
