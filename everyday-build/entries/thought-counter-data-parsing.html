@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <title>Thought counter: data parsing</title>
   <link rel="stylesheet" href="../../css/index.css">
+  <link href='https://fonts.googleapis.com/css?family=Signika:300' rel='stylesheet' type='text/css'>
 </head>
-   
+
 <body>
   <div class="navbar">
     <span class="navbar-li"><a href="../../index.html">Home</a></span>
     <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
     <span class="navbar-li"><a href="../index.html">Everyday Build</a></span>
-    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>      
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>
     <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
   </div>
-    
+
   <main class="section">
     <h2 class="headings">Meditation thought counter, part 2: data parsing</h2>
     <h3 class="headings">March 3, 2016</h3>
-    
-    <p>I've thought about data parsing before, specifically when I was working 
+
+    <p>I've thought about data parsing before, specifically when I was working
     on my <a href="https://github.com/mindplace/nifty_things/tree/master/Accountability_checklist">accountability
     standards</a> program--a small Ruby script that helps the user decide their daily accountability checklist,
-    then lets them check in every day to see if they lived up to their standards. The 
-    <a href="https://github.com/mindplace/nifty_things/blob/master/Accountability_checklist/lib/data_parsing.rb">data parsing portion of 
-    it is pretty extensive</a> by my standards. It draws from a text file that generates a new array per day that the user checked in, and their 
-    answers regarding their standards. It uses the data to count up all met and unmet standards, and exposes the data in 
-    the form of a chart; it also calculates and exposes average daily success rates, standards with success rates below 40%, 
+    then lets them check in every day to see if they lived up to their standards. The
+    <a href="https://github.com/mindplace/nifty_things/blob/master/Accountability_checklist/lib/data_parsing.rb">data parsing portion of
+    it is pretty extensive</a> by my standards. It draws from a text file that generates a new array per day that the user checked in, and their
+    answers regarding their standards. It uses the data to count up all met and unmet standards, and exposes the data in
+    the form of a chart; it also calculates and exposes average daily success rates, standards with success rates below 40%,
     and even a visual graph of success rates over time (that one I'm especially proud of: it's not easy to create a self-generating
     ASCII graph!). All this data is printed to the screen as well as exported into a text file. Here's a sample exported data file: </p>
     <script src="https://gist.github.com/mindplace/7756fcedded5d20f43cc.js"></script>
-    <p>What I realized when I was working on the accountability checker program was that I really enjoy working with data. I'm 
-    drawn to the kind of work that companies like <a href="https://keen.io/?s=blog">Keen IO</a> are doing with data, helping others 
-    experience more concreteness and supporting their efforts. So I've been keeping an eye out on other data parsing opportunities, 
+    <p>What I realized when I was working on the accountability checker program was that I really enjoy working with data. I'm
+    drawn to the kind of work that companies like <a href="https://keen.io/?s=blog">Keen IO</a> are doing with data, helping others
+    experience more concreteness and supporting their efforts. So I've been keeping an eye out on other data parsing opportunities,
     like this one for my <a href="thought-counter.html">meditation thought counter</a> project.</p>
     <script src="https://gist.github.com/mindplace/b87c1f1a0a5fb7b52a53.js"></script>
     <p>This is a much more simple data parsing concept than what I was doing with the accountability
-    standards project. It exposes the total thoughts recorded during the meditation session, 
-    the averare time between thoughts, and the longest interval between thoughts. I 
-    think the fact that it does so little is the result of my being inspired by the 
-    project itself: it's about reaching for simplicity and mental quiet. But I was also 
-    stumped for what sort of data might be useful, the same sort of problem I ran into 
+    standards project. It exposes the total thoughts recorded during the meditation session,
+    the averare time between thoughts, and the longest interval between thoughts. I
+    think the fact that it does so little is the result of my being inspired by the
+    project itself: it's about reaching for simplicity and mental quiet. But I was also
+    stumped for what sort of data might be useful, the same sort of problem I ran into
     when building my accountability standards project. I was hampered by my own imagination,
     not my technical ability, and it was interesting to experince this as much as it was
-    somewhat frustrating. I'll be adding to this meditation thought counter data parsing 
-    method in the future if I think of more things that would be useful. In the meantime, 
+    somewhat frustrating. I'll be adding to this meditation thought counter data parsing
+    method in the future if I think of more things that would be useful. In the meantime,
     it does the bare bones and does them elegantly.</p>
-    
+
   </main>
 </body>
 </html>

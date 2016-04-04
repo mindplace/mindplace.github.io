@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <title>Quicksort Post</title>
   <link rel="stylesheet" href="../../css/index.css">
+  <link href='https://fonts.googleapis.com/css?family=Signika:300' rel='stylesheet' type='text/css'>
 </head>
-   
+
 <body>
   <div class="navbar">
     <span class="navbar-li"><a href="../../index.html">Home</a></span>
     <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
     <span class="navbar-li"><a href="../index.html">Everyday Build</a></span>
-    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>      
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>
     <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
   </div>
-    
+
   <main class="section">
     <h2 class="headings">Sorting algorithms: quicksort</h2>
     <h3 class="headings">February 29, 2016</h3>
-    
-    <p>Today's entry in my sorting algorithm series (previous posts include 
+
+    <p>Today's entry in my sorting algorithm series (previous posts include
     <a href="sorts-selection.html">selection</a> sort, <a href="sorts-merge.html">merge</a> sort,
     <a href="sorts-insertion.html">insertion</a> sort, and <a href="sorts-bubble.html">bubble</a> sort)
     is the <a href="https://en.wikipedia.org/wiki/Quicksort">quick sort</a>. This is divide-and-conquer
-    sort that relies on partitioning elements and sorting them based on whether they are larger 
-    or smaller than a chosen pivot. Depending on whether the pivot is already a median in the 
-    array, its average runtime is O(n*log(n)) and is considered one of the most popular 
-    sorting algorithms as a result of its speed and low memory usage (O(log(n)) on average), even 
-    though it is considered an unstable sort. It is not really a good choice for nearly-sorted 
+    sort that relies on partitioning elements and sorting them based on whether they are larger
+    or smaller than a chosen pivot. Depending on whether the pivot is already a median in the
+    array, its average runtime is O(n*log(n)) and is considered one of the most popular
+    sorting algorithms as a result of its speed and low memory usage (O(log(n)) on average), even
+    though it is considered an unstable sort. It is not really a good choice for nearly-sorted
     data, however, because poor pivot choices in those cases can lead to a runtime of O(n^2).</p>
     <script src="https://gist.github.com/mindplace/8530df7c15e92845d744.js"></script>
-    <p>I struggled with this algorithm until I understood that it really does rest entirely 
+    <p>I struggled with this algorithm until I understood that it really does rest entirely
     on partitioning. I thought at first I could write two methods for this, one to hold the basic
-    program and one to partition sub-arrays, but when I started working on the helper method, 
-    I tried my hand at making it recursive, and it worked.</p> 
+    program and one to partition sub-arrays, but when I started working on the helper method,
+    I tried my hand at making it recursive, and it worked.</p>
     <p>A bug that I didn't catch originally though was one that I only realized to look for
-    after I started reading about a different quicksort form, the one that makes 3 partitions 
-    instead of 2, where the 3rd holds items whose values are equal to the pivot. When I read 
+    after I started reading about a different quicksort form, the one that makes 3 partitions
+    instead of 2, where the 3rd holds items whose values are equal to the pivot. When I read
     about that version of the algorithm, I realized that my version doesn't preserve
-    duplicates, so I added the third partition. Not sure if this still counts as the standard 
+    duplicates, so I added the third partition. Not sure if this still counts as the standard
     quicksort with this change, but hey, at least I caught a major bug.</p>
-    <p>Recursion is another difficult concept for me, and this algorithm really helped 
-    me strengthen my grasp of it. I debugged with <code>puts</code> to see how the recursion was 
-    working, and it showed me that it kept drilling down smaller and smaller partitions until 
+    <p>Recursion is another difficult concept for me, and this algorithm really helped
+    me strengthen my grasp of it. I debugged with <code>puts</code> to see how the recursion was
+    working, and it showed me that it kept drilling down smaller and smaller partitions until
     it was told to stop, then trickled up all those values fully ordered.</p>
-    <p>My concern with this algorithm was that it doesn't seem to have sorted 
+    <p>My concern with this algorithm was that it doesn't seem to have sorted
     the array in place, instead taking copies of array slices to work off of.
     At some point I want to write a program that reviews all my algorithms and tests
     their runtimes, to see if the way I wrote them approaches the runtimes that they
     are supposed to evaluate to. </p>
     <p>In terms of sorting algorithms, this is my second-to-last post, as I've written
-    sorts from nearly all the different groups: simple sorts (insertion and selection), 
-    efficient sorts (merge and quick), and bubble sorts (my basic bubble sort). Final 
-    group is the distribution sorts, like counting sort or bucket sort. After that I'll 
+    sorts from nearly all the different groups: simple sorts (insertion and selection),
+    efficient sorts (merge and quick), and bubble sorts (my basic bubble sort). Final
+    group is the distribution sorts, like counting sort or bucket sort. After that I'll
     have to move on to other topics to learn more about data structures.</p>
   </main>
 </body>

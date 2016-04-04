@@ -1,13 +1,18 @@
+* {
+  font-family: 'Signika', sans-serif;
+}
+
 body {
-  background-image: url("https://images.unsplash.com/photo-1450992000852-086b70712859?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d938ced2caafe4161eb595403dfee831");
+  background-image: url("https://wallpaperscraft.com/image/road_mountain_landscape_84512_1920x1080.jpg");
   background-position: bottom center;
   background-size: cover !important;
   background-attachment: fixed;
   height: 400px;
+  margin-top: 3%;
 }
 
 .navbar {
-  width: 60%;
+  width: 65%;
   margin: 1% auto;
   display: flex;
   flex-direction: row;
@@ -37,7 +42,7 @@ body {
 
 main {
   margin: auto;
-  width: 60%;
+  width: 65%;
   box-sizing: border-box;
   line-height: 130%;
 }
@@ -69,14 +74,12 @@ a:hover {
 }
 
 .social-links {
-  display: block;
-  float: left;
-  width: 64%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .link-li {
-  float: right;
-  display: block;
   padding: 0 10px;
 }
 
@@ -88,8 +91,6 @@ a:hover {
 
 .float-right {
   text-align: right;
-  padding: 0;
-  margin: 0;
 }
 
 code {
@@ -99,9 +100,41 @@ code {
   padding: 1px 4px 1px 4px;
 }
 
+.gist {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
 
+.gist-file {
+  margin-bottom: 0;
+}
 
+.month-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+}
 
+.cell {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 48%;
+  margin-bottom: 4%;
+  padding: 2%;
+}
+
+.cell p {
+  font-size: small;
+  color: #c3c3c3;
+  font-style: italic;
+}
+
+#special {
+  background-color: #C7F0FF;
+}
 
 /* red mountain
 https://images.unsplash.com/photo-1450992000852-086b70712859?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d938ced2caafe4161eb595403dfee831
@@ -111,5 +144,12 @@ https://images.unsplash.com/photo-1452723311049-05685d7428ce?ixlib=rb-0.3.5&q=80
 
 norway rgreen mountain
 https://images.unsplash.com/photo-1439524970634-649c37a69e5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a2c92beb6008deea628dc2a5d332998c
+
+
+mountain with road
+http://eskipaper.com/images/mountain-road-wallpaper-4.jpg
+
+mountain with side road
+https://wallpaperscraft.com/image/road_mountain_landscape_84512_1920x1080.jpg
 
 /

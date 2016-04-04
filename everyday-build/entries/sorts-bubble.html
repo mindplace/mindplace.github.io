@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <title>Sorting Algorithms: Bubble Sort</title>
   <link rel="stylesheet" href="../../css/index.css">
+  <link href='https://fonts.googleapis.com/css?family=Signika:300' rel='stylesheet' type='text/css'>
 </head>
-   
+
 <body>
   <div class="navbar">
     <span class="navbar-li"><a href="../../index.html">Home</a></span>
     <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
     <span class="navbar-li"><a href="../index.html">Everyday Build</a></span>
-    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>      
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>
     <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
   </div>
-    
+
     <main class="section">
       <h2 class="headings">Sorting algorithms: bubble sort</h2>
       <h3 class="headings">February 23, 2016</h3>
-      
-      <p>One of my guides at Dev Bootcamp has been feeding me a steady diet of 
+
+      <p>One of my guides at Dev Bootcamp has been feeding me a steady diet of
       awesome resources, and I've been eating them up like a sponge. (That metaphor got away
       from me.) One of the resources he pointed me towards is a <a href="http://www.sorting-algorithms.com/">
-        Sorting Algorithm Animations</a> site, and I've been mesmerized by the different algorithms for sorting 
-        that it showcases...in large part because I don't understand how they work.</p> 
-      <p>In college, one of my favorite English professors told me that the best papers are actually an attempt 
-      to answer a question where the author doesn't already know the answer before they start researching. 
+        Sorting Algorithm Animations</a> site, and I've been mesmerized by the different algorithms for sorting
+        that it showcases...in large part because I don't understand how they work.</p>
+      <p>In college, one of my favorite English professors told me that the best papers are actually an attempt
+      to answer a question where the author doesn't already know the answer before they start researching.
       I took this advice to heart, and it's helped me stay
       playful and curious as I learn code. Today's playful and curious experience is with the bubble sort.</p>
       <script src="https://gist.github.com/mindplace/b03585edd955ca2c6804.js"></script>
-      <p>This was probably my 
+      <p>This was probably my
       third or fourth time writing a bubble sort from scratch. The first time I wrote one, I didn't know that Ruby allowed
       you to switch the indexes of two objects in an array by using <code>array[i], array[j] = array[j], array[i]</code>,
       and I struggled with trying to find the appropriate methods to put those items into the appropriate positions.</p>
 
-      <p><span class="image-right"><img src="../imgs/bubble-sort-proc.png"></span> This second was a different bubble sort that 
-      I had written to an RSpec. It doesn't accept an array, but instead acts upon <code>self</code>, and can take a 
+      <p><span class="image-right"><img src="../imgs/bubble-sort-proc.png"></span> This second was a different bubble sort that
+      I had written to an RSpec. It doesn't accept an array, but instead acts upon <code>self</code>, and can take a
       <code>Proc</code> as shown in the RSpec snippet below.</p>
-      <p>Writing <code>bubble_sort!</code> was extremely difficult because I couldn't figure out where the block 
+      <p>Writing <code>bubble_sort!</code> was extremely difficult because I couldn't figure out where the block
       came into play. Was I supposed to <code>yield</code> to it before the program actually started sorting <code>self</code>,
       or somewhere else? What exactly was the block passing and how? All these sorts of things always feel very fuzzy to me,
       and in many ways my main struggle with Ruby is to simply get it to be less magical to me. That said, having to pass a block
-      to my <code>bubble_sort!</code> was extremely helpful in understanding just exactly what is being passed, and when to 
+      to my <code>bubble_sort!</code> was extremely helpful in understanding just exactly what is being passed, and when to
       call on it.</p>
       <p><img class="image-right" src="../imgs/bubble-sort-rspec.png"></p>
-      
+
       <p></p>
     </main>
 </body>

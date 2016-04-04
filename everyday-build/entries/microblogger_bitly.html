@@ -3,6 +3,7 @@
 <head>
   <title>MicroBlogger</title>
   <link rel="stylesheet" href="../../css/index.css">
+  <link href='https://fonts.googleapis.com/css?family=Signika:300' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -10,26 +11,26 @@
     <span class="navbar-li"><a href="../../index.html">Home</a></span>
     <span class="navbar-li"><a href="../../contact_me.html">Contact Me</a></span>
     <span class="navbar-li"><a href="../index.html">Everyday Build</a></span>
-    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>      
+    <span class="navbar-li"><a href="../../projects.html">Projects</a></span>
     <span class="navbar-li-last"><a href="../../resume.html">Resume</a></span>
   </div>
-  
+
   <main class="section">
       <h2 class="headings">New MicroBlogger feature: Bitly link shortener</h2>
       <h3 class="headings">February 18, 2016</h3>
 
-    <p>This was a project to add a feature to my <a href="microblogger.html">MicroBlogger</a> client. 
-      It uses the Bitly gem to shorten links automatically by recognizing 'http' and 'www'. Here's 
+    <p>This was a project to add a feature to my <a href="microblogger.html">MicroBlogger</a> client.
+      It uses the Bitly gem to shorten links automatically by recognizing 'http' and 'www'. Here's
       the code:</p>
     <script src="https://gist.github.com/mindplace/3bbe7bfa9193eed87e76.js"></script>
     <p>This was its own little challenge. First I had to understand why Bitly.new required two
-    arguments, and after a bit of researching realized those were the API authenticators, so I 
-    set up my own. Then, because I'm rusty, I forgot that #select returns an array; I kept having errors 
-    because I tried to feed Bitly the urls as an array. Then there was the 
-    challenge of having multiple urls in a tweet because I only realized 
+    arguments, and after a bit of researching realized those were the API authenticators, so I
+    set up my own. Then, because I'm rusty, I forgot that #select returns an array; I kept having errors
+    because I tried to feed Bitly the urls as an array. Then there was the
+    challenge of having multiple urls in a tweet because I only realized
     belatedly that this wouldn't support having more than one url in a tweet.</p>
     <p>Finally I had a problem when I didn't realize that the gem couldn't recognize
-    a link if it didn't come with 'http' or 'https' in front of it, so I had to 
+    a link if it didn't come with 'http' or 'https' in front of it, so I had to
     fix that.</p>
     <p>It took time to work through each bug, but it was all worth it to see the bitly-shortened link popping up in my
     Twitter feed.</p>
