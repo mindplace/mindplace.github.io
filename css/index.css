@@ -47,8 +47,8 @@ main {
 
 a:link, a:visited {
   text-decoration: none;
-  color: orange;
-  font-weight: normal;
+  color: #33963A;
+  font-weight: bold;
   font-family: 'Signika', sans-serif;
 }
 
