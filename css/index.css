@@ -77,7 +77,7 @@ a:hover {
 .social-links {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .link-li {
@@ -88,7 +88,7 @@ a:hover {
 .image-right {
   float: left;
   position: static;
-  margin: 0px 20px 0 0 ;
+  margin: 0px 10% 0 0 ;
 }
 
 .float-right {
