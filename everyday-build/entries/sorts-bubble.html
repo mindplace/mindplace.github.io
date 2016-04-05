@@ -34,17 +34,17 @@
       third or fourth time writing a bubble sort from scratch. The first time I wrote one, I didn't know that Ruby allowed
       you to switch the indexes of two objects in an array by using <code>array[i], array[j] = array[j], array[i]</code>,
       and I struggled with trying to find the appropriate methods to put those items into the appropriate positions.</p>
-
-      <p><span class="image-right"><img src="../imgs/bubble-sort-proc.png"></span> This second was a different bubble sort that
+      <p>This second was a different bubble sort that
       I had written to an RSpec. It doesn't accept an array, but instead acts upon <code>self</code>, and can take a
       <code>Proc</code> as shown in the RSpec snippet below.</p>
+      <script src="https://gist.github.com/mindplace/581ed12a2781e8c985729f2525b375f0.js"></script>
+
       <p>Writing <code>bubble_sort!</code> was extremely difficult because I couldn't figure out where the block
       came into play. Was I supposed to <code>yield</code> to it before the program actually started sorting <code>self</code>,
       or somewhere else? What exactly was the block passing and how? All these sorts of things always feel very fuzzy to me,
       and in many ways my main struggle with Ruby is to simply get it to be less magical to me. That said, having to pass a block
       to my <code>bubble_sort!</code> was extremely helpful in understanding just exactly what is being passed, and when to
       call on it.</p>
-      <p><img class="image-right" src="../imgs/bubble-sort-rspec.png"></p>
 
       <p></p>
     </main>

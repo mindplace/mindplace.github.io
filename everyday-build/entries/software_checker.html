@@ -28,15 +28,15 @@
     it prints out instructions for the user; if it does get some, it checks whether each
     argument is a software that is installed, and prints out whatever it finds.</p>
     <p>There were a few stuggles and a few very interesting moments with this project.
-    For one thing, I already knew a bit about ARGVs and could assume that a shell script
+    For one thing, I already knew a bit about <code>ARGV</code>s and could assume that a shell script
     could recognize and iterate over an array. I also assumed that there was some way
     to create a conditional flow. Both of these assumptions helped a lot with googling for the commands.
     I found <a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">this
     awesome resource</a> and used it as a command cheatsheet. I decided to use this one
-    to test if ARGVs were empty:</p>
+    to test if <code>ARGV</code>s were empty:</p>
     <p><img src="../imgs/bash-command.jpg"></p>
-    <p>That's where my confusion, still unresolved, comes in. I passed it $@, or
-    what I understand is the ARGV array, and expected that [ -s $@ ] would fail because
+    <p>That's where my confusion, still unresolved, comes in. I passed it <code>$@</code>, or
+    what I understand is the <code>ARGV</code> array, and expected that <code>[ -s $@ ]</code> would fail because
     an empty array does not have a size greater than zero. But instead it works, and prints
     the following instructions only if the ARGV array has a size equal to zero! So I remain
     confused.</p>
