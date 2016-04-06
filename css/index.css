@@ -38,7 +38,7 @@ body {
 }
 
 main {
-  margin: auto;
+  margin: 0 auto 10%;
   width: 65%;
   box-sizing: border-box;
   line-height: 130%;
