@@ -138,6 +138,9 @@ code {
 
 #special {
   background-color: #F2FFE1;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2%;
 }
 
 /* red mountain
