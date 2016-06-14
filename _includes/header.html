@@ -19,10 +19,7 @@
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
-
-        {% for item in site.data.navigation %}
-          <a class="page-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-        {% endfor %}
+          <a class="page-link" href="{{ site.baseurl }}/pdfs/resume.pdf">Resume</a>
         {% include icon-twitter.html username=site.twitter_username %}
         {% include icon-github.html username=site.github_username %}
       </div>
