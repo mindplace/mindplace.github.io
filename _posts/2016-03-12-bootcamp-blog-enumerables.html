@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Bootcamp blog: enumerables"
+date:   2016-03-12 14:56:27 -0400
+---
+<p>This is Week 5 of DBC, and this week we did a Ruby group project with our accountability
+groups where each person had a role and corresponding problems to solve for their role. Role 4
+was to write an array_deletion_method and a hash_deletion_method, both of those being bang methods.
+Here's how Christyn Budzyna and I solved it: </p>
+<script src="https://gist.github.com/mindplace/dd1174bbdc07905aa09a.js"></script>
+<p>Then today, I happened to read the
+<a href="http://www.sitepoint.com/guide-ruby-collections-iii-enumerable-enumerator/">"Guide
+to Ruby Collections III: Enumerable and Enumerator"</a> article that Emmanuel posted, which mentioned
+a very intesting method that I have only hazily seen before, and that primarily in the context of
+CLI: the <code>grep</code> method.</p>
+<p>According to <a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-grep">Enumerable#grep</a>,
+<code>grep</code> iterates over the collection object it is called on and returns an array
+of values which belong to the same case (<a href="http://ruby-doc.org/core-2.3.0/Object.html#method-i-3D-3D-3D">===</a>)
+as the given pattern:<br><code>["a", 1, "b"].grep(String)</code> => <code>["a", "b"]</code>.</p>
+<p>So to illustrate, here's our <code>my_array_deletion_method!</code> with <code>grep</code>:</p>
+<script src="https://gist.github.com/mindplace/284cf639f465ed45babc.js"></script>
+<p>8 lines down to 2, not bad!</p>

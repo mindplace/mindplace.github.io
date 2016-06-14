@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Binary search"
+date:   2016-03-27 14:56:27 -0400
+---
+
+<p>Moving on to writing my own binary search seemed like it made sense after spending time with
+  sorting algorithms, but it turned out to be tougher than I expected. The essential concept
+  of how binary search works, thanks to <a href="https://www.youtube.com/watch?v=JQhciTuD3E8">this video</a> made plenty of sense;
+  the difficulty was to not just locate a given item in a sorted list, but to actually return
+  its original location.</p>
+<script src="https://gist.github.com/mindplace/d9bda84fffb63271e967.js"></script>
+<p>The difficulty started with the fact that I initially designed my algorithm in a way where
+  it took ever smaller slices of the given array, bounded by either the first item and the midpoint
+  item, or the midpoint item and the last item, in the last iteration of the slice. This meant that
+  finding the item was easy, but the only location for it would be its location in the final slice,
+  not the original array. That made my whole algorithm pretty pointless, in my mind. So I redesigned
+  it to keep count of how many items before and after the current slice I had chopped off. And after
+  many tweaks, that worked out.</p>

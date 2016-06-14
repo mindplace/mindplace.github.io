@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Board game: Bingo"
+date:   2016-03-14 14:56:27 -0400
+---
+
+<p>I've written board games before, like <a href="https://github.com/mindplace/console_games/blob/master/TicTacToe/game.rb">Tic Tac Toe</a>
+and <a href="https://github.com/mindplace/console_games/blob/master/Battleship/battleship.rb">Battleship</a>, and I've found
+I like working with boards, games, and generally things that make their needs
+clear. So with the solo challenge at DBC this week being to write a Bingo class,
+I was pretty happy. Here's some sample output from the middle of a game (because I think it's pretty cute):</p>
+<script src="https://gist.github.com/mindplace/d5a11c78413b3334b786.js"></script>
+<p>Here's what my Bingo class looks like:</p>
+<script src="https://gist.github.com/mindplace/38918dec4f81a0f0def7.js"></script>
+<p>It feels pretty complicated to look at, and at some point I might think about
+refactoring it to be more simple. I designed it to be entirely driven from outside,
+but it would be easy to add a <code>play_game</code> method to it so that the game logic is also
+contained inside it. For now, I put the game logic outside of it:</p>
+<script src="https://gist.github.com/mindplace/6dd2c14fee25c9028d85.js"></script>
+<p>My biggest struggle with this was that generating a random location turned out to be
+more complicated than one would hope. Simply generating a location using
+<code>rand(1..100)</code> and <code>"bingo".chars.sample</code> turned out to be way
+too random for my board! I went through 250 moves without a single move matching up with
+my board. Instead, I made the <code>generate_letter</code> method that metaphorically
+flips a coin: it generates a number between 1 and 10 and, if it is prime, chooses a location on the
+board that matches letter to number. Otherwise, it generates a random bingo column letter
+and matches it to one of the numbers on the board, which more often than not doens't land
+on anything. So from the user perspectice, it takes about 30 moves to win, and yet you're not
+getting x's on each round, so it feels more randomized.</p>

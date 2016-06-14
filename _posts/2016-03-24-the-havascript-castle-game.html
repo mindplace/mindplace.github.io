@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "The JavaScript Castle Game"
+date:   2016-03-24 14:56:27 -0400
+---
+<p>Whew! Just finished it! This is a little command-line game in JavaScript that
+generates a castle and, over the next '5 days', has random potential denizens show up, who
+do or do not end up staying for good. If enough good additions stay in the castle, the user
+wins--else, the user gets rudely booted from their castle, never to return! Here's some sample
+output:</p>
+<script src="https://gist.github.com/mindplace/6066681d8cfe6edd9978.js"></script>
+<p>The most difficult issue I had to overcome with this game was the fact that JavaScript (for
+very good reasons) doesn't have the kind of sleep functionality that I've come to rely on with
+Ruby. I had to find a workaround on StackOverflow which I do not think I would be able to
+write myself at this point. Additionally, the other thing that gave me trouble was generating
+random numbers, especially those in a specific range. This was a frustrating exercise in
+trying to get the <code>Math.random()</code> to output something I actually was able to use, as
+opposed to a decimal.
+</p>
+<p>Enough griping! Here's the code!</p>
+<script src="https://gist.github.com/mindplace/f34f5a424df3b3a68d90.js"></script>

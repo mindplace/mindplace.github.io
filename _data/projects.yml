@@ -1,0 +1,11 @@
+- name: Make Together
+  description: A social media platform for web designers and web developers to meet each other, post projects they are seeking collaborators on, and have conversations. Built on Rails with Bootstrap and jQuery. Login via Omniauth login for Github, and a custom Oauth solution for Dribbble. User-to-user instant messaging implemented through public_pub and a Faye server. Built with <a href="https://github.com/LisaBee224">Lisa Buch</a>, <a href="https://github.com/samanthavholmes">Samantha Holmes</a>, and <a href="https://github.com/choff999">Caitlin Hoffman</a>.
+  url: https://github.com/mindplace/make-together
+
+- name: LES Film Festival
+  description: A fake film festival built to work on our Rails, jQuery, and Bootstrap skills. Built with <a href="https://github.com/jmcolella">John Colella</a> and <a href="https://github.com/katherinebroner">Katherine Broner</a>.
+  url: https://github.com/mindplace/les-film-festival
+
+- name: Accountability List
+  description: The user generates a list of personal accountability standards, reviews them every day, check off whichever they complete that day, and is able to see their statistics over time. Built on Sinatra to practice visual design, CRUD, and RESTful conventions. Currently working on using the generated data to create D3 visualizations for users.
+  url: https://github.com/mindplace/accountability-list

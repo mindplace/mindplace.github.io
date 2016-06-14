@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Esther Leytush</title>
+    <description>Building myself into a fullstack Rails dev by building awesome projects.</description>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 13 Jun 2016 22:34:35 -0400</pubDate>
+    <lastBuildDate>Mon, 13 Jun 2016 22:34:35 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>JavaScript browser grocery list</title>
+        <description>&lt;p&gt;My cohort is preparing for week 1 in Phase 1 as of next week, and it&#39;s all review this week.
+  As part of that, I thought I would try branching out into using JavaScript in the browser. Here&#39;s
+  a grocery list function that works, rather annoyingly, through pop-ups, alerting and prompting
+  the user to the state of their grocery list.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/99027193d2cf15a319034d204c277133.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;The more I work with JavaScript, the more irritating I find it. For example, when I tried running this
+  script in the command line just to see if there were any syntax errors that I hadn&#39;t caught
+  by eye, it refused to move past what I swear was a made-up error at line 2, which
+  had not thrown an error previously, nor threw an error when I gave up and ran the code in
+  the browser console directly. I keep having these struggles with JavaScript over what looks
+  like absolutely nothing. I hope we come to terms with one another soon.&lt;/p&gt;
+
+&lt;p&gt;That said, I was able to get a little more clarity in working with strings, objects, and
+  loops in JavaScript, allowing for this second iteration to be a better laid out
+  program.
+&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Apr 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/04/04/javascript-browser-grocery-list.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/04/04/javascript-browser-grocery-list.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Binary conversions</title>
+        <description>&lt;p&gt;One of the first computing concepts I was introduced to when I started learning to program was
+  the concept of binary numbers. I had known already that computers understood everything on a
+  fundamendal level in terms of binary code, but I hadn&#39;t understood how standard numbers in base-10, for example,
+  could be understood in base-2. Converting numbers to their representations in different bases was
+  a bizarre concept to me until I was shown me how they are broken down: how 111 turned
+  into 7, for example. Once I finally worked through it mentally, I sat down and wrote two
+  scripts to translate a base-10 number
+  into base-2, and vice versa, and then rewrote these programs in JavaScript. To start, here&#39;s the Ruby
+  script that converts a base-2 number into a base-10 one:&lt;/p&gt;
+  &lt;script src=&quot;https://gist.github.com/mindplace/85e7052a78b70878ec103be9b24b6e2b.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Understanding that the binary number needed to be reversed before it could be translated was an
+  important part of conceptualizing it: that a binary number like 001 needs to be seen as 100 in order
+  to be passed as a number to the program, but that 100 must then be reversed in order to be translated. Here&#39;s the
+  same script in JavaScript:
+&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/163fe26593fd000990dc95b860d02b31.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Conceptually, I&#39;ve been trying to stick to the same logic in Ruby as well as JavaScript; I&#39;m not sure if
+  this really helps me branch out into the way JavaScript actually differs conceptually from Ruby, but it&#39;s
+  certainly helped speed me up to solving algorithmic problems in JavaScript.&lt;/p&gt;
+&lt;p&gt;So far the programs I wrote to convert a base-2 to base-10 numbers were short. By contrast,
+  my solution for converting a base-10 to base-2 turned out to be much longer:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/6098697725c7c0dd6aed9bc615d37a56.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;I couldn&#39;t think of how to slot in the appropriate 1&#39;s into their places without counting
+  up in powers of 2, but that solution did work well. At some point I want to return to it and
+  think about it again to see if I could solve it in a better way. Here&#39;s the same solution in
+  JavaScript:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/740684d0745b8249bd4707d9064a26dd.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;That&#39;s all for today! Thanks for reading!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Apr 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/04/03/binary-conversions.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/04/03/binary-conversions.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Bootcamp blog: regular expressions</title>
+        <description>&lt;p&gt;To say that using regular expressions is like hitting your face on the keyboard until something
+  matches is not an entirely untrue statement, if you were to look at some examples:&lt;/p&gt;
+&lt;p&gt;matching an IP address:&lt;br&gt;&lt;code&gt;\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;finding email addresses:&lt;br&gt; &lt;code&gt;\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;finding an &#39;Al&#39; next to the largest number in a text:&lt;br&gt;&lt;code&gt;\bAL\w*( \w\.)? S\w+ \d{2,},\d+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I think the picture here is becoming clearer: Regular Expressions, or RegExps, are
+  valuable, albeit indecipherable, strings of code that work to find or find-and-replace
+  certain strings inside of other strings. They&#39;re useful when dealing with large strings,
+  but also in a lot of other places. They&#39;re the tool of the power-user who parses text
+  with minimal code and maximum results.&lt;/p&gt;
+&lt;p&gt;The term &#39;regular expression&#39; was coined by Warren McCulloch and Walter Pitts, a neuroscientist and logician respectively, who in 1943 published a paper in Mathematical Biophysics which attempted to understand &#39;how the human brain could produce complex patterns using simple cells that are bound together&#39; (&lt;a href=&quot;http://blog.staffannoteberg.com/2013/01/30/regular-expressions-a-brief-history/&quot;&gt;link&lt;/a&gt;). Among other ideas, the paper laid out the term Regular Expression, which by some amazing jump between disciplines came to influence computer scientists (as did various other ideas from other disciplines). In 1968, Ken Thompson descriped a RegExp compiler--the idea was to allow users to match patterns in text files. This functionality was then implemented in the text editor &#39;ed&#39;. To do a RegExp search in ed, you had to write &lt;code&gt;g/&amp;lt;regular expression&amp;gt;/p&lt;/code&gt;: essentially, &lt;code&gt;g/re/p&lt;/code&gt;. &lt;code&gt;g&lt;/code&gt; meant &#39;global search&#39; and &lt;code&gt;p&lt;/code&gt; meant &#39;print&#39;, This command eventually resulted in a form we use &lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-grep&quot;&gt;even in Ruby&lt;/a&gt;: &lt;code&gt;grep&lt;/code&gt;; we got it via Unix, and then Perl, but other languages like Java also implemented RegExps.
+&lt;/p&gt;
+&lt;p&gt;More honestly, RegExps are really a great and valuable tool. They tend to be difficult to remember, use, and understand, but also powerful and
+often speedy. I have dipped the barest toe into the waters of regular expressions, but I intend to learn to use them myself with Ruby and text parsing.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h3&gt;Resources:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://regex.bastardsbook.com/&quot;&gt;&lt;i&gt;The Bastards Book of Regular Expressions&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://regexone.com/&quot;&gt;RegexOne&lt;/a&gt;: an interactive tutorial&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://regexcrossword.com/&quot;&gt;Regex Crossword&lt;/a&gt;: regular expression challenges&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@leighsn/verbal-expressions-in-ruby-fb8a912221e2#.jzr5f62hl&quot;&gt;&quot;Verbal Expressions in Ruby&quot;&lt;/a&gt;: a gem to make regexes easier to write&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://code.tutsplus.com/categories/regular-expressions&quot;&gt;envatotuts+&lt;/a&gt;: regular
+  expression tutorials&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://code.tutsplus.com/tutorials/you-dont-know-anything-about-regular-expressions--net-7869&quot;&gt;&quot;You Don&#39;t Know Anything About Regular Expressions: a Complete Guide&quot;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.staffannoteberg.com/2013/01/30/regular-expressions-a-brief-history/&quot;&gt;
+  &quot;Regular Expressions: a brief history&quot;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://swtch.com/~rsc/regexp/regexp1.html&quot;&gt;&quot;Regular Expression Matching Can Be Simple And Fast (but is slow in Java, Perl, PHP, Python, Ruby, ...)&quot;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Regular_expression&quot;&gt;Wikipedia: regular expression&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 02 Apr 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/04/02/bootcamp-blog-regular-expressions.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/04/02/bootcamp-blog-regular-expressions.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Bootcamp blog: enumerable cheatsheet</title>
+        <description>&lt;p&gt;Today&#39;s post is a cheatsheet I did for week 8 of Dev Bootcamp. We&#39;re coming up quickly
+now onto Phase1, the intense on-campus immersive phase, and we&#39;re all preparing ourselves
+and our Ruby skills for that. This week was an introduction to SQL and some work in
+JavaScript, Ruby, and HTML/CSS. Here&#39;s the page I made, see it yourself &lt;a href=&quot;http://mindplace.github.io/static-pages/cheat-sheet/enumerable-cheatsheet&quot;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/enumerable-cheatsheet.png&quot; width=&quot;100%&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I struggled for a very long time with the footer. I couldn&#39;t figure out how to have
+  it stick to the bottom even if the page contents weren&#39;t enough to push it there naturally.
+  In the end I couldn&#39;t figure it out and I shrugged my shoulders and fixed the rest of it
+  to my liking. I&#39;m going to bring it up to a friend at bootcamp who has CSS experience.
+  In the meantime, I&#39;m enjoying my other design choices.
+&lt;/p&gt;
+&lt;p&gt;
+  The HTML and CSS is &lt;a href=&quot;https://github.com/mindplace/static-pages&quot;&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 Apr 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/04/01/bootcamp-blog-enumerable-cheatsheet.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/04/01/bootcamp-blog-enumerable-cheatsheet.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Binary search</title>
+        <description>&lt;p&gt;Moving on to writing my own binary search seemed like it made sense after spending time with
+  sorting algorithms, but it turned out to be tougher than I expected. The essential concept
+  of how binary search works, thanks to &lt;a href=&quot;https://www.youtube.com/watch?v=JQhciTuD3E8&quot;&gt;this video&lt;/a&gt; made plenty of sense;
+  the difficulty was to not just locate a given item in a sorted list, but to actually return
+  its original location.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/d9bda84fffb63271e967.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;The difficulty started with the fact that I initially designed my algorithm in a way where
+  it took ever smaller slices of the given array, bounded by either the first item and the midpoint
+  item, or the midpoint item and the last item, in the last iteration of the slice. This meant that
+  finding the item was easy, but the only location for it would be its location in the final slice,
+  not the original array. That made my whole algorithm pretty pointless, in my mind. So I redesigned
+  it to keep count of how many items before and after the current slice I had chopped off. And after
+  many tweaks, that worked out.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/27/binary-search.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/27/binary-search.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>The JavaScript Castle Game</title>
+        <description>&lt;p&gt;Whew! Just finished it! This is a little command-line game in JavaScript that
+generates a castle and, over the next &#39;5 days&#39;, has random potential denizens show up, who
+do or do not end up staying for good. If enough good additions stay in the castle, the user
+wins--else, the user gets rudely booted from their castle, never to return! Here&#39;s some sample
+output:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/6066681d8cfe6edd9978.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;The most difficult issue I had to overcome with this game was the fact that JavaScript (for
+very good reasons) doesn&#39;t have the kind of sleep functionality that I&#39;ve come to rely on with
+Ruby. I had to find a workaround on StackOverflow which I do not think I would be able to
+write myself at this point. Additionally, the other thing that gave me trouble was generating
+random numbers, especially those in a specific range. This was a frustrating exercise in
+trying to get the &lt;code&gt;Math.random()&lt;/code&gt; to output something I actually was able to use, as
+opposed to a decimal.
+&lt;/p&gt;
+&lt;p&gt;Enough griping! Here&#39;s the code!&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/f34f5a424df3b3a68d90.js&quot;&gt;&lt;/script&gt;
+</description>
+        <pubDate>Thu, 24 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/24/the-havascript-castle-game.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/24/the-havascript-castle-game.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Euclid&#39;s greatest common divisor</title>
+        <description>&lt;p&gt;I was rereading Paul Ford&#39;s amazing essay &lt;a href=&quot;http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/&quot;&gt;&quot;What Is Code?&quot;&lt;/a&gt;
+yesterday when it mentioned &lt;a href=&quot;https://en.wikipedia.org/wiki/Euclidean_algorithm&quot;&gt;Euclid&#39;s algorithm&lt;/a&gt;,
+one of the oldest algorithms still commonly in use today. It is a way to find the GCD of two numbers (greatest common divisor) and it does it like so:&lt;/p&gt;
+
+&lt;p class=&quot;highlight-text&quot;&gt;
+1. Take 2 numbers&lt;br&gt;
+2. The greater number modulo the smaller number equals the remainder&lt;br&gt;
+3. If the remainder is not 0, the smaller number becomes the new greater number and remainder becomes the new smaller number&lt;br&gt;
+4. Do steps 1 - 3 for as many times as you need to in order to get a remainder that is equal to 0&lt;br&gt;
+5. At that point, return the most recent smaller number.&lt;/p&gt;
+
+
+&lt;p&gt;I appreciated the recursive nature of this lovely little algorithm and decided to
+try it out and practice my recursion skills, all at the same time:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/8fde7031305c98b6bcde.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;It can still be shortened, but it&#39;s short enough and simple enough already so
+why make it complicated by trying to oversimplify? The only issue I ran into was that
+I wasn&#39;t clear on which number I was supposed to return, but after rewatching
+&lt;a href=&quot;https://www.youtube.com/watch?v=AJn843kplDw&quot;&gt;this visual tutorial&lt;/a&gt; everything eventually clicked for me.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 15 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/15/euclid-greatest-common-divisor.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/15/euclid-greatest-common-divisor.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Board game: Bingo</title>
+        <description>&lt;p&gt;I&#39;ve written board games before, like &lt;a href=&quot;https://github.com/mindplace/console_games/blob/master/TicTacToe/game.rb&quot;&gt;Tic Tac Toe&lt;/a&gt;
+and &lt;a href=&quot;https://github.com/mindplace/console_games/blob/master/Battleship/battleship.rb&quot;&gt;Battleship&lt;/a&gt;, and I&#39;ve found
+I like working with boards, games, and generally things that make their needs
+clear. So with the solo challenge at DBC this week being to write a Bingo class,
+I was pretty happy. Here&#39;s some sample output from the middle of a game (because I think it&#39;s pretty cute):&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/d5a11c78413b3334b786.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Here&#39;s what my Bingo class looks like:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/38918dec4f81a0f0def7.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;It feels pretty complicated to look at, and at some point I might think about
+refactoring it to be more simple. I designed it to be entirely driven from outside,
+but it would be easy to add a &lt;code&gt;play_game&lt;/code&gt; method to it so that the game logic is also
+contained inside it. For now, I put the game logic outside of it:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/6dd2c14fee25c9028d85.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;My biggest struggle with this was that generating a random location turned out to be
+more complicated than one would hope. Simply generating a location using
+&lt;code&gt;rand(1..100)&lt;/code&gt; and &lt;code&gt;&quot;bingo&quot;.chars.sample&lt;/code&gt; turned out to be way
+too random for my board! I went through 250 moves without a single move matching up with
+my board. Instead, I made the &lt;code&gt;generate_letter&lt;/code&gt; method that metaphorically
+flips a coin: it generates a number between 1 and 10 and, if it is prime, chooses a location on the
+board that matches letter to number. Otherwise, it generates a random bingo column letter
+and matches it to one of the numbers on the board, which more often than not doens&#39;t land
+on anything. So from the user perspectice, it takes about 30 moves to win, and yet you&#39;re not
+getting x&#39;s on each round, so it feels more randomized.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 14 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/14/board-game-bingo.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/14/board-game-bingo.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Personalized Chrome new tab/landing page, part 1</title>
+        <description>&lt;p&gt;While reading an interesting Lifehacker article about
+&lt;a href=&quot;http://lifehacker.com/start-me-offers-customizable-start-pages-you-can-use-in-1762960188&quot;&gt;
+  customizable start-up pages&lt;/a&gt;, it occured to me that I could try making my own. A few minutes
+later, armed with &lt;a href=&quot;http://www.instructables.com/id/Developing-a-Custom-Newtab-Page-For-Google-Chrome/&quot;&gt;this
+awesome little tutorial&lt;/a&gt;, I jumped into crafting
+my own new-tab/landing page.&lt;/p&gt;
+&lt;p&gt;This was one of the most exciting projects I&#39;ve ever worked on
+because it is so useful to me right now. Building it felt faster, easier, and more personal than any HTML &amp; CSS I&#39;ve
+worked on to date. All I had to do was sketch up for myself what I wanted my page to have and how it would roughly look,
+then I jumped into the HTML and built it out. The HTML and CSS is &lt;a href=&quot;https://github.com/mindplace/chrome-newtab-page&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/new-tab-screenshot.png&quot; width=&quot;100%&quot;&gt;&lt;/p&gt;
+&lt;p&gt;After finishing the HTML and CSS, I just had to find myself a 128x128 pixel icon, and put together what seems to be my first JSON script:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/4e8e158be802d08ba8d4.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;I put all the files into a folder and uploaded it to chrome://extensions page by clicking &quot;Load
+unpacked extension&quot;. Seeing this made me so very happy:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/blog/ext-screenshot.png&quot; max-width=&quot;100%&quot;&gt;&lt;/p&gt;
+&lt;p&gt;And that was it! Part 2 will be to see if I can turn this into an actual extension for Chrome so that it doesn&#39;t have to
+keep loading from my desktop.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 13 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/13/personalized-chrome-new-tab-landing-page-part-1.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/13/personalized-chrome-new-tab-landing-page-part-1.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Bootcamp blog: enumerables</title>
+        <description>&lt;p&gt;This is Week 5 of DBC, and this week we did a Ruby group project with our accountability
+groups where each person had a role and corresponding problems to solve for their role. Role 4
+was to write an array_deletion_method and a hash_deletion_method, both of those being bang methods.
+Here&#39;s how Christyn Budzyna and I solved it: &lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/dd1174bbdc07905aa09a.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Then today, I happened to read the
+&lt;a href=&quot;http://www.sitepoint.com/guide-ruby-collections-iii-enumerable-enumerator/&quot;&gt;&quot;Guide
+to Ruby Collections III: Enumerable and Enumerator&quot;&lt;/a&gt; article that Emmanuel posted, which mentioned
+a very intesting method that I have only hazily seen before, and that primarily in the context of
+CLI: the &lt;code&gt;grep&lt;/code&gt; method.&lt;/p&gt;
+&lt;p&gt;According to &lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-grep&quot;&gt;Enumerable#grep&lt;/a&gt;,
+&lt;code&gt;grep&lt;/code&gt; iterates over the collection object it is called on and returns an array
+of values which belong to the same case (&lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Object.html#method-i-3D-3D-3D&quot;&gt;===&lt;/a&gt;)
+as the given pattern:&lt;br&gt;&lt;code&gt;[&quot;a&quot;, 1, &quot;b&quot;].grep(String)&lt;/code&gt; =&gt; &lt;code&gt;[&quot;a&quot;, &quot;b&quot;]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So to illustrate, here&#39;s our &lt;code&gt;my_array_deletion_method!&lt;/code&gt; with &lt;code&gt;grep&lt;/code&gt;:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/284cf639f465ed45babc.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;8 lines down to 2, not bad!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Mar 2016 13:56:27 -0500</pubDate>
+        <link>http://yourdomain.com/2016/03/12/bootcamp-blog-enumerables.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/12/bootcamp-blog-enumerables.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
