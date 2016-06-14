@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Modules and a calculator"
+date:   2016-03-19 14:56:27 -0400
+---
+<p>Assigned reading for my program is <a href=""><i>The Well Grounded Rubyist</i></a>, and having come to the 4th chapter,
+I decided to try making some modules. I wrote a Calculator class with some basic calculation methods abstracted to a
+class method_missing method:</p>
+<script src="https://gist.github.com/mindplace/2f279d031a58999a9cb8.js"></script>
+<p>I didn't understand how class methods worked until the <i>WGR</i> explained that they worked on the class object itself,
+while instance methods worked individually, on single instances of the class. This seemed like a good time to try out class
+methods, as I had written them before but didn't understand how they worked, and a calculator seemed like an especially appropriate use.</p>
+<p>Now to add the mixin module, which I already included in the Calculator class, but using the <code>extend</code> keyword (thanks to
+the article <a href="http://www.railstips.org/blog/archives/2009/05/15/include-vs-extend-in-ruby/">"Include vs Extend in Ruby"</a>):</p>
+<script src="https://gist.github.com/mindplace/28490483c0d9f30db413.js"></script>
+<p>The <code>median</code> method got a bit complicated, but I had a very specific idea of what I wanted it to return in a variety of cases.
+Plus I jumped on the chance to do some more recursion! Output:</p>
+<script src="https://gist.github.com/mindplace/fb5f12863bd46e0752dd.js"></script>
+<p>Just as expected. Mainly the issue I had with this was when running into NoMethodErrors when initially using <code>include</code> rather than
+<code>extend</code>. Overall, modules are clearly super useful and I'll definitely expect to use them in the future.</p>

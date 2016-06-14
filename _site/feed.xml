@@ -5,9 +5,30 @@
     <description>Building myself into a fullstack Rails dev by building awesome projects.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Jun 2016 22:34:35 -0400</pubDate>
-    <lastBuildDate>Mon, 13 Jun 2016 22:34:35 -0400</lastBuildDate>
+    <pubDate>Tue, 14 Jun 2016 00:07:57 -0400</pubDate>
+    <lastBuildDate>Tue, 14 Jun 2016 00:07:57 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Bucket sort</title>
+        <description>&lt;p&gt;I started off not really understanding how bucket sort works; the concept of partitioning
+  items by placing them into different buckets made sense, but what is the way in which the
+  program decides on bucket sizes? I couldn&#39;t understand the logic even when I looked at
+  examples of others&#39; bucket sorts. So I decided to design my solution in a way that didn&#39;t
+  pre-make buckets before partitioning. Instead, it sends items to their corresponding indexes&amp;mdash;so
+  66 would be sent to &lt;code&gt;bucket[66]&lt;/code&gt;, etc.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/bed7e13afb85c22f321938a5ccd57967.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Does this still count as a bucket sort? Is this an example of another type of sorting
+  algorithm? It makes sense and seems to be optimized for speed, as claiming new slots in
+  an existing array should be faster than doing calculations to figure out where an item should go. Either way, it&#39;s simple and it works, so it&#39;s satisfying enough, even if it
+  isn&#39;t an actual bucket sort.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Apr 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/04/05/bucket-sort.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/04/05/bucket-sort.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>JavaScript browser grocery list</title>
@@ -87,7 +108,7 @@
   certain strings inside of other strings. They&#39;re useful when dealing with large strings,
   but also in a lot of other places. They&#39;re the tool of the power-user who parses text
   with minimal code and maximum results.&lt;/p&gt;
-&lt;p&gt;The term &#39;regular expression&#39; was coined by Warren McCulloch and Walter Pitts, a neuroscientist and logician respectively, who in 1943 published a paper in Mathematical Biophysics which attempted to understand &#39;how the human brain could produce complex patterns using simple cells that are bound together&#39; (&lt;a href=&quot;http://blog.staffannoteberg.com/2013/01/30/regular-expressions-a-brief-history/&quot;&gt;link&lt;/a&gt;). Among other ideas, the paper laid out the term Regular Expression, which by some amazing jump between disciplines came to influence computer scientists (as did various other ideas from other disciplines). In 1968, Ken Thompson descriped a RegExp compiler--the idea was to allow users to match patterns in text files. This functionality was then implemented in the text editor &#39;ed&#39;. To do a RegExp search in ed, you had to write &lt;code&gt;g/&amp;lt;regular expression&amp;gt;/p&lt;/code&gt;: essentially, &lt;code&gt;g/re/p&lt;/code&gt;. &lt;code&gt;g&lt;/code&gt; meant &#39;global search&#39; and &lt;code&gt;p&lt;/code&gt; meant &#39;print&#39;, This command eventually resulted in a form we use &lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-grep&quot;&gt;even in Ruby&lt;/a&gt;: &lt;code&gt;grep&lt;/code&gt;; we got it via Unix, and then Perl, but other languages like Java also implemented RegExps.
+&lt;p&gt;The term &#39;regular expression&#39; was coined by Warren McCulloch and Walter Pitts, a neuroscientist and logician respectively, who in 1943 published a paper in Mathematical Biophysics which attempted to understand &#39;how the human brain could produce complex patterns using simple cells that are bound together&#39; (&lt;a href=&quot;http://blog.staffannoteberg.com/2013/01/30/regular-expressions-a-brief-history/&quot;&gt;link&lt;/a&gt;). Among other ideas, the paper laid out the term Regular Expression, which by some amazing jump between disciplines came to influence computer scientists (as did various other ideas from other disciplines). In 1968, Ken Thompson descriped a RegExp compiler&amp;mdash;the idea was to allow users to match patterns in text files. This functionality was then implemented in the text editor &#39;ed&#39;. To do a RegExp search in ed, you had to write &lt;code&gt;g/&amp;lt;regular expression&amp;gt;/p&lt;/code&gt;: essentially, &lt;code&gt;g/re/p&lt;/code&gt;. &lt;code&gt;g&lt;/code&gt; meant &#39;global search&#39; and &lt;code&gt;p&lt;/code&gt; meant &#39;print&#39;, This command eventually resulted in a form we use &lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-grep&quot;&gt;even in Ruby&lt;/a&gt;: &lt;code&gt;grep&lt;/code&gt;; we got it via Unix, and then Perl, but other languages like Java also implemented RegExps.
 &lt;/p&gt;
 &lt;p&gt;More honestly, RegExps are really a great and valuable tool. They tend to be difficult to remember, use, and understand, but also powerful and
 often speedy. I have dipped the barest toe into the waters of regular expressions, but I intend to learn to use them myself with Ruby and text parsing.&lt;/p&gt;
@@ -141,6 +162,78 @@ JavaScript, Ruby, and HTML/CSS. Here&#39;s the page I made, see it yourself &lt;
       </item>
     
       <item>
+        <title>Ruby inheritance and interconnected classes</title>
+        <description>&lt;p&gt;To learn a bit more about inheritance in Ruby, we were given this assigment to work through, in
+  which we modeled Dev Bootcamp&#39;s cohort structure and schedule. I created a GlobalCohort class,
+  a sub-class to that called LocalCohort, which was city-specific, and an additional Student
+  class. Here&#39;s GlobalCohort:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/e2be6ed10ac4a15b3e1c5db63cfea1fd.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;I think the interesting part for this class is the way it is able to model and give information
+  about the phase schedule based on the start date. I&#39;ve worked with the Date class only a bit, when
+  I created the &lt;a href=&quot;/2016/03/02/deadline-counter.html&quot;&gt;deadline counter&lt;/a&gt;, so this was a welcome continuation of that. And now
+for LocalCohort:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/64a5705fd064d52049e7fb5887abe9fb.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;This class was meant to be much simpler; the important difference between it and GlobalCohort,
+  in my design, was to make LocalCohort the location where I would add Student objects, so that
+  students were always organized by their LocalCohorts, or cities. Now for Student:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/5ea54b21728f1eaf49b5c91204f330e4.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Also simple. This one needed to be able to store the student&#39;s information, like name, email, and
+  history of events like quizzes, and to be able to know which global cohort and which city the
+  student was going to belong to. Everything else was designed to be found for the entire group, and
+  therefore stored in GlobalCohort. Output:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/20c59c90cd03075efe99dd49ef9d295c.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Conceptually, this gave me a ton of problems, because I went into this challenge thinking that
+  it was possible for instances in a class chain&amp;mdash;skippers to nyc to esther_leytush&amp;mdash;would be aware
+  of each other in both directions, and have access to attributes. But of course this isn&#39;t the case;
+  instances of Student don&#39;t and in fact should not have access to the attributes of instances of LocalCohort,
+  for example, because they should not be able to change the LocalCohort&#39;s state. Once this clicked for me,
+  I stopped getting so many &lt;code&gt;nil&lt;/code&gt; errors, which was nice. And I definitely think I got some
+good practice with interconnected classes and modeling real-world scenarios.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 29 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/29/ruby-inheritance-and-interconnected-classes.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/29/ruby-inheritance-and-interconnected-classes.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Finding primes with the sieve of Eratosthenes</title>
+        <description>    &lt;p&gt;Before I started Dev Bootcamp, one of the ways I prepared myself was by spending
+      quite a lot of time solving various challenges, and it wasn&#39;t long before I came accross
+      &lt;a href=&quot;https://projecteuler.net/archives&quot;&gt;Project Euler&lt;/a&gt;. I wasn&#39;t able to get too far
+      with them, maybe only the first dozen or so, as the difficulty curve rose really quickly for me,
+      and my 3 levels of Calculus in college weren&#39;t coming back to me at all easily.&lt;/p&gt;
+    &lt;p&gt;One of the most memorable challenges I did for Project Euler was finding the sums of all
+      the prime numbers below 2 million. This was a difficult problem for me because my
+      brute-force solution&amp;mdash;checking each
+      consecutive number for primeness by taking its factors&amp;mdash;was just incredibly slow, and therefore
+      disqualified as a solution. (And by slow I mean it would have taken days.) I finally caved in
+      and created a sieve of Eratosthenes as StackOverflow commentors suggested. To do that, I spent
+      quite a lot of time staring at &lt;a href=&quot;https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes&quot;&gt;the
+      lovely animation on the Wikipedia page&lt;/a&gt; for the sieve. I understood that the sieve didn&#39;t
+      check for primeness; it instead assumed that multiples of given nums were already not going to be
+      prime. Thanks to that, I finally came up with my solution for the prime problem:&lt;/p&gt;
+      &lt;script src=&quot;https://gist.github.com/mindplace/cf2c73c507b7711cd22d.js&quot;&gt;&lt;/script&gt;
+      &lt;p&gt;I was so very proud of this solution. It&#39;s short, easy on computational load, and is optimized
+        by the way it uses squares: it starts resetting multiples from the square of the current num,
+        and breaks as soon as the square of the current num exceeds the length of the range. I&#39;m happy with
+        this solution! So a few months later, I decided to implement the sieve in JavaScript as well,
+        except this one is meant to find the nth prime:&lt;/p&gt;
+        &lt;script src=&quot;https://gist.github.com/mindplace/ad2d6dd52d89e32f6813.js&quot;&gt;&lt;/script&gt;
+      &lt;p&gt;First off, the JavaScript solution is much more verbose; to do things like populate the initial
+        range, or to find the next larger number to be the current num, it takes more lines and more
+        words to do so. But even in JavaScript it is an elegant solution that is much shorter and simpler
+        than it could otherwise be. So I think I can count myself as still happy with it.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/28/finding-primes-with-the-sieve-of-eratosthenes.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/28/finding-primes-with-the-sieve-of-eratosthenes.html</guid>
+        
+        
+      </item>
+    
+      <item>
         <title>Binary search</title>
         <description>&lt;p&gt;Moving on to writing my own binary search seemed like it made sense after spending time with
   sorting algorithms, but it turned out to be tougher than I expected. The essential concept
@@ -164,144 +257,56 @@ JavaScript, Ruby, and HTML/CSS. Here&#39;s the page I made, see it yourself &lt;
       </item>
     
       <item>
-        <title>The JavaScript Castle Game</title>
-        <description>&lt;p&gt;Whew! Just finished it! This is a little command-line game in JavaScript that
-generates a castle and, over the next &#39;5 days&#39;, has random potential denizens show up, who
-do or do not end up staying for good. If enough good additions stay in the castle, the user
-wins--else, the user gets rudely booted from their castle, never to return! Here&#39;s some sample
-output:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/6066681d8cfe6edd9978.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;The most difficult issue I had to overcome with this game was the fact that JavaScript (for
-very good reasons) doesn&#39;t have the kind of sleep functionality that I&#39;ve come to rely on with
-Ruby. I had to find a workaround on StackOverflow which I do not think I would be able to
-write myself at this point. Additionally, the other thing that gave me trouble was generating
-random numbers, especially those in a specific range. This was a frustrating exercise in
-trying to get the &lt;code&gt;Math.random()&lt;/code&gt; to output something I actually was able to use, as
-opposed to a decimal.
-&lt;/p&gt;
-&lt;p&gt;Enough griping! Here&#39;s the code!&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/f34f5a424df3b3a68d90.js&quot;&gt;&lt;/script&gt;
+        <title>Solving algorithms in JavaScript</title>
+        <description>&lt;p&gt;Working through another set of small algorithmic challenges in order to bootstrap my JavaScript
+  literacy! Today&#39;s problems include a pretty long solution to finding the mode in a given array,
+  and the Look-Say sequence.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Mode.&lt;/b&gt; This problem gave me, well, problems. I used a JavaScript object like a hash to
+  store values, but getting them back was messy as I&#39;m still unused to the syntax. In the end
+  it was a long, drawn-out affair in three parts: generating a hash of the given numbers with their
+  respective counts, determining the element with the highest count, and generating a new array
+  containing the numbers whose counts were equal to the highest count.&lt;/p&gt;
+  &lt;script src=&quot;https://gist.github.com/mindplace/b30f04954bd02bbd9ee6.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;b&gt;Look-Say Sequence.&lt;/b&gt; The idea for this one is for the program to look at a given number,
+  extract it from the series, and record how many times it is repeated. So the number 1 returns
+  11, because there was one 1 in the original number; the number 338862222 returns two 3s, two 8s,
+  one 6, and four 2s, or 23281642.&lt;/p&gt;
+  &lt;script src=&quot;https://gist.github.com/mindplace/3877aa922f0c537b5c3e.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Doing these kinds of algorithms all week has really helped me to get comfortable with JavaScript,
+  I think. It&#39;s how I initially learned Ruby: first learn enough syntax to solve algorithms, then
+  solve a whole bunch of them, then read textbooks to understand what is happening and what else
+  I should think about to start building on top of the small but stable amount of knowledge that I
+  have. I read somewhere about a dev who has a series of go-to challenges for solving when learning
+  new languages, and although I originally thought that something like that wouldn&#39;t be enough, now
+  it feels a bit different.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 24 Mar 2016 14:56:27 -0400</pubDate>
-        <link>http://yourdomain.com/2016/03/24/the-havascript-castle-game.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2016/03/24/the-havascript-castle-game.html</guid>
+        <pubDate>Fri, 25 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/25/solving-algorithms-in-javascript.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/25/solving-algorithms-in-javascript.html</guid>
         
         
       </item>
     
       <item>
-        <title>Euclid&#39;s greatest common divisor</title>
-        <description>&lt;p&gt;I was rereading Paul Ford&#39;s amazing essay &lt;a href=&quot;http://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/&quot;&gt;&quot;What Is Code?&quot;&lt;/a&gt;
-yesterday when it mentioned &lt;a href=&quot;https://en.wikipedia.org/wiki/Euclidean_algorithm&quot;&gt;Euclid&#39;s algorithm&lt;/a&gt;,
-one of the oldest algorithms still commonly in use today. It is a way to find the GCD of two numbers (greatest common divisor) and it does it like so:&lt;/p&gt;
-
-&lt;p class=&quot;highlight-text&quot;&gt;
-1. Take 2 numbers&lt;br&gt;
-2. The greater number modulo the smaller number equals the remainder&lt;br&gt;
-3. If the remainder is not 0, the smaller number becomes the new greater number and remainder becomes the new smaller number&lt;br&gt;
-4. Do steps 1 - 3 for as many times as you need to in order to get a remainder that is equal to 0&lt;br&gt;
-5. At that point, return the most recent smaller number.&lt;/p&gt;
-
-
-&lt;p&gt;I appreciated the recursive nature of this lovely little algorithm and decided to
-try it out and practice my recursion skills, all at the same time:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/8fde7031305c98b6bcde.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;It can still be shortened, but it&#39;s short enough and simple enough already so
-why make it complicated by trying to oversimplify? The only issue I ran into was that
-I wasn&#39;t clear on which number I was supposed to return, but after rewatching
-&lt;a href=&quot;https://www.youtube.com/watch?v=AJn843kplDw&quot;&gt;this visual tutorial&lt;/a&gt; everything eventually clicked for me.&lt;/p&gt;
+        <title>Fibonacci algorithms in JavaScript and Ruby</title>
+        <description>&lt;p&gt; Working with the Fibonacci sequence is really enjoyable as it is
+  not bad to do either recursively or iteratively. And having to do it in JS was not painful. Here&#39;s
+  one in JavaScript that generates Fibonacci numbers while the length of the sequence array does not equal the
+  given required length:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/deb13ac6c015c8b3a4e1.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;And a similarly formed algorithm for determining if a given number is a Fibonacci number:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/918c6e3d87a28c484da4.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Here&#39;s the same solution in Ruby:&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/57fb6100245cfbdfd979.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Those are all iterative solutions. I think recursive solutions are also lovely!&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/mindplace/b7711feface611ad7082.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Except that my solution is, if anything, a line or two longer than the iterative one. So this
+  wouldn&#39;t be even a conceptually better or neater solution and since it takes more memory,
+  it&#39;ll remain just an exercise.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 15 Mar 2016 14:56:27 -0400</pubDate>
-        <link>http://yourdomain.com/2016/03/15/euclid-greatest-common-divisor.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2016/03/15/euclid-greatest-common-divisor.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Board game: Bingo</title>
-        <description>&lt;p&gt;I&#39;ve written board games before, like &lt;a href=&quot;https://github.com/mindplace/console_games/blob/master/TicTacToe/game.rb&quot;&gt;Tic Tac Toe&lt;/a&gt;
-and &lt;a href=&quot;https://github.com/mindplace/console_games/blob/master/Battleship/battleship.rb&quot;&gt;Battleship&lt;/a&gt;, and I&#39;ve found
-I like working with boards, games, and generally things that make their needs
-clear. So with the solo challenge at DBC this week being to write a Bingo class,
-I was pretty happy. Here&#39;s some sample output from the middle of a game (because I think it&#39;s pretty cute):&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/d5a11c78413b3334b786.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;Here&#39;s what my Bingo class looks like:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/38918dec4f81a0f0def7.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;It feels pretty complicated to look at, and at some point I might think about
-refactoring it to be more simple. I designed it to be entirely driven from outside,
-but it would be easy to add a &lt;code&gt;play_game&lt;/code&gt; method to it so that the game logic is also
-contained inside it. For now, I put the game logic outside of it:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/6dd2c14fee25c9028d85.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;My biggest struggle with this was that generating a random location turned out to be
-more complicated than one would hope. Simply generating a location using
-&lt;code&gt;rand(1..100)&lt;/code&gt; and &lt;code&gt;&quot;bingo&quot;.chars.sample&lt;/code&gt; turned out to be way
-too random for my board! I went through 250 moves without a single move matching up with
-my board. Instead, I made the &lt;code&gt;generate_letter&lt;/code&gt; method that metaphorically
-flips a coin: it generates a number between 1 and 10 and, if it is prime, chooses a location on the
-board that matches letter to number. Otherwise, it generates a random bingo column letter
-and matches it to one of the numbers on the board, which more often than not doens&#39;t land
-on anything. So from the user perspectice, it takes about 30 moves to win, and yet you&#39;re not
-getting x&#39;s on each round, so it feels more randomized.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 14 Mar 2016 14:56:27 -0400</pubDate>
-        <link>http://yourdomain.com/2016/03/14/board-game-bingo.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2016/03/14/board-game-bingo.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Personalized Chrome new tab/landing page, part 1</title>
-        <description>&lt;p&gt;While reading an interesting Lifehacker article about
-&lt;a href=&quot;http://lifehacker.com/start-me-offers-customizable-start-pages-you-can-use-in-1762960188&quot;&gt;
-  customizable start-up pages&lt;/a&gt;, it occured to me that I could try making my own. A few minutes
-later, armed with &lt;a href=&quot;http://www.instructables.com/id/Developing-a-Custom-Newtab-Page-For-Google-Chrome/&quot;&gt;this
-awesome little tutorial&lt;/a&gt;, I jumped into crafting
-my own new-tab/landing page.&lt;/p&gt;
-&lt;p&gt;This was one of the most exciting projects I&#39;ve ever worked on
-because it is so useful to me right now. Building it felt faster, easier, and more personal than any HTML &amp; CSS I&#39;ve
-worked on to date. All I had to do was sketch up for myself what I wanted my page to have and how it would roughly look,
-then I jumped into the HTML and built it out. The HTML and CSS is &lt;a href=&quot;https://github.com/mindplace/chrome-newtab-page&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/blog/new-tab-screenshot.png&quot; width=&quot;100%&quot;&gt;&lt;/p&gt;
-&lt;p&gt;After finishing the HTML and CSS, I just had to find myself a 128x128 pixel icon, and put together what seems to be my first JSON script:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/4e8e158be802d08ba8d4.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;I put all the files into a folder and uploaded it to chrome://extensions page by clicking &quot;Load
-unpacked extension&quot;. Seeing this made me so very happy:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/blog/ext-screenshot.png&quot; max-width=&quot;100%&quot;&gt;&lt;/p&gt;
-&lt;p&gt;And that was it! Part 2 will be to see if I can turn this into an actual extension for Chrome so that it doesn&#39;t have to
-keep loading from my desktop.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 13 Mar 2016 14:56:27 -0400</pubDate>
-        <link>http://yourdomain.com/2016/03/13/personalized-chrome-new-tab-landing-page-part-1.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2016/03/13/personalized-chrome-new-tab-landing-page-part-1.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Bootcamp blog: enumerables</title>
-        <description>&lt;p&gt;This is Week 5 of DBC, and this week we did a Ruby group project with our accountability
-groups where each person had a role and corresponding problems to solve for their role. Role 4
-was to write an array_deletion_method and a hash_deletion_method, both of those being bang methods.
-Here&#39;s how Christyn Budzyna and I solved it: &lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/dd1174bbdc07905aa09a.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;Then today, I happened to read the
-&lt;a href=&quot;http://www.sitepoint.com/guide-ruby-collections-iii-enumerable-enumerator/&quot;&gt;&quot;Guide
-to Ruby Collections III: Enumerable and Enumerator&quot;&lt;/a&gt; article that Emmanuel posted, which mentioned
-a very intesting method that I have only hazily seen before, and that primarily in the context of
-CLI: the &lt;code&gt;grep&lt;/code&gt; method.&lt;/p&gt;
-&lt;p&gt;According to &lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-grep&quot;&gt;Enumerable#grep&lt;/a&gt;,
-&lt;code&gt;grep&lt;/code&gt; iterates over the collection object it is called on and returns an array
-of values which belong to the same case (&lt;a href=&quot;http://ruby-doc.org/core-2.3.0/Object.html#method-i-3D-3D-3D&quot;&gt;===&lt;/a&gt;)
-as the given pattern:&lt;br&gt;&lt;code&gt;[&quot;a&quot;, 1, &quot;b&quot;].grep(String)&lt;/code&gt; =&gt; &lt;code&gt;[&quot;a&quot;, &quot;b&quot;]&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;So to illustrate, here&#39;s our &lt;code&gt;my_array_deletion_method!&lt;/code&gt; with &lt;code&gt;grep&lt;/code&gt;:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/284cf639f465ed45babc.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;8 lines down to 2, not bad!&lt;/p&gt;
-</description>
-        <pubDate>Sat, 12 Mar 2016 13:56:27 -0500</pubDate>
-        <link>http://yourdomain.com/2016/03/12/bootcamp-blog-enumerables.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2016/03/12/bootcamp-blog-enumerables.html</guid>
+        <pubDate>Fri, 25 Mar 2016 14:56:27 -0400</pubDate>
+        <link>http://yourdomain.com/2016/03/25/fibonacci-algorithms-in-javascript-and-ruby.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/03/25/fibonacci-algorithms-in-javascript-and-ruby.html</guid>
         
         
       </item>

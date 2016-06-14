@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "To-do list maker"
+date:   2016-02-27 14:56:27 -0400
+---
+<p>This is a classic program for many languages (much like building a blog seems to
+be a classic beginner's application in Rails) and I thought I'd give it a try and flex
+my I/O muscles.</p>
+<script src="https://gist.github.com/mindplace/6df4ca68f74397478811.js"></script>
+<p>The program initializes from the command line and prompts the user to input
+items one a time. Once the user presses enter without inputting an item, the item-collection
+terminates, and offers to export the items into a text file. If this option is accepted, it
+creates a new file relative to the script's location and sends items from the list array
+one at a time into the new file; otherwise, it formats the items and prints them to the screen.</p>
+<p>Writing programs like these, I find myself focusing mostly on two things: <b>simplicity of
+logic</b>&mdash;terse, DRY code, single-responsibility methods, etc&mdash;and <b>user experience</b>.</p>
+<p>My goal is always to anticipate how a user will use my program, even if I'm going to be the only user.
+I want to abstract all the 'thinking' to the program so that the user has a very clear sense of
+their 'job' in interacting with the program. I think it's pretty useful to be thinking of user
+experience even when writing such mini-programs, because a beautiful program is useless if it isn't
+FOR anyone or anything, and it remains useless if it is difficult or uncomfortable to use&mdash;even
+if it's able to offer a great deal of functionality or options.</p>

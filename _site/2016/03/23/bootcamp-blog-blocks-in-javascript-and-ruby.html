@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bootcamp blog: blocks in JavaScript and Ruby</title>
+  <meta name="description" content="There are plenty of differences between JavaScript and Ruby, but I think one thing thathasn't necessarily been covered too often is the way these two languag...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/2016/03/23/bootcamp-blog-blocks-in-javascript-and-ruby.html">
+  <link rel="alternate" type="application/rss+xml" title="Esther Leytush" href="http://yourdomain.com/feed.xml">
+</head>
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Esther Leytush</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/blog/">Blog</a>
+          
+        
+          
+          <a class="page-link" href="/contact/">Contact</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/projects/">Projects</a>
+          
+        
+
+        
+          <a class="page-link" href="https://resume.creddle.io/resume/h8u15yv6b0r">Resume</a>
+        
+        <a href="https://twitter.com/mindpl_ace"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span></a>
+
+        <a href="https://github.com/mindplace"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span></a>
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Bootcamp blog: blocks in JavaScript and Ruby</h1>
+
+    <p class="post-meta"><time datetime="2016-03-23T14:56:27-04:00" itemprop="datePublished">March 23, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>There are plenty of differences between JavaScript and Ruby, but I think one thing that
+hasn't necessarily been covered too often is the way these two languages treat blocks differently.</p>
+<p>In Ruby, the most common kinds of blocks are those passed to various Array, Hash, and Enumerable methods,
+like <code>map</code> and <code>each</code>. Like this use, on line 12:</p>
+<script src="https://gist.github.com/mindplace/91e97e4a8f20c6227ae4.js"></script>
+<p>Here's sample output when the coinflip is heads: </p>
+<script src="https://gist.github.com/mindplace/7e47e6e553154b5d0ee9.js"></script>
+<p>The important thing about these kinds of blocks is that these blocks, as in the block that I passed to the <code>Enumerable#inject</code> method,
+are not formal: they are not in themselves
+objects, they cannot be directly referenced, they cannot be passed as arguments; they're just syntax. But
+Ruby has so much functionality for blocks: if you formalize a block by turning it into an instance of the Proc class,
+or store it in variable form as a lambda, you
+can certainly use it as an object. This isn't just Ruby&mdash;plenty, if not most, languages have block objects.</p>
+<p><i>"1970 - Guy Steele and Gerald Sussman create Scheme. Their work leads to a series of "Lambda the Ultimate"
+papers culminating in "Lambda the Ultimate Kitchen Utensil." This paper becomes the basis for a long running,
+but ultimately unsuccessful run of late night infomercials. Lambdas are relegated to relative obscurity until
+Java makes them popular by not having them."</i> ~ from <a href="http://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html">"A Brief,
+Incomplete, and Mostly Wrong History of Programming Languages"</a></p>
+<p>So in Ruby, we can store blocks as lambdas inside of variables, and call on them by invoking
+the method <code>call</code> onto the variable, and passing it any arguments that it requires. Observe:</p>
+<script src="https://gist.github.com/mindplace/d46e303bb08814cecc7d.js"></script>
+<p>What's happening here? We created a lambda object by simply using the keyword <code>lambda</code>, assigned
+that to a variable <code>add</code>, and specified the lambda block with the block <code>{|x, y| x + y}</code>.
+Then, on line 13, we called it using <code>add.call</code> and passing it the two number arguments, which satisfy
+the requirements for x & y in the lambda block, and x + y (num1 + num2) is produced. Is the output identical?</p>
+<script src="https://gist.github.com/mindplace/7e47e6e553154b5d0ee9.js"></script>
+<p>Ok, cool, it totally is identical! Does JavaScript have a similar functionality? Why yes, yes it does:</p>
+<script src="https://gist.github.com/mindplace/5e3466098c0ce47e1a36.js"></script>
+<p>Other than no sleep functionality, and struggling to generate a random number to take a random
+sample from the coins array, the difference between this script and the Ruby one is the way that function
+in <code>add</code> is embedded into the variable. Very cool! Looks a lot like a lambdas!</p>
+<p>Here's the difference. In Ruby, lambdas are rarely used. It is much more common to
+<a href="https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/18-blocks/lessons/55-new-lesson">pass blocks implicitly
+or explicitly</a> to a method when calling it to run. When we explicitly pass a block to a method, we have to use an ampersand (&) symbol to
+denote to the method that that argument is a block. Alternatively, we can implicitly pass a block to a method, and
+don't need to either declare it as an argument when it is passed, nor embed the block in a variable.
+Here's the same example with an implicit block: notice
+how it is being called to run below the method definition, and how it is being called upon: </p>
+<script src="https://gist.github.com/mindplace/78071290b85bac699732.js"></script>
+<p>Does JavaScript have something like this? Well, it definitely has explicit blocks, and it calls them <a href="http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/">callback</a>
+functions. In fact, the JavaScript example used above includes a nameless callback function inside of the <code>add</code> variable. No, it doesn't look
+like you can implicitly pass a block the way we're doing with the Ruby example above, but JavaScript's functions are so easily embeddable as
+callback functions that there's no reason to pine for Ruby's approach.</p>
+<p>So here's the takeaway. Ruby thinks pretty seriously about blocks, Procs, and lambdas. It formalizes Procs and lambdas with special rules
+like what happens when you use the keyword <code>return</code> inside of one. It allows you to call or run the block and pass it things as well
+as making a distinction between that and creating your own external method, running that by passing it an argument, and capturing the result. But JavaScript
+isn't as demanding of carefulness: it's common practice to create callbacks, embed functions as values for variables, call on them and pass things
+to them inside and outside of functions, and more. It's a wonderful, functional free-for-all. Both approaches&mdash;and both cultures, really&mdash;have their
+own history and purpose, and both work great even though they are different. </p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+  </body>
+
+</html>

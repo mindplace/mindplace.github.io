@@ -1,0 +1,66 @@
+---
+layout: post
+title:  "Bootcamp blog: Ruby classes"
+date:   2016-03-16 14:56:27 -0400
+---
+<p>Classes in Ruby&mdash;and other languages&mdash;are a way of organizing objects into mini code-factories:
+where the class itself is a template that gets filled out for each copy, or instance, of itself. A great
+real-world explanation of classes is in role-playing games where at the beginning you create your own character
+(and credit for this thought goes to the
+<a href="http://inventwithpython.com/blog/2014/12/02/why-is-object-oriented-programming-useful-with-an-role-playing-game-example/">Invent With Python</a> blogger).
+Your character will belong to a class&mdash;it'll be a Warrior, or a Druid, or a Healer, etc&mdash;but it will be unique
+to you, because it will have a name that you give it, and other information like special clothes that it wears
+because you decided on them, etc. Based on its class, your character will also have its own behaviours: it will
+be able to heal other characters if it's a Healer, or talk to plants if it's a Druid, or kick some serious butt
+if it's a Warrior, etc, and for the most part, these special behaviours will not be available to characters from
+other classes.</p>
+<p>Similarly, a Ruby class has state&mdash;attributes like name, etc&mdash;and behaviours&mdash;methods that instances of itself
+can execute. We can think of attributes as things that describe the object and give it an identity from other
+instances of that class: it'll have its own name, for example. So attributes are things that that instance of the
+class IS, and its methods are things that it DOES.</p>
+<p>When a copy of the class is taken to create a new instance of that class, it is given its own
+state/attributes. To illustrate, here's a Book class:</p>
+<script src="https://gist.github.com/mindplace/90dd6d9af6dd59ede721.js"></script>
+<p>Books in the real world aren't meant to DO anything on their own (not that that stops them from being
+powerful forces...), but they are certainly meant to have unique attributes: their own title and author, for example.
+In the example above, the class Book is a set of code that, when a copy of itself is made and given a title and
+an author, will be a unique Book object.</p>
+<p>The methods <code>title</code> and <code>author</code> expose the values
+contained inside the instance variables <code>@title</code> and <code>@author</code> respectively. (Instance
+variables are variables that are expressely there to hold values for a specific instance of that class: they are
+available anywhere inside the class to give their value or to have that value altered.) Using <code>attr_reader</code>,
+we can abstract away those simple <code>title</code> and <code>author</code> methods into the following:
+<code>attr_reader :title, :author</code>, which under the hood is exactly what those little methods are, just
+differently written. Here's the Book class updated to use <code>attr_reader</code>:</p>
+<script src="https://gist.github.com/mindplace/8fe4ba7674eda3e8d828.js"></script>
+<p>Looks like the parts inside <code>initialize</code> changed too! Like <code>attr_reader</code>,
+writing variable assignments like this is just a shorter, one-line way of doing the same thing as before.</p>
+<p>Now let's make a Library class:</p>
+<script src="https://gist.github.com/mindplace/ee370d161d1cc016b224.js"></script>
+<p>Our Library class is a little more complex than our Book class. Our Library class has methods that allow it to
+DO stuff, not just BE stuff: it can <code>add_book</code> into itself, it can <code>suggest_a_book</code> to the
+user, and it can <code>suggest_an_author</code> too. Don't focus too much on the code inside <code>add_book</code>
+just yet, we'll get to it in a moment. Right now, let's make a new Library object, and ask it to show itself to us
+using <code>p</code>:</p>
+<script src="https://gist.github.com/mindplace/416ee67f221a09f8036d.js"></script>
+<p>That's a very interesting bit of code right there in the comments: when we asked <code>my_library</code>
+to show itself to us, it printed out that long string of characters. The first part is clear: it's telling us
+what class it belongs to. The next bit of numbers is its object ID; and that last part, the <code>@books=[]</code>, is its
+attribute <code>books</code>, which we said is empty when we first initialize our Library. (Since
+all libraries start out empty at first and get filled up with books over time.) So now, let's add some books
+to our library using the <code>add_book</code> method:</p>
+<script src="https://gist.github.com/mindplace/82acb8ab901326ea1a85.js"></script>
+<p>So before, our library had an empty array for <code>@books</code> attribute: but now it's filled with 4 Book objects, each
+with their own attributes of <code>@title</code> and <code>@author</code>! This is because the Library method <code>add_book</code>
+takes two arguments, title and author, and uses those arguments to create a new Book object each time it is called;
+then it "shovels" the new Book object as a whole&mdash;including its object ID and everything else about it, like its
+attributes&mdash;into the <code>@books</code> array.</p>
+<p>It's a bit hard to read those long indecipherable object strings. Let's ask it to show us its books in a nicer
+way:</p>
+<script src="https://gist.github.com/mindplace/0ae344719e4c9ae1b475.js"></script>
+<p>That's much nicer! <code>@books</code> holds the value of an array of objects, and the array method <code>each</code>
+allows us to iterate over <code>@books</code> and ask each book object to put itself to the console in the way we've
+specified.</p>
+<p>Now let's try out its rather pushy <code>suggest_a_book</code> and <code>suggest_an_author</code> methods:</p>
+<script src="https://gist.github.com/mindplace/7d0358f4b83fbddc1f4a.js"></script>
+<p>Super nifty! That's all for today, I'm feeling like opening up my copy of <i>The Well Grounded Rubyist</i> now.</p>

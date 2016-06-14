@@ -44,6 +44,11 @@
   text-align: right;
   padding-top: 20px;
 }
+.image-float {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
 /**
  * Site header
  */
@@ -232,10 +237,17 @@
         flex: 1;
     }
 }
-
+.dividing-month {
+  margin-top: 4%;
+}
+h2.dividing-month {
+  margin-bottom: 1%;
+  padding-bottom: 0;
+}
 .post-meta-box {
   display: inline-block;
-  width: 15%;
+  width: 10%;
+  padding-left: 3%;
 }
 .post-meta {
     font-size: $base-font-size;

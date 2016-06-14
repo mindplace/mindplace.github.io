@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Finding primes with the sieve of Eratosthenes"
+date:   2016-03-28 14:56:27 -0400
+---
+    <p>Before I started Dev Bootcamp, one of the ways I prepared myself was by spending
+      quite a lot of time solving various challenges, and it wasn't long before I came accross
+      <a href="https://projecteuler.net/archives">Project Euler</a>. I wasn't able to get too far
+      with them, maybe only the first dozen or so, as the difficulty curve rose really quickly for me,
+      and my 3 levels of Calculus in college weren't coming back to me at all easily.</p>
+    <p>One of the most memorable challenges I did for Project Euler was finding the sums of all
+      the prime numbers below 2 million. This was a difficult problem for me because my
+      brute-force solution&mdash;checking each
+      consecutive number for primeness by taking its factors&mdash;was just incredibly slow, and therefore
+      disqualified as a solution. (And by slow I mean it would have taken days.) I finally caved in
+      and created a sieve of Eratosthenes as StackOverflow commentors suggested. To do that, I spent
+      quite a lot of time staring at <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">the
+      lovely animation on the Wikipedia page</a> for the sieve. I understood that the sieve didn't
+      check for primeness; it instead assumed that multiples of given nums were already not going to be
+      prime. Thanks to that, I finally came up with my solution for the prime problem:</p>
+      <script src="https://gist.github.com/mindplace/cf2c73c507b7711cd22d.js"></script>
+      <p>I was so very proud of this solution. It's short, easy on computational load, and is optimized
+        by the way it uses squares: it starts resetting multiples from the square of the current num,
+        and breaks as soon as the square of the current num exceeds the length of the range. I'm happy with
+        this solution! So a few months later, I decided to implement the sieve in JavaScript as well,
+        except this one is meant to find the nth prime:</p>
+        <script src="https://gist.github.com/mindplace/ad2d6dd52d89e32f6813.js"></script>
+      <p>First off, the JavaScript solution is much more verbose; to do things like populate the initial
+        range, or to find the next larger number to be the current num, it takes more lines and more
+        words to do so. But even in JavaScript it is an elegant solution that is much shorter and simpler
+        than it could otherwise be. So I think I can count myself as still happy with it.</p>
