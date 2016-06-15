@@ -155,12 +155,13 @@ pre {
   background-size: cover;
   padding-top: -20%;
   background-attachment: fixed;
-  background-position: center; }
+  background-position: center;
+  height: 100vh; }
 
 .index-inner {
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 10% 15% 20% 15%;
+  padding: 10% 15% 24.9% 15%;
   text-align: center; }
 
 .index-inner h1 {
