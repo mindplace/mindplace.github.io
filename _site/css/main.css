@@ -11,7 +11,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 400 18px/1.5 "Jaldi", sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -44,7 +44,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 15.75px; }
 
 /**
  * Lists
@@ -151,8 +151,27 @@ pre {
   padding-top: 3%; }
 
 .index-home {
+  background-image: url("/assets/fruit.jpg");
+  background-size: cover;
+  padding-top: -20%; }
+
+.index-inner {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10% 15% 20% 15%;
+  text-align: center; }
+
+.index-inner h1 {
+  font-size: 6em; }
+
+.index-inner h3 {
+  font-size: 2.5em; }
+
+.index-second {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  margin-top: 15%;
+  margin-bottom: 25%; }
 
 .index-box {
   width: 50%; }
@@ -201,7 +220,6 @@ pre {
 .site-header {
   border-top: 5px solid #424242;
   background-color: #424242;
-  border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
   position: relative; }
 
@@ -213,7 +231,7 @@ pre {
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: white; }
+    color: #828282; }
 
 .site-nav {
   float: right;
@@ -221,7 +239,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: white;
+    color: #828282;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -343,7 +361,7 @@ h2.dividing-month {
   padding-left: 3%; }
 
 .post-meta {
-  font-size: 16px;
+  font-size: 18px;
   color: #828282; }
 
 .post-link {

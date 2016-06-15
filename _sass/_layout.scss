@@ -5,8 +5,28 @@
   padding-top: 3%;
 }
 .index-home {
+  // background-image: url("/assets/succulent.jpg");
+  background-image: url("/assets/fruit.jpg");
+  background-size: cover;
+  padding-top: -20%;
+}
+.index-inner {
+  background: transparentize($black, 0.5);
+  color: white;
+  padding: 10% 15% 20% 15%;
+  text-align: center;
+}
+.index-inner h1 {
+  font-size: 6em;
+}
+.index-inner h3 {
+  font-size: 2.5em;
+}
+.index-second {
   display: flex;
   flex-direction: row;
+  margin-top: 15%;
+  margin-bottom: 25%;
 }
 .index-box {
   width: 50%;
@@ -55,7 +75,7 @@
 .site-header {
     border-top: 5px solid $grey-color-dark;
     background-color: $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    // border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -72,7 +92,7 @@
 
     &,
     &:visited {
-        color: white;
+        color: $grey-color;
     }
 }
 
@@ -85,7 +105,7 @@
     }
 
     .page-link {
-        color: white;
+        color: $grey-color;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
