@@ -1,77 +1,203 @@
-.centered {
-  text-align: center;
+@include media-query($on-laptop) {
+  @media screen and (min-width: $on-laptop) {
+    .wrapper {
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+    .centered {
+      text-align: center;
+    }
+    .home {
+      padding-top: 3%;
+    }
+    .index-home {
+      background-image: url("/assets/fruit.jpg");
+      background-size: cover;
+      padding-top: -20%;
+      background-attachment: fixed;
+      background-position: center;
+      height: 100vh;
+    }
+    .index-inner {
+      background: transparentize($black, 0.5);
+      color: white;
+      padding: 10% 15% 24.9% 15%;
+      text-align: center;
+    }
+    .index-inner h1 {
+      font-size: 5em;
+    }
+    .index-inner h3 {
+      font-size: 2.5em;
+    }
+    .index-second {
+      display: flex;
+      flex-direction: row;
+      margin-top: 15%;
+      margin-bottom: 25%;
+    }
+    .index-box {
+      width: 50%;
+    }
+    .index-box img {
+      width: 80%;
+      padding: 2%;
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
+    }
+    .wrapped {
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
+      padding: 2%;
+      margin-bottom: 4%;
+    }
+    .highlight-text {
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
+      padding: 2%;
+    }
+    .blog-heading {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 4px solid $grey-color-light;
+      margin-bottom: 3%;
+    }
+    .blog-heading-header {
+      display: inline-block;
+      width: 50%;
+    }
+    .blog-rss {
+      display: inline-block;
+      width: 50%;
+      text-align: right;
+      padding-top: 20px;
+    }
+    .image-float {
+      float: left;
+      margin-right: 2%;
+      margin-bottom: 2%;
+    }
+    .post-meta-box {
+      display: inline-block;
+      width: 10%;
+      padding-left: 3%;
+    }
+    .post-meta {
+        font-size: $base-font-size;
+        color: $grey-color;
+    }
+    .post-link {
+        font-size: 20px;
+    }
+    .post-link-box {
+      display: inline-block;
+      width: 80%;
+    }
+  }
 }
-.home {
-  padding-top: 3%;
+
+@include media-query($on-phone) {
+  @media screen and (max-width: $on-phone) {
+    body {
+      width: 100%;
+    }
+    .wrapper {
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+    .home {
+      padding-top: 3%;
+    }
+    .index-home {
+      background-image: url("/assets/fruit.jpg");
+      background-size: cover;
+      padding-top: -20%;
+      background-attachment: fixed;
+      background-position: center;
+      height: 92vh;
+    }
+    .index-inner {
+      background: transparentize($black, 0.5);
+      color: white;
+      padding: 10% 15% 34% 15%;
+      text-align: center;
+    }
+    .index-inner h1 {
+      font-size: 3em;
+    }
+    .index-inner h3 {
+      padding-top: 15%;
+      font-size: 1.5em;
+    }
+    .index-second {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 25%;
+    }
+    .index-box {
+      padding-top: 5%;
+      width: 80%;
+      margin: auto;
+    }
+    .index-box img {
+      padding: 2%;
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
+    }
+    .wrapped {
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
+      padding: 2%;
+      margin-bottom: 4%;
+    }
+    .highlight-text {
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
+      padding: 2%;
+    }
+    .blog-heading {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 4px solid $grey-color-light;
+      margin-bottom: 3%;
+    }
+    .blog-heading-header {
+      display: inline-block;
+      width: 70%;
+    }
+    .blog-rss {
+      display: none
+    }
+    .image-float {
+      float: left;
+      margin-right: 2%;
+      margin-bottom: 2%;
+    }
+    .post-list li {
+      padding-bottom: 6%;
+    }
+    .post-meta-box {
+      display: inline-block;
+      width: 20%;
+      padding-left: 2%;
+    }
+    .post-meta {
+        font-size: $base-font-size;
+        color: $grey-color;
+        line-height: 10px;
+    }
+    .post-link {
+        font-size: $base-font-size;
+        line-height: 10px;
+    }
+    .post-link-box {
+      display: inline-block;
+      width: 76%;
+    }
+  }
 }
-.index-home {
-  // background-image: url("/assets/succulent.jpg");
-  background-image: url("/assets/fruit.jpg");
-  background-size: cover;
-  padding-top: -20%;
-  background-attachment: fixed;
-  background-position: center;
-  height: 100vh;
-}
-.index-inner {
-  background: transparentize($black, 0.5);
-  color: white;
-  padding: 10% 15% 24.9% 15%;
-  text-align: center;
-}
-.index-inner h1 {
-  font-size: 5em;
-}
-.index-inner h3 {
-  font-size: 2.5em;
-}
-.index-second {
-  display: flex;
-  flex-direction: row;
-  margin-top: 15%;
-  margin-bottom: 25%;
-}
-.index-box {
-  width: 50%;
-}
-.index-box img {
-  width: 80%;
-  padding: 2%;
-  border: 1px solid $grey-color-light;
-  border-radius: 5px;
-}
-.wrapped {
-  border: 1px solid $grey-color-light;
-  border-radius: 5px;
-  padding: 2%;
-  margin-bottom: 4%;
-}
-.highlight-text {
-  border: 1px solid $grey-color-light;
-  border-radius: 5px;
-  padding: 2%;
-}
-.blog-heading {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 4px solid $grey-color-light;
-  margin-bottom: 3%;
-}
-.blog-heading-header {
-  display: inline-block;
-  width: 50%;
-}
-.blog-rss {
-  display: inline-block;
-  width: 50%;
-  text-align: right;
-  padding-top: 20px;
-}
-.image-float {
-  float: left;
-  margin-right: 2%;
-  margin-bottom: 2%;
-}
+
+
 /**
  * Site header
  */
@@ -267,22 +393,7 @@ h2.dividing-month {
   margin-bottom: 1%;
   padding-bottom: 0;
 }
-.post-meta-box {
-  display: inline-block;
-  width: 10%;
-  padding-left: 3%;
-}
-.post-meta {
-    font-size: $base-font-size;
-    color: $grey-color;
-}
-.post-link {
-    font-size: 20px;
-}
-.post-link-box {
-  display: inline-block;
-  width: 80%;
-}
+
 
 
 
