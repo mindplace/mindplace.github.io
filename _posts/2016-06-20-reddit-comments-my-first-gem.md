@@ -1,5 +1,8 @@
 ---
 published: false
+layout: post
+title: 'reddit_comments: my first gem'
+date: 2016-06-20T00:00:00.000Z
 ---
 ## reddit_comments: my first gem!
 
