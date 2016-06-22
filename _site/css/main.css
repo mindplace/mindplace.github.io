@@ -445,7 +445,7 @@ h2.dividing-month {
 .page-content a:hover {
   color: #8eb3b0; }
 
-.page-content a:link {
+.page-content a:link, a:visited {
   color: #58837f; }
 
 /**
