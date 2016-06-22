@@ -39,19 +39,25 @@ body {
   margin-bottom: 2%;
 }
 
+.index-home {
+  background-image: url("/assets/water_cliffs.jpg");
+  background-size: cover;
+  padding-top: -20%;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.index-inner {
+  background: transparentize(white, 0.7);
+  color: black;
+}
+
 @include media-query($on-phone) {
   @media screen and (max-width: $on-phone) {
     .index-home {
-      background-image: url("/assets/fruit.jpg");
-      background-size: cover;
-      padding-top: -20%;
-      background-attachment: fixed;
-      background-position: center;
       height: 92vh;
     }
     .index-inner {
-      background: transparentize($black, 0.5);
-      color: white;
       padding: 10% 15% 34% 15%;
       text-align: center;
       box-sizing: border-box;
@@ -107,16 +113,9 @@ body {
 
 @media screen and (min-width: $on-phone) {
   .index-home {
-    background-image: url("/assets/fruit.jpg");
-    background-size: cover;
-    padding-top: -20%;
-    background-attachment: fixed;
-    background-position: center;
     height: 100vh;
   }
   .index-inner {
-    background: transparentize($black, 0.5);
-    color: white;
     padding: 10% 15% 24.9% 15%;
     text-align: center;
     box-sizing: border-box;
@@ -172,8 +171,8 @@ body {
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    background-color: $grey-color-dark;
+    border-top: 5px solid $blue-light;
+    background-color: $blue-light;
     // border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -191,7 +190,7 @@ body {
 
     &,
     &:visited {
-        color: $grey-color;
+        color: white;
     }
 }
 
@@ -204,7 +203,7 @@ body {
     }
 
     .page-link {
-        color: $grey-color;
+        color: white;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the last one
@@ -362,6 +361,12 @@ body {
 h2.dividing-month {
   margin-bottom: 1%;
   padding-bottom: 0;
+}
+.page-content a:hover {
+  color: $blue-light-vis;
+}
+.page-content a:link {
+  color: $blue-light;
 }
 
 

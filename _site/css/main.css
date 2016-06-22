@@ -11,7 +11,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 18px/1.5 "Jaldi", sans-serif;
+  font: 400 18px/1.5 "News Cycle", sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -184,18 +184,22 @@ body {
   margin-right: 2%;
   margin-bottom: 2%; }
 
+.index-home {
+  background-image: url("/assets/water_cliffs.jpg");
+  background-size: cover;
+  padding-top: -20%;
+  background-attachment: fixed;
+  background-position: center; }
+
+.index-inner {
+  background: rgba(255, 255, 255, 0.3);
+  color: black; }
+
 @media screen and (max-width: 440px) and (max-width: 440px) {
   .index-home {
-    background-image: url("/assets/fruit.jpg");
-    background-size: cover;
-    padding-top: -20%;
-    background-attachment: fixed;
-    background-position: center;
     height: 92vh; }
 
   .index-inner {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
     padding: 10% 15% 34% 15%;
     text-align: center;
     box-sizing: border-box;
@@ -247,16 +251,9 @@ body {
     width: 76%; } }
 @media screen and (min-width: 440px) {
   .index-home {
-    background-image: url("/assets/fruit.jpg");
-    background-size: cover;
-    padding-top: -20%;
-    background-attachment: fixed;
-    background-position: center;
     height: 100vh; }
 
   .index-inner {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
     padding: 10% 15% 24.9% 15%;
     text-align: center;
     box-sizing: border-box;
@@ -308,8 +305,8 @@ body {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  background-color: #424242;
+  border-top: 5px solid #58837f;
+  background-color: #58837f;
   min-height: 56px;
   position: relative; }
 
@@ -321,7 +318,7 @@ body {
   margin-bottom: 0;
   float: left; }
   .site-title, .site-title:visited {
-    color: #828282; }
+    color: white; }
 
 .site-nav {
   float: right;
@@ -329,7 +326,7 @@ body {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #828282;
+    color: white;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -444,6 +441,12 @@ body {
 h2.dividing-month {
   margin-bottom: 1%;
   padding-bottom: 0; }
+
+.page-content a:hover {
+  color: #8eb3b0; }
+
+.page-content a:link {
+  color: #58837f; }
 
 /**
  * Posts

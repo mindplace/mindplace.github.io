@@ -5,9 +5,62 @@
     <description>Building myself into a fullstack Rails dev by building awesome projects.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Jun 2016 15:47:44 -0400</pubDate>
-    <lastBuildDate>Fri, 17 Jun 2016 15:47:44 -0400</lastBuildDate>
+    <pubDate>Wed, 22 Jun 2016 11:35:16 -0400</pubDate>
+    <lastBuildDate>Wed, 22 Jun 2016 11:35:16 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>reddit_comments: my first gem</title>
+        <description>&lt;h2 id=&quot;redditcomments-my-first-gem&quot;&gt;reddit_comments: my first gem!&lt;/h2&gt;
+
+&lt;p&gt;I’ve wanted to build a gem since I first heard about them, but didn’t find myself building any particular features or products that could be modularized and shared with others in this way. But this weekend, at AngelHack Brooklyn 2016, my team and I built &lt;a href=&quot;https://github.com/mindplace/Curator-a-&quot;&gt;Curator&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Curator uses the Reddit API and the NYTimes API to pull text data when queried with a search term. It uses this data to make a call to the HPE Haven OnDemand API, which parses and extracts concepts. These concepts are returned to the frontend, where the jQuery library jQCloud uses it to create beautiful word clouds displaying how the media vs individuals feel about the given search query.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;One of the major problems we needed to solve was grabbing text from a Reddit post page with comments. Reddit’s commenting system is such that a user can make a comment on another comment, as well as on a post. So after battling http calls issues and figuring all that out, we were still left with a huge hash of comments with nested comments with nested comments.&lt;/p&gt;
+
+&lt;p&gt;If you know me at all, you know that my ears perk up at these kinds of problems right away, because I am a bit of a fan of recursion. So I ended up spending a lot of time figuring out what data is given in this hash, and then designing a method to pull in those comments recursively:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;recursive_comment_digging&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[])&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parent_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;parent_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;replies&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;replies&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;replies&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;children&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;recursive_comment_digging&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;comment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;comments&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Today I sat down and packaged up that functionality as a gem. It turned out to be a lot easier than I initially thought it would be. Essentially there were several parts to the job:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Deciding on scope: I decided that I wanted my gem to take a URL and return the comments posted on that Reddit page as an array of hashes.&lt;/li&gt;
+  &lt;li&gt;Understanding what goes into building a gem: I found &lt;a href=&quot;http://railscasts.com/episodes/245-new-gem-with-bundler&quot;&gt;RailsCast’s post&lt;/a&gt; on building a gem with Bundler to be really helpful, as well as the official &lt;a href=&quot;http://guides.rubygems.org/rubygems-basics/&quot;&gt;RubyGems&lt;/a&gt; documentation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The biggest issue I faced was when I tried to push the gem to RubyGems.org. It turned out that because my terminal had been in the folder when I had built the gem initially to install and test locally, the compiled gem file ended up being inside the folders that contained the files to build it–but resolving this was as easy as deleting that file and building it outside of the folders entirely.&lt;/p&gt;
+
+&lt;p&gt;Next step is refactoring and building some RSpec tests for this gem!&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 19 Jun 2016 20:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2016/06/19/reddit-comments-my-first-gem.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/06/19/reddit-comments-my-first-gem.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Bucket sort</title>
@@ -283,30 +336,6 @@ good practice with interconnected classes and modeling real-world scenarios.&lt;
         <pubDate>Fri, 25 Mar 2016 14:56:27 -0400</pubDate>
         <link>http://yourdomain.com/2016/03/25/solving-algorithms-in-javascript.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2016/03/25/solving-algorithms-in-javascript.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Fibonacci algorithms in JavaScript and Ruby</title>
-        <description>&lt;p&gt; Working with the Fibonacci sequence is really enjoyable as it is
-  not bad to do either recursively or iteratively. And having to do it in JS was not painful. Here&#39;s
-  one in JavaScript that generates Fibonacci numbers while the length of the sequence array does not equal the
-  given required length:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/deb13ac6c015c8b3a4e1.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;And a similarly formed algorithm for determining if a given number is a Fibonacci number:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/918c6e3d87a28c484da4.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;Here&#39;s the same solution in Ruby:&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/57fb6100245cfbdfd979.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;Those are all iterative solutions. I think recursive solutions are also lovely!&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/b7711feface611ad7082.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;Except that my solution is, if anything, a line or two longer than the iterative one. So this
-  wouldn&#39;t be even a conceptually better or neater solution and since it takes more memory,
-  it&#39;ll remain just an exercise.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 25 Mar 2016 14:56:27 -0400</pubDate>
-        <link>http://yourdomain.com/2016/03/25/fibonacci-algorithms-in-javascript-and-ruby.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2016/03/25/fibonacci-algorithms-in-javascript-and-ruby.html</guid>
         
         
       </item>
