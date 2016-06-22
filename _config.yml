@@ -8,7 +8,6 @@
 # Site settings
 title: Esther Leytush
 email: eleytush@gmail.com
-description: Building myself into a fullstack Rails dev by building awesome projects. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: mindpl_ace
