@@ -248,7 +248,10 @@ body {
 
   .post-link-box {
     display: inline-block;
-    width: 76%; } }
+    width: 76%; }
+
+  .page-link {
+    color: #58837f; } }
 @media screen and (min-width: 440px) {
   .index-home {
     height: 100vh; }
@@ -300,7 +303,10 @@ body {
 
   .post-link-box {
     display: inline-block;
-    width: 80%; } }
+    width: 80%; }
+
+  .page-link {
+    color: #58837f; } }
 /**
  * Site header
  */
@@ -361,9 +367,10 @@ body {
       .site-nav .page-link {
         display: block;
         padding: 5px 10px;
-        margin-left: 20px; }
+        color: #58837f;
+        margin: 5px; }
         .site-nav .page-link:not(:last-child) {
-          margin-right: 0; } }
+          margin: 5px; } }
 
 /**
  * Site footer

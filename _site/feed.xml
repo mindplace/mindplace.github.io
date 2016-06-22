@@ -5,15 +5,13 @@
     <description>Building myself into a fullstack Rails dev by building awesome projects.</description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jun 2016 11:35:16 -0400</pubDate>
-    <lastBuildDate>Wed, 22 Jun 2016 11:35:16 -0400</lastBuildDate>
+    <pubDate>Wed, 22 Jun 2016 16:28:14 -0400</pubDate>
+    <lastBuildDate>Wed, 22 Jun 2016 16:28:14 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>reddit_comments: my first gem</title>
-        <description>&lt;h2 id=&quot;redditcomments-my-first-gem&quot;&gt;reddit_comments: my first gem!&lt;/h2&gt;
-
-&lt;p&gt;I’ve wanted to build a gem since I first heard about them, but didn’t find myself building any particular features or products that could be modularized and shared with others in this way. But this weekend, at AngelHack Brooklyn 2016, my team and I built &lt;a href=&quot;https://github.com/mindplace/Curator-a-&quot;&gt;Curator&lt;/a&gt;:&lt;/p&gt;
+        <description>&lt;p&gt;I’ve wanted to build a gem since I first heard about them, but didn’t find myself building any particular features or products that could be modularized and shared with others in this way. But this weekend, at AngelHack Brooklyn 2016, my team and I built &lt;a href=&quot;https://github.com/mindplace/Curator-a-&quot;&gt;Curator&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“Curator uses the Reddit API and the NYTimes API to pull text data when queried with a search term. It uses this data to make a call to the HPE Haven OnDemand API, which parses and extracts concepts. These concepts are returned to the frontend, where the jQuery library jQCloud uses it to create beautiful word clouds displaying how the media vs individuals feel about the given search query.”&lt;/p&gt;
@@ -53,7 +51,6 @@
 &lt;p&gt;The biggest issue I faced was when I tried to push the gem to RubyGems.org. It turned out that because my terminal had been in the folder when I had built the gem initially to install and test locally, the compiled gem file ended up being inside the folders that contained the files to build it–but resolving this was as easy as deleting that file and building it outside of the folders entirely.&lt;/p&gt;
 
 &lt;p&gt;Next step is refactoring and building some RSpec tests for this gem!&lt;/p&gt;
-
 </description>
         <pubDate>Sun, 19 Jun 2016 20:00:00 -0400</pubDate>
         <link>http://yourdomain.com/2016/06/19/reddit-comments-my-first-gem.html</link>
