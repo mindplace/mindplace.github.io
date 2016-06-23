@@ -54,6 +54,10 @@ body {
 .project-img {
   margin-bottom: 2%;
 }
+.secondary-title {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+}
 
 @include media-query($on-phone) {
   @media screen and (max-width: $on-phone) {
