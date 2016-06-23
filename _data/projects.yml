@@ -1,11 +1,14 @@
 - name: Make Together
   description: A social media platform that connects designers and developers to have conversations and build projects together. My role involved leading the team, building custom Oauth solution for Dribbble login, Heroku deployment, and integrating others' code into overall project. Built with <a href="https://github.com/LisaBee224">Lisa Buch</a>, <a href="https://github.com/samanthavholmes">Samantha Holmes</a>, and <a href="https://github.com/choff999">Caitlin Hoffman</a>.
   url: https://github.com/mindplace/make-together
+  img: /assets/maketogether.png
 
 - name: LES Film Festival
-  description: A fake film festival built to work on our Rails, jQuery, and Bootstrap skills. Built with <a href="https://github.com/jmcolella">John Colella</a> and <a href="https://github.com/katherinebroner">Katherine Broner</a>.
+  description: A fake film festival built to work on our Rails, jQuery, and Bootstrap skills. My role included heavy involvement in crafting the app architecture, creating logic for models, taking ownership for various vertical slices, integrating Bootstrap into our frontend setup, and spearheading Heroku deployment. Built with <a href="https://github.com/jmcolella">John Colella</a> and <a href="https://github.com/katherinebroner">Katherine Broner</a>.
   url: https://github.com/mindplace/les-film-festival
+  img: /assets/les.png
 
 - name: Accountability List
   description: The user generates a list of personal accountability standards, reviews them every day, check off whichever they complete that day, and is able to see their statistics over time. Built on Sinatra to practice visual design, CRUD, and RESTful conventions. Currently working on using the generated data to create D3 visualizations for users.
   url: https://github.com/mindplace/accountability-list
+  img: /assets/accountability.png

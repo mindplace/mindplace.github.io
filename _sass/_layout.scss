@@ -51,6 +51,9 @@ body {
   background: transparentize(white, 0.7);
   color: black;
 }
+.project-img {
+  margin-bottom: 2%;
+}
 
 @include media-query($on-phone) {
   @media screen and (max-width: $on-phone) {

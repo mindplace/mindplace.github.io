@@ -195,6 +195,9 @@ body {
   background: rgba(255, 255, 255, 0.3);
   color: black; }
 
+.project-img {
+  margin-bottom: 2%; }
+
 @media screen and (max-width: 440px) and (max-width: 440px) {
   .index-home {
     height: 92vh; }

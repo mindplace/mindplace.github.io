@@ -9,6 +9,7 @@ permalink: /projects/
 <div class="home">
     {% for item in site.data.projects %}
       <div class="wrapped">
+        <img class="project-img" src="{{ item.img }}">
         <a href="{{ item.url }}"><h2>{{ item.name }}</h2></a>
         <p class="project-description">{{ item.description }}</p>
       </div>
