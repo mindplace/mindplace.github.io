@@ -5,9 +5,60 @@
     <description></description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jun 2016 23:31:53 -0400</pubDate>
-    <lastBuildDate>Wed, 22 Jun 2016 23:31:53 -0400</lastBuildDate>
+    <pubDate>Sun, 26 Jun 2016 13:39:15 -0400</pubDate>
+    <lastBuildDate>Sun, 26 Jun 2016 13:39:15 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Deploying Sinatra apps to Heroku</title>
+        <description>&lt;p&gt;I’ve deployed various Rails apps to Heroku, but never tried deploying a Sinatra app. At first glance, the process should be similar: add some gems, create new Heroku app via command line, push up, and run database setup commands. Let’s see if that prediction holds true.&lt;/p&gt;
+
+&lt;p&gt;I’ve got a &lt;a href=&quot;https://github.com/mindplace/throne-overthrow&quot;&gt;StackOverflow clone&lt;/a&gt; that I built with a team for Dev Bootcamp that we called ThroneOverthrow (the go-to forum to ask questions about Game of Thrones!) ready to deploy. It has a lot of problems, primarily the way it looks and feels, but it’s a toy app and ready enough.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ heroku create throne-overthrow
+Creating ⬢ throne-overthrow... done
+https://throne-overthrow.herokuapp.com/ | https://git.heroku.com/throne-overthrow.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So far so good! Now to deploy…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git push heroku master
+... [lots of good-looking things happen on the screen...]
+Verifying deploy... done.
+To https://git.heroku.com/throne-overthrow.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sweet! Now, migrations and seeding…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ heroku run rake db:migrate
+Running rake db:migrate on ⬢ throne-overthrow... up, run.1706
+
+$ heroku run rake db:seed
+Running rake db:seed on ⬢ throne-overthrow... up, run.8956
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Looks great. Opening to make sure it’s up…&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ heroku open
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/blog/throne-overthrow.png&quot; alt=&quot;throne-overthrow.png&quot; /&gt;
+&lt;i&gt;Jon Snow says, ‘Wat are dis?’&lt;/i&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s all there! Awesome and painless.&lt;/p&gt;
+
+&lt;p&gt;The site is up at &lt;a href=&quot;https://throne-overthrow.herokuapp.com&quot;&gt;throne-overthrow.herokuapp.com&lt;/a&gt;. Last step is making sure the site doesn’t go to sleep when people want to check it out, which means using &lt;a href=&quot;http://kaffeine.herokuapp.com/&quot;&gt;Kaffeine&lt;/a&gt;. Aaaand…done!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 26 Jun 2016 00:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2016/06/26/deploying-sinatra-apps-to-heroku.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/06/26/deploying-sinatra-apps-to-heroku.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>reddit_comments: my first gem</title>
@@ -302,37 +353,6 @@ good practice with interconnected classes and modeling real-world scenarios.&lt;
         <pubDate>Sun, 27 Mar 2016 14:56:27 -0400</pubDate>
         <link>http://yourdomain.com/2016/03/27/binary-search.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2016/03/27/binary-search.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Solving algorithms in JavaScript</title>
-        <description>&lt;p&gt;Working through another set of small algorithmic challenges in order to bootstrap my JavaScript
-  literacy! Today&#39;s problems include a pretty long solution to finding the mode in a given array,
-  and the Look-Say sequence.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Mode.&lt;/b&gt; This problem gave me, well, problems. I used a JavaScript object like a hash to
-  store values, but getting them back was messy as I&#39;m still unused to the syntax. In the end
-  it was a long, drawn-out affair in three parts: generating a hash of the given numbers with their
-  respective counts, determining the element with the highest count, and generating a new array
-  containing the numbers whose counts were equal to the highest count.&lt;/p&gt;
-  &lt;script src=&quot;https://gist.github.com/mindplace/b30f04954bd02bbd9ee6.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;&lt;b&gt;Look-Say Sequence.&lt;/b&gt; The idea for this one is for the program to look at a given number,
-  extract it from the series, and record how many times it is repeated. So the number 1 returns
-  11, because there was one 1 in the original number; the number 338862222 returns two 3s, two 8s,
-  one 6, and four 2s, or 23281642.&lt;/p&gt;
-  &lt;script src=&quot;https://gist.github.com/mindplace/3877aa922f0c537b5c3e.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;Doing these kinds of algorithms all week has really helped me to get comfortable with JavaScript,
-  I think. It&#39;s how I initially learned Ruby: first learn enough syntax to solve algorithms, then
-  solve a whole bunch of them, then read textbooks to understand what is happening and what else
-  I should think about to start building on top of the small but stable amount of knowledge that I
-  have. I read somewhere about a dev who has a series of go-to challenges for solving when learning
-  new languages, and although I originally thought that something like that wouldn&#39;t be enough, now
-  it feels a bit different.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 25 Mar 2016 14:56:27 -0400</pubDate>
-        <link>http://yourdomain.com/2016/03/25/solving-algorithms-in-javascript.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2016/03/25/solving-algorithms-in-javascript.html</guid>
         
         
       </item>
