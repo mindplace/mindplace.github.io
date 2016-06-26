@@ -1,5 +1,6 @@
 ---
 published: true
+layout: post
 title: Deploying Sinatra apps to Heroku
 date: 2016-06-26
 ---
