@@ -116,12 +116,40 @@ Running rake db:seed on ⬢ throne-overthrow... up, run.8956
 <p>The site is up at <a href="https://throne-overthrow.herokuapp.com">throne-overthrow.herokuapp.com</a>. Last step is making sure the site doesn’t go to sleep when people want to check it out, which means using <a href="http://kaffeine.herokuapp.com/">Kaffeine</a>. Aaaand…done!</p>
 
   </div>
-
 </article>
 
 <div class="post-header">
   <h3><a href="/blog/"><< Back to blog</a></h3>
 </div>
+
+<div class="post-header">
+  <h2>Comments</h2>
+</div>
+
+<article>
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      /*
+      var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() {
+          var d = document, s = d.createElement('script');
+
+          s.src = '//estherleytush.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</article>
 
       </div>
     </div>
@@ -170,6 +198,7 @@ Running rake db:seed on ⬢ throne-overthrow... up, run.8956
 
 </footer>
 
+    <script id="dsq-count-scr" src="//estherleytush.disqus.com/count.js" async></script>
   </body>
 
 </html>
