@@ -37,6 +37,4 @@ And finally, in my posts layout, I add this to the bottom of the page:
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 ```
 
-Checked it out on my site and it's there and looking super spiffy!
-
-![disqus.png](/assets/blog/disqus.png)
+Checked it out on my site and it's there and looking super spiffy! There it is below :) 
