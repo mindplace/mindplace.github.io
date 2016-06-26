@@ -1,8 +1,9 @@
 ---
 published: true
 layout: post
-title: 'reddit_comments: my first gem'
+title: reddit_comments: my first gem
 date: 2016-06-20T00:00:00.000Z
+comments: true
 ---
 I've wanted to build a gem since I first heard about them, but didn't find myself building any particular features or products that could be modularized and shared with others in this way. But this weekend, at AngelHack Brooklyn 2016, my team and I built [Curator](https://github.com/mindplace/Curator-a-):
 
