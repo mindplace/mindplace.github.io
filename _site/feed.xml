@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jun 2016 13:58:31 -0400</pubDate>
-    <lastBuildDate>Sun, 26 Jun 2016 13:58:31 -0400</lastBuildDate>
+    <pubDate>Sun, 26 Jun 2016 14:27:30 -0400</pubDate>
+    <lastBuildDate>Sun, 26 Jun 2016 14:27:30 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -56,6 +56,49 @@ Running rake db:seed on ⬢ throne-overthrow... up, run.8956
         <pubDate>Sun, 26 Jun 2016 00:00:00 -0400</pubDate>
         <link>http://yourdomain.com/2016/06/26/deploying-sinatra-apps-to-heroku.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2016/06/26/deploying-sinatra-apps-to-heroku.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Publishing comments with Disqus on a Jekyll site</title>
+        <description>&lt;p&gt;Adding comments to this blog has definitely been on my to-do list for a while. It’s one of the only ways that readers and users get to interact with the content I put here. I decided to use &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt; comments instead of building my own solution, moreso because they support &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; sites (which is what this site is–I believe in appropriate sized containers!).&lt;/p&gt;
+
+&lt;p&gt;It should be simple, as their &lt;a href=&quot;https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions&quot;&gt;documentation&lt;/a&gt; is short and straightforward. First, I add a script tag to the basic layout that wraps my posts:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script id=&quot;dsq-count-scr&quot; src=&quot;//estherleytush.disqus.com/count.js&quot; async&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then for the pages I want to enable Disqus on, I add &lt;code class=&quot;highlighter-rouge&quot;&gt;comments: true&lt;/code&gt; to the YAML front matter:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;published: true
+comments: true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And finally, in my posts layout, I add this to the bottom of the page:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div id=&quot;disqus_thread&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+    (function() {
+        var d = document, s = d.createElement(&#39;script&#39;);
+
+        s.src = &#39;//estherleytush.disqus.com/embed.js&#39;;
+
+        s.setAttribute(&#39;data-timestamp&#39;, +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+&amp;lt;/script&amp;gt;
+&amp;lt;noscript&amp;gt;Please enable JavaScript to view the &amp;lt;a href=&quot;https://disqus.com/?ref_noscript&quot; rel=&quot;nofollow&quot;&amp;gt;comments powered by Disqus.&amp;lt;/a&amp;gt;&amp;lt;/noscript&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Checked it out on my site and it’s there and looking super spiffy! There it is below :)&lt;/p&gt;
+</description>
+        <pubDate>Fri, 24 Jun 2016 20:00:00 -0400</pubDate>
+        <link>http://yourdomain.com/2016/06/24/adding-comments-to-jekyll-site.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/06/24/adding-comments-to-jekyll-site.html</guid>
         
         
       </item>
@@ -330,29 +373,6 @@ good practice with interconnected classes and modeling real-world scenarios.&lt;
         <pubDate>Mon, 28 Mar 2016 14:56:27 -0400</pubDate>
         <link>http://yourdomain.com/2016/03/28/finding-primes-with-the-sieve-of-eratosthenes.html</link>
         <guid isPermaLink="true">http://yourdomain.com/2016/03/28/finding-primes-with-the-sieve-of-eratosthenes.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Binary search</title>
-        <description>&lt;p&gt;Moving on to writing my own binary search seemed like it made sense after spending time with
-  sorting algorithms, but it turned out to be tougher than I expected. The essential concept
-  of how binary search works, thanks to &lt;a href=&quot;https://www.youtube.com/watch?v=JQhciTuD3E8&quot;&gt;this video&lt;/a&gt; made plenty of sense;
-  the difficulty was to not just locate a given item in a sorted list, but to actually return
-  its original location.&lt;/p&gt;
-&lt;script src=&quot;https://gist.github.com/mindplace/d9bda84fffb63271e967.js&quot;&gt;&lt;/script&gt;
-&lt;p&gt;The difficulty started with the fact that I initially designed my algorithm in a way where
-  it took ever smaller slices of the given array, bounded by either the first item and the midpoint
-  item, or the midpoint item and the last item, in the last iteration of the slice. This meant that
-  finding the item was easy, but the only location for it would be its location in the final slice,
-  not the original array. That made my whole algorithm pretty pointless, in my mind. So I redesigned
-  it to keep count of how many items before and after the current slice I had chopped off. And after
-  many tweaks, that worked out.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 27 Mar 2016 14:56:27 -0400</pubDate>
-        <link>http://yourdomain.com/2016/03/27/binary-search.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2016/03/27/binary-search.html</guid>
         
         
       </item>

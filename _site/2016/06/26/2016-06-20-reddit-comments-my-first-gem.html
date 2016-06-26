@@ -1,0 +1,40 @@
+<p>I’ve wanted to build a gem since I first heard about them, but didn’t find myself building any particular features or products that could be modularized and shared with others in this way. But this weekend, at AngelHack Brooklyn 2016, my team and I built <a href="https://github.com/mindplace/Curator-a-">Curator</a>:</p>
+
+<blockquote>
+  <p>“Curator uses the Reddit API and the NYTimes API to pull text data when queried with a search term. It uses this data to make a call to the HPE Haven OnDemand API, which parses and extracts concepts. These concepts are returned to the frontend, where the jQuery library jQCloud uses it to create beautiful word clouds displaying how the media vs individuals feel about the given search query.”</p>
+</blockquote>
+
+<p>One of the major problems we needed to solve was grabbing text from a Reddit post page with comments. Reddit’s commenting system is such that a user can make a comment on another comment, as well as on a post. So after battling http calls issues and figuring all that out, we were still left with a huge hash of comments with nested comments with nested comments.</p>
+
+<p>If you know me at all, you know that my ears perk up at these kinds of problems right away, because I am a bit of a fan of recursion. So I ended up spending a lot of time figuring out what data is given in this hash, and then designing a method to pull in those comments recursively:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">recursive_comment_digging</span><span class="p">(</span><span class="n">child</span><span class="p">,</span> <span class="n">comments</span><span class="o">=</span><span class="p">[])</span>
+    <span class="n">post</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">post</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">child</span><span class="p">[</span><span class="s2">"id"</span><span class="p">]</span>
+    <span class="n">post</span><span class="p">[</span><span class="s2">"parent_id"</span><span class="p">]</span> <span class="o">=</span> <span class="n">child</span><span class="p">[</span><span class="s2">"parent_id"</span><span class="p">]</span>
+    <span class="n">post</span><span class="p">[</span><span class="s2">"author"</span><span class="p">]</span> <span class="o">=</span> <span class="n">child</span><span class="p">[</span><span class="s2">"author"</span><span class="p">]</span>
+    <span class="n">post</span><span class="p">[</span><span class="s2">"body"</span><span class="p">]</span> <span class="o">=</span> <span class="n">child</span><span class="p">[</span><span class="s2">"body"</span><span class="p">]</span>
+
+    <span class="n">comments</span> <span class="o">&lt;&lt;</span> <span class="n">post</span>
+
+    <span class="k">if</span> <span class="n">child</span><span class="p">[</span><span class="s2">"replies"</span><span class="p">]</span> <span class="o">!=</span> <span class="kp">nil</span> <span class="o">&amp;&amp;</span> <span class="n">child</span><span class="p">[</span><span class="s2">"replies"</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">""</span>
+      <span class="n">child</span><span class="p">[</span><span class="s2">"replies"</span><span class="p">][</span><span class="s2">"data"</span><span class="p">][</span><span class="s2">"children"</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">comment</span><span class="o">|</span>
+        <span class="n">comments</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span><span class="p">.</span><span class="nf">recursive_comment_digging</span><span class="p">(</span><span class="n">comment</span><span class="p">[</span><span class="s2">"data"</span><span class="p">])</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="n">comments</span>
+  <span class="k">end</span>
+
+</code></pre>
+</div>
+
+<p>Today I sat down and packaged up that functionality as a gem. It turned out to be a lot easier than I initially thought it would be. Essentially there were several parts to the job:</p>
+
+<ol>
+  <li>Deciding on scope: I decided that I wanted my gem to take a URL and return the comments posted on that Reddit page as an array of hashes.</li>
+  <li>Understanding what goes into building a gem: I found <a href="http://railscasts.com/episodes/245-new-gem-with-bundler">RailsCast’s post</a> on building a gem with Bundler to be really helpful, as well as the official <a href="http://guides.rubygems.org/rubygems-basics/">RubyGems</a> documentation.</li>
+</ol>
+
+<p>The biggest issue I faced was when I tried to push the gem to RubyGems.org. It turned out that because my terminal had been in the folder when I had built the gem initially to install and test locally, the compiled gem file ended up being inside the folders that contained the files to build it–but resolving this was as easy as deleting that file and building it outside of the folders entirely.</p>
+
+<p>Next step is refactoring and building some RSpec tests for this gem!</p>

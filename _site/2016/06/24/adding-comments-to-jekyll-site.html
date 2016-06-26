@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bootcamp blog: Ruby enumerables</title>
-  <meta name="description" content="This is Week 5 of DBC, and this week we did a Ruby group project with our accountabilitygroups where each person had a role and corresponding problems to sol...">
+  <title>Publishing comments with Disqus on a Jekyll site</title>
+  <meta name="description" content="Adding comments to this blog has definitely been on my to-do list for a while. It’s one of the only ways that readers and users get to interact with the cont...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/2016/03/12/bootcamp-blog-enumerables.html">
+  <link rel="canonical" href="http://yourdomain.com/2016/06/24/adding-comments-to-jekyll-site.html">
   <link rel="alternate" type="application/rss+xml" title="Esther Leytush" href="http://yourdomain.com/feed.xml">
   <link href='https://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
@@ -67,29 +67,45 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Bootcamp blog: Ruby enumerables</h1>
+    <h1 class="post-title" itemprop="name headline">Publishing comments with Disqus on a Jekyll site</h1>
 
-    <p class="post-meta"><time datetime="2016-03-12T13:56:27-05:00" itemprop="datePublished">March 12, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-06-24T20:00:00-04:00" itemprop="datePublished">June 24, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p>This is Week 5 of DBC, and this week we did a Ruby group project with our accountability
-groups where each person had a role and corresponding problems to solve for their role. Role 4
-was to write an array_deletion_method and a hash_deletion_method, both of those being bang methods.
-Here's how Christyn Budzyna and I solved it: </p>
-<script src="https://gist.github.com/mindplace/dd1174bbdc07905aa09a.js"></script>
-<p>Then today, I happened to read the
-<a href="http://www.sitepoint.com/guide-ruby-collections-iii-enumerable-enumerator/">"Guide
-to Ruby Collections III: Enumerable and Enumerator"</a> article that Emmanuel posted, which mentioned
-a very intesting method that I have only hazily seen before, and that primarily in the context of
-CLI: the <code>grep</code> method.</p>
-<p>According to <a href="http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-grep">Enumerable#grep</a>,
-<code>grep</code> iterates over the collection object it is called on and returns an array
-of values which belong to the same case (<a href="http://ruby-doc.org/core-2.3.0/Object.html#method-i-3D-3D-3D">===</a>)
-as the given pattern:<br><code>["a", 1, "b"].grep(String)</code> => <code>["a", "b"]</code>.</p>
-<p>So to illustrate, here's our <code>my_array_deletion_method!</code> with <code>grep</code>:</p>
-<script src="https://gist.github.com/mindplace/284cf639f465ed45babc.js"></script>
-<p>8 lines down to 2, not bad!</p>
+    <p>Adding comments to this blog has definitely been on my to-do list for a while. It’s one of the only ways that readers and users get to interact with the content I put here. I decided to use <a href="https://disqus.com/">Disqus</a> comments instead of building my own solution, moreso because they support <a href="https://jekyllrb.com/">Jekyll</a> sites (which is what this site is–I believe in appropriate sized containers!).</p>
+
+<p>It should be simple, as their <a href="https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions">documentation</a> is short and straightforward. First, I add a script tag to the basic layout that wraps my posts:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;script id="dsq-count-scr" src="//estherleytush.disqus.com/count.js" async&gt;&lt;/script&gt;
+</code></pre>
+</div>
+
+<p>Then for the pages I want to enable Disqus on, I add <code class="highlighter-rouge">comments: true</code> to the YAML front matter:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>published: true
+comments: true
+</code></pre>
+</div>
+
+<p>And finally, in my posts layout, I add this to the bottom of the page:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        s.src = '//estherleytush.disqus.com/embed.js';
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="https://disqus.com/?ref_noscript" rel="nofollow"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+</code></pre>
+</div>
+
+<p>Checked it out on my site and it’s there and looking super spiffy! There it is below :)</p>
 
   </div>
 </article>
