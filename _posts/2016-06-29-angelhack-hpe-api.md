@@ -3,6 +3,7 @@ published: true
 comments: true
 title: 'AngelHack Brooklyn 2016: Using HPE''s API to build Curator'
 date: 2016-06-29T00:00:00.000Z
+layout: post
 ---
 [Curator](https://github.com/mindplace/Curator-a-) won at [AngelHack Brooklyn 2016](http://angelhack.com/portfolio-item/brooklyn-usa-may-7-8-2016/) for best use of [HPE Haven OnDemand](https://dev.havenondemand.com/apis)'s API! 
 
