@@ -9,7 +9,7 @@ layout: post
 
 ![curator](/assets/blog/curator.png)
 
-My team built [Curator](https://github.com/mindplace/Curator-a-), a Rails app, which uses the Reddit API and the NYTimes API to pull text data when queried with a search term. It uses this data to make a call to an [HPE's content-extraction API](https://dev.havenondemand.com/apis/getcontent#overview) that parses the text data. These concepts are returned to the frontend, where the jQuery library [jQCloud](https://github.com/lucaong/jQCloud) uses it to create beautiful word clouds displaying how the media vs individuals feel about the given search query. Here's some sample results when queried with 'Clinton':
+We built [Curator](https://github.com/mindplace/Curator-a-) as a Rails app. It uses the Reddit API and the NYTimes API to pull text data when queried with a search term, then makes a call to an [HPE's content-extraction API](https://dev.havenondemand.com/apis/getcontent#overview) that parses the text data. These concepts are returned to the frontend, where the jQuery library [jQCloud](https://github.com/lucaong/jQCloud) uses it to create beautiful word clouds displaying how the media vs individuals feel about the given search query. Here's some sample results when queried with 'Clinton':
 
 ![clinton-query-curator](/assets/blog/curator-clinton.png)
 
@@ -21,7 +21,7 @@ Let's look at the <code>call_to_Reddit</code> more closely, one of our helper me
 
 <script src="https://gist.github.com/mindplace/0d1e29b8fd77f56e62b6ccc83af611b6.js"></script>
 
-For each of these two posts, we parsed them to get just their URLs, then triggered a call to <code>parse_posts</code> to grab content for both these posts.
+For each of these two posts, we parsed them to get just their URLs, then triggered a call to <code>parse_posts</code> to grab their content.
 
 This is where the meat of the work comes in. Using Reddit again, we used the two links we got from <code>call_to_Reddit</code> to get all the content for those posts. The data comes in as a giant hash, which we needed to parse for just its text elements. The post URLs and titles are preserved in one part of our hash, while the other part contains just the comment text data.
 
