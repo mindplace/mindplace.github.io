@@ -109,7 +109,7 @@ def generate_short
   self.short = SecureRandom.hex(3)
 
   while Url.exists?(short: self.short)
-	 self.short = SecureRandom.hex(3)
+    self.short = SecureRandom.hex(3)
   end
 end
 ```
@@ -132,13 +132,12 @@ def show
   url = Url.find_by(short: short)
 
   if url
-	 url.click_count += 1
-	 url.save
-
-   redirect_to url.body
+    url.click_count += 1
+    url.save
+    redirect_to url.body
   else
-	 @short = "#{ENV["host"]}#{short}"
-	 render "/not_found"
+    @short = "#{ENV["host"]}#{short}"
+    render "/not_found"
   end
 end
 ```
