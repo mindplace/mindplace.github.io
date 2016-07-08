@@ -9,7 +9,7 @@ layout: post
 
 ![curator](/assets/blog/curator.png)
 
-We built [Curator](https://github.com/mindplace/Curator-a-) as a Rails app. It uses the Reddit API and the NYTimes API to pull text data when queried with a search term, then makes a call to an [HPE's content-extraction API](https://dev.havenondemand.com/apis/getcontent#overview) that parses the text data. These concepts are returned to the frontend, where the jQuery library [jQCloud](https://github.com/lucaong/jQCloud) uses it to create beautiful word clouds displaying how the media vs individuals feel about the given search query. Here's some sample results when queried with 'Clinton':
+We built [Curator](https://github.com/mindplace/Curator-a-) as a Rails app. It uses the Reddit API and the NYTimes API to pull text data when queried with a search term, then makes a call to an [HPE's concept-extraction API](https://dev.havenondemand.com/apis/extractconcepts#overview) that parses the text data. These concepts are returned to the frontend, where the jQuery library [jQCloud](https://github.com/lucaong/jQCloud) uses it to create beautiful word clouds displaying how the media vs individuals feel about the given search query. Here's some sample results when queried with 'Clinton':
 
 ![clinton-query-curator](/assets/blog/curator-clinton.png)
 
@@ -33,7 +33,7 @@ Getting the comments was tricky, in part because it was hard to understand which
 
 I later extracted the comment grabbing portion of the work that we did and turned that into a Ruby gem called [reddit_comments](https://github.com/mindplace/reddit_comments_gem).
 
-Once we had our text data, it was time to make the call to [HPE's content-extraction API](https://dev.havenondemand.com/apis/getcontent#overview). In order to do this, we decided to use the official [havenondemand](https://github.com/HPE-Haven-OnDemand/havenondemand-ruby) Ruby gem. This greatly simplified what we needed to do, making it possible to simply initialize a client and send a request. Here's our code for that:
+Once we had our text data, it was time to make the call to [HPE's concept-extraction API](https://dev.havenondemand.com/apis/extractconcepts#overview). In order to do this, we decided to use the official [havenondemand](https://github.com/HPE-Haven-OnDemand/havenondemand-ruby) Ruby gem. This greatly simplified what we needed to do, making it possible to simply initialize a client and send a request. Here's our code for that:
 
 <script src="https://gist.github.com/mindplace/a9640d6406cf3986f8cc59e18564f0aa.js"></script>
 
