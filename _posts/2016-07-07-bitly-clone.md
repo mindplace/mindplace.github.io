@@ -63,11 +63,11 @@ The method `shorten_multiple_links` is found in the module `URLActions`. This me
 
 def shorten_multiple_links
   if params["urls"]
-	 json = {"urls": []}
-	 params["urls"].each{ |set| json[:urls] << shorten_single_link(set["url"]) }
-	 json
+    json = {"urls": []}
+    params["urls"].each{ |set| json[:urls] << shorten_single_link(set["url"]) }
+    json
   else
-	 shorten_single_link(params["url"])
+    shorten_single_link(params["url"])
   end
 end
 ```
@@ -79,15 +79,15 @@ This helps it construct a hash of multiple links or just a single link. Let's lo
 def shorten_single_link(link)
   url = Url.find_by(body: link)
   if url
-	 json = {"success": true, "url": link, "short": "#{ENV["host"]}#{url.short}"}
+    json = {"success": true, "url": link, "short": "#{ENV["host"]}#{url.short}"}
   else
-	 url = Url.new(body: link)
+    url = Url.new(body: link)
 
-   if url.save
-	  json = {"success": true, "url": link, "short": "#{ENV["host"]}#{url.short}"}
-	 else
-	  json = {"success": false, "url": link, "errors": url.errors_as_string}
-	 end
+    if url.save
+      json = {"success": true, "url": link, "short": "#{ENV["host"]}#{url.short}"}
+    else
+      json = {"success": false, "url": link, "errors": url.errors_as_string}
+    end
   end
 
   json
