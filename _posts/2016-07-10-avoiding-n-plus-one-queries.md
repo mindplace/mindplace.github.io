@@ -11,7 +11,8 @@ But things are more fun when they're written out, with lovely code samples! So w
 <hr>
 
 ## N+1 errors in Rails apps
-### What they are  
+
+### What they are
 
 N+1 errors are when a parent record needs to load information about some child records and queries the database once per child record. So say you had an index page for posts: you'd query the database from your controller to load those posts via `@posts = Post.all` or something of the sort, and say you'd then have 20 posts for the page in total. But then if you needed to render info of an association attached to a post record--such as that post's number of comments--you'd be querying for those comments once per post. So, 1 query to get 20 posts, and then 20 queries to get the total comments per post, for a total of 21 queries: hence the name N+1.
 
