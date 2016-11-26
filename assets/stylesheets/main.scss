@@ -26,6 +26,7 @@ $content-width:    800px;
 
 $palm:             480px;
 $medium:           544px;
+$medium-end:       758px;
 $laptop:           992px;
 
 @import
@@ -40,11 +41,30 @@ $laptop:           992px;
     "header"
 ;
 
-#main {
-  margin-top: 70px;
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 30px;
+}
 
-  @media screen and (min-width: $medium) {
-    margin-top: 100px;
+.Site-content {
+  flex: 1;
+}
+
+#main-wrapper {
+  float: right;
+
+  #main {
+    margin-top: 70px;
+
+    @media screen and (min-width: $medium) {
+      margin-top: 150px;
+    }
+
+    @media screen and (min-width: $laptop) {
+      margin-top: 100px;
+    }
   }
 }
 
@@ -52,7 +72,7 @@ $laptop:           992px;
   display: none;
 }
 
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $laptop) {
   #header {
     display: none;
   }
@@ -60,4 +80,8 @@ $laptop:           992px;
   #sidebar {
     display: inline;
   }
+}
+
+footer {
+  float: right;
 }

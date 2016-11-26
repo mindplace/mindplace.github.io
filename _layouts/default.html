@@ -2,20 +2,20 @@
 <html>
   {% include head.html %}
 
-  <body class="site">
-    <div class="container">
-      <div class="row">
+  <body>
+    <div class="Site container">
+      <div class="Site-content row">
         {% include header.html %}
         {% include sidebar.html %}
 
-        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8 col-xl-8">
+        <div id="main-wrapper" class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
           <div id="main">
             {{ content }}
           </div>
-
-          {% include footer.html %}
         </div>
       </div>
+
+      {% include footer.html %}
     </div>
 
     <!-- <script id="dsq-count-scr" src="/estherleytush.disqus.com/count.js" async></script> -->

@@ -97,11 +97,21 @@
 /**
  * Site footer
  */
+
+.footer-wrapper {
+  float: right;
+}
 .site-footer {
     border-top: 1px solid $grey-color-light;
 
-    .email-footer-link {
+    .footer-right {
       text-align: right;
+      float: right;
+      display: inline-block;
+    }
+
+    .footer-left {
+      display: inline-block;
     }
 }
 

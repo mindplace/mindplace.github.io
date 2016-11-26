@@ -211,10 +211,17 @@ pre {
 /**
  * Site footer
  */
+.footer-wrapper {
+  float: right; }
+
 .site-footer {
   border-top: 1px solid #e8e8e8; }
-  .site-footer .email-footer-link {
-    text-align: right; }
+  .site-footer .footer-right {
+    text-align: right;
+    float: right;
+    display: inline-block; }
+  .site-footer .footer-left {
+    display: inline-block; }
 
 .footer-heading {
   font-size: 18px;
@@ -937,19 +944,16 @@ footer #github {
   #sidebar a {
     color: #1756a9; }
   #sidebar .fixed-condition {
-    position: relative; }
+    position: relative;
+    width: 30%;
+    max-width: 200px; }
     @media screen and (min-width: 768px) {
       #sidebar .fixed-condition {
         margin-top: 100px;
-        position: fixed;
-        width: 30%;
-        padding: 0 30px; } }
+        position: fixed; } }
     @media screen and (min-width: 992px) {
       #sidebar .fixed-condition {
-        margin-top: 100px;
-        position: fixed;
-        width: 22%;
-        padding: 0 40px; } }
+        width: 22%; } }
   #sidebar strong {
     font-size: 16px;
     color: #4A4A4A;
@@ -984,32 +988,37 @@ footer #github {
   background-image: url("/assets/images/teapot-garden.jpg");
   background-size: cover;
   background-position: bottom center;
-  height: 80vh;
+  height: 500px;
   width: 100%; }
 #home .hello-world {
-  height: 80vh;
+  height: 500px;
   text-align: center;
   padding: 20px;
-  padding-top: 15vh;
+  padding-top: 15%;
   background-color: rgba(255, 255, 255, 0.5);
   border: 5px solid grey;
   width: 100%; }
-  @media screen and (min-width: 544px) {
-    #home .hello-world {
-      padding: 30px;
-      padding-top: 20vh; } }
 #home h1 {
   color: black;
   font-size: 70px; }
 #home h3 {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 30px; }
-@media screen and (min-width: 544px) {
+@media screen and (min-width: 758px) {
+  #home .hello-world {
+    padding-top: 10%; }
   #home h1 {
     font-size: 90px; }
   #home h3 {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 30px; } }
+@media screen and (min-width: 992px) {
+  #home .image-wrapper {
+    height: 80vh; }
+  #home .hello-world {
+    height: 80vh;
+    padding: 30px;
+    padding-top: 15vh; } }
 
 #header {
   display: -moz-flex;
@@ -1046,7 +1055,7 @@ footer #github {
 #header h1 {
   height: inherit;
   line-height: inherit;
-  padding: 0 0 0 0.6em;
+  padding: 0 0 0 30px;
   white-space: nowrap;
   letter-spacing: 13px; }
 
@@ -1169,7 +1178,7 @@ footer #github {
     line-height: 2.75em; }
 
   #header h1 {
-    padding: 0 0 0 0.6em; }
+    padding: 0 0 0 30px; }
 
   #header .main .search {
     display: none; } }
@@ -1256,20 +1265,36 @@ body.is-menu-visible #menu {
 @media screen and (max-width: 736px) {
   #menu > * {
     padding: 1.5em; } }
-#main {
-  margin-top: 70px; }
-  @media screen and (min-width: 544px) {
-    #main {
-      margin-top: 100px; } }
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0 30px; }
+
+.Site-content {
+  flex: 1; }
+
+#main-wrapper {
+  float: right; }
+  #main-wrapper #main {
+    margin-top: 70px; }
+    @media screen and (min-width: 544px) {
+      #main-wrapper #main {
+        margin-top: 150px; } }
+    @media screen and (min-width: 992px) {
+      #main-wrapper #main {
+        margin-top: 100px; } }
 
 #sidebar {
   display: none; }
 
-@media screen and (min-width: 544px) {
+@media screen and (min-width: 992px) {
   #header {
     display: none; }
 
   #sidebar {
     display: inline; } }
+footer {
+  float: right; }
 
 /*# sourceMappingURL=main-compiled.css.map */

@@ -8,19 +8,16 @@
 
   .fixed-condition {
     position: relative;
+    width: 30%;
+    max-width: 200px;
 
     @media screen and (min-width: 768px) {
       margin-top: 100px;
       position: fixed;
-      width: 30%;
-      padding: 0 30px;
     }
 
     @media screen and (min-width: $laptop) {
-      margin-top: 100px;
-      position: fixed;
       width: 22%;
-      padding: 0 40px;
     }
   }
 
