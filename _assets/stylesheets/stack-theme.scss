@@ -55,21 +55,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/**
- * /////////////////
- * Container element
- * /////////////////
- */
-// #container {
-//     width: 700px;
-//     margin: auto;
-// }
-
-/**
- * //////////////////////////////////
- * Right aka content column formatting
- * //////////////////////////////////
- */
 .right {
     width: 500px;
     float: left;
@@ -177,19 +162,6 @@ footer #github {
     border-bottom: 1px solid #f0f0f0;
 }
 
-.posts {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 
-  h2 {
-    margin: 20px 0;
-    font-size: 18px;
-  }
-
-  li {
-    padding: 0 0 10px 20px;
-  }
-}
 
 .post-content img, .content img {max-width: 100%}

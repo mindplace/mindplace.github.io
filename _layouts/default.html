@@ -5,7 +5,7 @@
   <body class="site">
     <div class="container">
       <div class="row">
-        <!-- {% include header.html %} -->
+        {% include header.html %}
         {% include sidebar.html %}
 
         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8 col-xl-8">
@@ -25,8 +25,12 @@
       crossorigin="anonymous"></script>
 
     {% javascript bootstrap %}
+    {% javascript skel.min %}
+    {% javascript util %}
+    {% javascript main %}
     {% javascript thickbox-compressed %}
     {% javascript projects %}
-  </body>
 
+    {% include mobile-popout-menu.html %}
+  </body>
 </html>

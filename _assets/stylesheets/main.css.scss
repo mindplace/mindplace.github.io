@@ -35,9 +35,29 @@ $laptop:           992px;
     "syntax",
     "thickbox",
     "stack-theme",
-    "sidebar"
+    "sidebar",
+    "pages",
+    "header"
 ;
 
 #main {
-  margin-top: 100px;
+  margin-top: 70px;
+
+  @media screen and (min-width: $medium) {
+    margin-top: 100px;
+  }
+}
+
+#sidebar {
+  display: none;
+}
+
+@media screen and (min-width: $medium) {
+  #header {
+    display: none;
+  }
+
+  #sidebar {
+    display: inline;
+  }
 }

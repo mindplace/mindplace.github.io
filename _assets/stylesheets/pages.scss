@@ -1,0 +1,72 @@
+// ------------------------------------
+// Blog index page
+// ------------------------------------
+
+.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  h2 {
+    margin: 20px 0;
+    font-size: 18px;
+  }
+
+  li {
+    padding: 0 0 10px 20px;
+  }
+}
+
+// ------------------------------------
+// Index page
+// ------------------------------------
+
+#home {
+  @media screen and (min-width: $medium) {
+    margin-top: -40px;
+  }
+
+  .image-wrapper {
+    background-image: url(asset_path("teapot-garden.jpg"));
+    background-size: cover;
+    background-position: bottom center;
+    height: 80vh;
+    width: 100%;
+  }
+
+  .hello-world {
+    height: 80vh;
+    text-align: center;
+    padding: 20px;
+    padding-top: 15vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 5px solid grey;
+    width: 100%;
+
+    @media screen and (min-width: $medium) {
+      padding: 30px;
+      padding-top: 20vh;
+    }
+  }
+
+  h1 {
+    color: black;
+    font-size: 70px;
+  }
+
+  h3 {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px 0;
+  }
+
+  @media screen and (min-width: $medium) {
+    h1 {
+      font-size: 90px;
+    }
+
+    h3 {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 30px 0;
+    }
+  }
+}
