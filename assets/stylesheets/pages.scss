@@ -84,3 +84,44 @@
     }
   }
 }
+
+// -----------------------------------------------
+// Projects page
+
+#projects {
+
+  .tabs-wrapper {
+    margin-bottom: 30px;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid $grey-color;
+    }
+
+    li {
+      padding: 5px 20px;
+      margin: 0 3px 0 0;
+      border: 1px solid $grey-color;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+      border-bottom: none;
+      height: 35px;
+
+    }
+    
+    .active {
+      border-bottom: 1px solid white;
+      margin-bottom: -1px;
+      height: 36px;
+    }
+  }
+
+  .project-box {
+    padding: 0 10px 20px 0;
+  }
+}

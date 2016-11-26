@@ -4,14 +4,26 @@ title: Projects
 permalink: /projects/
 ---
 
-<h1 class="centered">I write code every day.<br>Check it out on <a href="https://github.com/mindplace?tab=repositories">Github</a>.</h1>
+<div id="projects">
+  <div class="tabs-wrapper col-xs-12">
+    <ul>
+      <li><a href="#">Rails</a></li>
+      <li class="active"><a href="#">JavaScript</a></li>
+      <li><a href="#">Front-end</a></li>
+    </ul>
+  </div>
 
-<div class="home">
-    {% for item in site.data.projects %}
-      <div class="wrapped">
-        <img class="project-img" src="{{ item.img }}">
-        <a href="{{ item.url }}"><h2>{{ item.name }}</h2></a>
-        <p class="project-description">{{ item.description }}</p>
-      </div>
-    {% endfor %}
+  <div class="projects-wrapper">
+      {% for item in site.data.projects %}
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 {{ item.tags }}">
+          <div class="project-box">
+            <img class="project-img" src="{{ item.img }}">
+            <a href="{{ item.url }}"><h2>{{ item.name }}</h2></a>
+            <p class="project-description">{{ item.description }}</p>
+          </div>
+        </div>
+
+      {% endfor %}
+  </div>
 </div>
