@@ -1,0 +1,42 @@
+<div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+  <div class="fixed-condition">
+    <a href="/">
+      {% image headshot.jpg id="about" height="75px" width="75px" %}
+    </a>
+
+    <h1 class="author-name">{{ site.title }}</h1>
+    <div id="about">
+        <p>I'm a happy web developer at <a href="http://thebacon.com">The Bacon</a>, and a mentor
+          at <a href="#">Dev Bootcamp</a> and <a href="#">Codecademy</a>.</p>
+    </div>
+
+    <div class="social">
+        <ul>
+          <!-- {{ site.data.social }} -->
+          {% for link_value in site.data.social %}
+            {% assign link_tag = link_value[0] %}
+            {% assign link = site.data.social[link_tag] %}
+
+            <li><a href="{{ link.link }}" target="_blank">
+              <i class="fa {{ link.icon }}"></i></a>
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- <div class="search" id="js-search">
+      <input type="text" placeholder="search..." class="search__input form-control" id="js-search__input">
+      <ul class="search__results" id="js-search__results"></ul>
+    </div> -->
+
+    <div class="navbar-links">
+      <ul>
+        <li><a href="/">&nbsp;&raquo; Home</a></li>
+        <li><a id="blog-link" href="/blog">&nbsp;&raquo; Blog</a></li>
+        <li><a id="contact-link" href="/contact">&nbsp;&raquo; Contact</a></li>
+      </ul>
+    </div>
+  </div><!-- end /.fixed-condition -->
+</div>

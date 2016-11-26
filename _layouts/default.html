@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
 
-    {% include header.html %}
+  <body class="site">
+    <div class="container">
+      <div class="row">
+        <!-- {% include header.html %} -->
+        {% include sidebar.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8 col-xl-8">
+          <div id="main">
+            {{ content }}
+          </div>
+
+          {% include footer.html %}
+        </div>
       </div>
     </div>
 
-    {% include footer.html %}
     <script id="dsq-count-scr" src="//estherleytush.disqus.com/count.js" async></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"></script>
+
+    {% javascript bootstrap %}
+    {% javascript thickbox-compressed %}
+    {% javascript projects %}
   </body>
 
 </html>

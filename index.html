@@ -1,30 +1,13 @@
 ---
-layout: index
+layout: default
 ---
 
-<!-- <div class="home index-home"> -->
-<div class="index-home">
-  <div class="index-inner">
-    <h1 class="primary-title">I write meaningful code.</h1>
-    <h3 class="secondary-title">Seeking web development opportunities in NYC</h3>
-  </div>
-</div>
-
-<div class="page-content">
-<div class="wrapper">
-<div class="home">
-  <div class="index-second">
-    <div class="index-box">
-      <img src="/assets/headshot.jpg">
-    </div>
-
-    <div class="index-box">
-      <h1 class="secondary-title">Hi, I'm Esther.</h1>
-      <p>I'm working on my Rails and JavaScript competencies and writing about it in my <a href="/blog/">blog</a>.</p>
-      <p>I graduated from <a href="http://devbootcamp.com/?utm_source=Google&utm_medium=cpc&utm_campaign=NYC+Metro+-+Branded&utm_content=Branded+-+Dev+Bootcamp&utm_term=dev%20bootcamp">Dev Bootcamp</a>.
-      <p>Are you looking for someone like me?<br><a href="/contact/">Reach out</a>.</p>
-    </div>
-  </div>
-</div>
-</div>
+<div id="home">
+    <h1>Stack Problems</h1>
+    <hr />
+    <ol class="posts">
+    {% for post in site.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
+    {% endfor %}
+    </ol>
 </div>

@@ -8,17 +8,31 @@
   <title>Esther Leytush</title>
   <meta name="description" content="">
 
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
-  <link rel="alternate" type="application/rss+xml" title="Esther Leytush" href="http://yourdomain.com/feed.xml">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+  <!-- Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:400,300italic,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+  <!-- Font awesome icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+        rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+        crossorigin="anonymous">
+
+  <link type="text/css" rel="stylesheet" href="/assets/main.css">
+
+  <link rel="canonical" href="http://estherleytush.com/">
+  <link rel="alternate" type="application/rss+xml" title="Esther Leytush" href="http://estherleytush.com/feed.xml">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
-  <link href='https://fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
 
-  <header class="site-header">
+  <body class="site">
+    <div class="container">
+      <div class="row">
+        <!-- <header class="site-header">
 
   <div class="wrapper">
 
@@ -48,49 +62,194 @@
           
         
           
-        
-          
           <a class="page-link" href="/projects/">Projects</a>
           
         
-          <a class="page-link" href="/pdfs/resume.pdf">Resume</a>
+          <a class="page-link" href="https://resume.creddle.io/resume/h8u15yv6b0r">Resume</a>
       </div>
     </nav>
 
   </div>
 
 </header>
+ -->
+        <div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+  <div class="fixed-condition">
+    <a href="/">
+      <img src="/assets/headshot.jpg" id=about height=75px width=75px width="800" height="800" alt="headshot.jpg">
+    </a>
 
-
-      <!-- <div class="home index-home"> -->
-<div class="index-home">
-  <div class="index-inner">
-    <h1 class="primary-title">I write meaningful code.</h1>
-    <h3 class="secondary-title">Seeking web development opportunities in NYC</h3>
-  </div>
-</div>
-
-<div class="page-content">
-<div class="wrapper">
-<div class="home">
-  <div class="index-second">
-    <div class="index-box">
-      <img src="/assets/headshot.jpg">
+    <h1 class="author-name">Esther Leytush</h1>
+    <div id="about">
+        <p>I'm a happy web developer at <a href="http://thebacon.com">The Bacon</a>, and a mentor
+          at <a href="#">Dev Bootcamp</a> and <a href="#">Codecademy</a>.</p>
     </div>
 
-    <div class="index-box">
-      <h1 class="secondary-title">Hi, I'm Esther.</h1>
-      <p>I'm working on my Rails and JavaScript competencies and writing about it in my <a href="/blog/">blog</a>.</p>
-      <p>I graduated from <a href="http://devbootcamp.com/?utm_source=Google&utm_medium=cpc&utm_campaign=NYC+Metro+-+Branded&utm_content=Branded+-+Dev+Bootcamp&utm_term=dev%20bootcamp">Dev Bootcamp</a>.
-      <p>Are you looking for someone like me?<br><a href="/contact/">Reach out</a>.</p>
+    <div class="social">
+        <ul>
+          <!-- {"twitter"=>{"link"=>"#", "icon"=>"fa-twitter"}, "github"=>{"link"=>"#", "icon"=>"fa-github"}, "linkedin"=>{"link"=>"#", "icon"=>"fa-linkedin-square"}} -->
+          
+            
+            
+
+            <li><a href="#" target="_blank">
+              <i class="fa fa-twitter"></i></a>
+            </li>
+          
+            
+            
+
+            <li><a href="#" target="_blank">
+              <i class="fa fa-github"></i></a>
+            </li>
+          
+            
+            
+
+            <li><a href="#" target="_blank">
+              <i class="fa fa-linkedin-square"></i></a>
+            </li>
+          
+        </ul>
     </div>
-  </div>
-</div>
-</div>
+
+    <hr>
+
+    <!-- <div class="search" id="js-search">
+      <input type="text" placeholder="search..." class="search__input form-control" id="js-search__input">
+      <ul class="search__results" id="js-search__results"></ul>
+    </div> -->
+
+    <div class="navbar-links">
+      <ul>
+        <li><a href="/">&nbsp;&raquo; Home</a></li>
+        <li><a id="blog-link" href="/blog">&nbsp;&raquo; Blog</a></li>
+        <li><a id="contact-link" href="/contact">&nbsp;&raquo; Contact</a></li>
+      </ul>
+    </div>
+  </div><!-- end /.fixed-condition -->
 </div>
 
 
-  <footer class="site-footer">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-8 col-xl-8">
+          <div id="main">
+            <div id="home">
+    <h1>Stack Problems</h1>
+    <hr />
+    <ol class="posts">
+    
+      <li><a href="/2016/10/20/five-offers-in-four-months.html">Five offers in four months</a> &raquo; <i><span>20 Oct 2016</span></i></li>
+    
+      <li><a href="/2016/07/10/avoiding-n-plus-one-queries.html">Avoiding N+1 Queries</a> &raquo; <i><span>10 Jul 2016</span></i></li>
+    
+      <li><a href="/2016/07/07/bitly-clone.html">Bitly clone API in Rails</a> &raquo; <i><span>07 Jul 2016</span></i></li>
+    
+      <li><a href="/2016/06/28/angelhack-hpe-api.html">AngelHack Brooklyn 2016: Using HPE's Haven OnDemand API to build Curator</a> &raquo; <i><span>28 Jun 2016</span></i></li>
+    
+      <li><a href="/2016/06/26/deploying-sinatra-apps-to-heroku.html">Deploying Sinatra apps to Heroku</a> &raquo; <i><span>26 Jun 2016</span></i></li>
+    
+      <li><a href="/2016/06/24/adding-comments-to-jekyll-site.html">Publishing comments with Disqus on a Jekyll site</a> &raquo; <i><span>24 Jun 2016</span></i></li>
+    
+      <li><a href="/2016/06/19/reddit-comments-my-first-gem.html">reddit_comments: my first gem</a> &raquo; <i><span>19 Jun 2016</span></i></li>
+    
+      <li><a href="/2016/04/05/bucket-sort.html">Bucket sort</a> &raquo; <i><span>05 Apr 2016</span></i></li>
+    
+      <li><a href="/2016/04/04/javascript-browser-grocery-list.html">JavaScript browser grocery list</a> &raquo; <i><span>04 Apr 2016</span></i></li>
+    
+      <li><a href="/2016/04/03/binary-conversions.html">Binary conversions</a> &raquo; <i><span>03 Apr 2016</span></i></li>
+    
+      <li><a href="/2016/04/02/bootcamp-blog-regular-expressions.html">Bootcamp blog: regular expressions</a> &raquo; <i><span>02 Apr 2016</span></i></li>
+    
+      <li><a href="/2016/04/01/bootcamp-blog-enumerable-cheatsheet.html">Bootcamp blog: enumerable cheatsheet</a> &raquo; <i><span>01 Apr 2016</span></i></li>
+    
+      <li><a href="/2016/03/29/ruby-inheritance-and-interconnected-classes.html">Ruby inheritance and interconnected classes</a> &raquo; <i><span>29 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/28/finding-primes-with-the-sieve-of-eratosthenes.html">Finding primes with the sieve of Eratosthenes</a> &raquo; <i><span>28 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/27/binary-search.html">Binary search</a> &raquo; <i><span>27 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/25/solving-algorithms-in-javascript.html">Solving algorithms in JavaScript</a> &raquo; <i><span>25 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/25/fibonacci-algorithms-in-javascript-and-ruby.html">Fibonacci algorithms in JavaScript and Ruby</a> &raquo; <i><span>25 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/24/the-javascript-castle-game.html">The JavaScript Castle Game</a> &raquo; <i><span>24 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/23/bootcamp-blog-blocks-in-javascript-and-ruby.html">Bootcamp blog: blocks in JavaScript and Ruby</a> &raquo; <i><span>23 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/22/rock-paper-scissors.html">Rock, paper, scissors</a> &raquo; <i><span>22 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/21/numbers-and-iteration-with-javascript.html">Numbers and iteration with JavaScript</a> &raquo; <i><span>21 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/20/fizzbuzz-with-ruby-and-javascript.html">FizzBuzz with Ruby and JavaScript</a> &raquo; <i><span>20 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/19/modules-and-a-calculator.html">Modules and a calculator</a> &raquo; <i><span>19 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/18/reverse-polish-notation-calculator.html">Reverse polish notation calculator</a> &raquo; <i><span>18 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/17/numbers-into-words.html">Numbers into words</a> &raquo; <i><span>17 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/16/bootcamp-blog-ruby-classes.html">Bootcamp blog: Ruby classes</a> &raquo; <i><span>16 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/15/euclid-greatest-common-divisor.html">Euclid's greatest common divisor</a> &raquo; <i><span>15 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/14/board-game-bingo.html">Board game: Bingo</a> &raquo; <i><span>14 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/13/personalized-chrome-new-tab-landing-page-part-1.html">Personalized Chrome new tab/landing page, part 1</a> &raquo; <i><span>13 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/12/bootcamp-blog-enumerables.html">Bootcamp blog: Ruby enumerables</a> &raquo; <i><span>12 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/07/one-page-project-reading-mandeville.html">One-page project: Reading Mandeville in the Early Modern Period</a> &raquo; <i><span>07 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/05/one-page-project-tea-site.html">One-page project: tea site</a> &raquo; <i><span>05 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/04/trying-out-pdf-generation-with-ruby.html">Trying out PDF generation with Ruby</a> &raquo; <i><span>04 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/04/ruby-arrays-and-hashes.html">Bootcamp blog: Ruby arrays and hashes</a> &raquo; <i><span>04 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/03/meditation-thought-counter-part-2-data-parsing.html">Meditation thought counter, part 2: data parsing</a> &raquo; <i><span>03 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/02/deadline-counter.html">Deadline counter</a> &raquo; <i><span>02 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/03/01/recursion.html">Recursion</a> &raquo; <i><span>01 Mar 2016</span></i></li>
+    
+      <li><a href="/2016/02/29/quicksort.html">Quicksort</a> &raquo; <i><span>29 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/28/meditation-thought-counter-part-1.html">Meditation thought counter, part 1</a> &raquo; <i><span>28 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/27/to-do-list-maker.html">To-do list maker</a> &raquo; <i><span>27 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/26/merge-sort.html">Merge sort</a> &raquo; <i><span>26 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/26/bootcamp-blog-css-concepts.html">Bootcamp blog: CSS concepts</a> &raquo; <i><span>26 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/25/selection-sort.html">Selection sort</a> &raquo; <i><span>25 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/24/insertion-sort.html">Insertion sort</a> &raquo; <i><span>24 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/23/bubble-sort.html">Bubble sort</a> &raquo; <i><span>23 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/22/ruby-from-scratch-array-methods.html">From-scratch Ruby array methods</a> &raquo; <i><span>22 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/21/shell-script-software-checker.html">Shell script: software checker</a> &raquo; <i><span>21 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/20/renaissance-adventure.html">Renaissance adventure: wherein the dusty traveller happens upon pirates, minsterels, and a whoole hoste of villaines</a> &raquo; <i><span>20 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/19/accountability-reviewer.html">Accountability reviewer</a> &raquo; <i><span>19 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/18/new-microblogger-feature-bitly-link-shortener.html">New Microblogger feature: Bitly link shortener</a> &raquo; <i><span>18 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/16/microblogger.html">MicroBlogger</a> &raquo; <i><span>16 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/10/bootcamp-blog-version-control-git-and-github.html">Bootcamp blog: version control, git, and Github</a> &raquo; <i><span>10 Feb 2016</span></i></li>
+    
+      <li><a href="/2016/02/04/opening-webdev-careers-to-those-who-need-them-most.html">Opening webdev careers to those who need them most</a> &raquo; <i><span>04 Feb 2016</span></i></li>
+    
+    </ol>
+</div>
+
+          </div>
+
+          <footer class="site-footer">
 
   <div class="wrapper">
     <div class="footer-col-wrapper">
@@ -98,41 +257,27 @@
         <ul class="contact-list">
           <li>Esther Leytush</li>
           <li><a class="page-link" href="mailto:eleytush@gmail.com">eleytush@gmail.com</a></li><br>
-
-          
-          <li>
-            <a class="page-link" href="https://github.com/mindplace"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
-</span>github.com/mindplace</a>
-
-          </li>
-          
-
-          
-          <li>
-            <a class="page-link" href="https://twitter.com/mindpl_ace"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
-</span>twitter.com/mindpl_ace</a>
-
-          </li>
-          
-          <br>
-          <br>
           <li>&#9400; Esther Leytush 2016</li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        
-          <p>I'm a fullstack web developer and code makes me happy. It's the most amazing thing I have in my life, and I want nothing more than the chance to keep pouring my heart into it.</p>
-        
-          <p>Non-code things I like include my sweet rescued dog Ash, reading speculative fiction, making guacamole, and napping.</p>
-        
-          <p>Some quirks:<br>I compulsively say 'bless you' when people cough.<br>I really, REALLY like for code to be properly indented.<br>I have been known to color-code my planner.</p>
-        
       </div>
     </div>
   </div>
 
 </footer>
 
-</body>
+        </div>
+      </div>
+    </div>
+
+    <script id="dsq-count-scr" src="//estherleytush.disqus.com/count.js" async></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.js"
+      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+      crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="/assets/bootstrap.js"></script>
+    <script type="text/javascript" src="/assets/thickbox-compressed.js"></script>
+    <script type="text/javascript" src="/assets/projects.js"></script>
+  </body>
+
 </html>

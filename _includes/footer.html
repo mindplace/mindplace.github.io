@@ -6,28 +6,8 @@
         <ul class="contact-list">
           <li>{{ site.title }}</li>
           <li><a class="page-link" href="mailto:{{ site.email }}">{{ site.email }}</a></li><br>
-
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-          <br>
-          <br>
           <li>&#9400; Esther Leytush 2016</li>
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {% for listitem in site.data.description %}
-          <p>{{ listitem.item }}</p>
-        {% endfor %}
       </div>
     </div>
   </div>
