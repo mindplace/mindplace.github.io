@@ -2,33 +2,33 @@
 title: Esther Leytush
 email: eleytush@gmail.com
 
-baseurl: "" # the subpath of your site, e.g. /blog
+testurl: "localhost:4000" # the subpath of your site, e.g. /blog
 url: "http://estherleytush.com" # the base hostname & protocol for your site
 
 gems:
   - jekyll-assets
 
 
-# Build settings
-markdown: kramdown
-
-kramdown:
-  math_engine: mathjax
-  math_engine_opts:
-    preview: true
-
-# assets
-plugins-dir:
-  - jekyll-assets
-
-assets:
-  dirname: assets # _assets
-  baseurl: /assets/
-  sources: # asset subdirectories
-      - _assets/stylesheets
-      - _assets/javascript
-      - _assets/images
-      - _assets/blog
-  cachebust: hard
-  js_compressor: uglifier # included by rails
-  css_compressor: sass # included by rails
+# # Build settings
+# markdown: kramdown
+#
+# kramdown:
+#   math_engine: mathjax
+#   math_engine_opts:
+#     preview: true
+#
+# # assets
+# plugins-dir:
+#   - jekyll-assets
+#
+# assets:
+#   dirname: assets # _assets
+#   baseurl: /assets/
+#   sources: # asset subdirectories
+#       - _assets/stylesheets
+#       - _assets/javascript
+#       - _assets/images
+#       - _assets/blog
+#   cachebust: hard
+#   js_compressor: uglifier # included by rails
+#   css_compressor: sass # included by rails
