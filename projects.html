@@ -7,23 +7,36 @@ permalink: /projects/
 <div id="projects">
   <div class="tabs-wrapper col-xs-12">
     <ul>
-      <li><a href="#">Rails</a></li>
-      <li class="active"><a href="#">JavaScript</a></li>
-      <li><a href="#">Front-end</a></li>
+      <li class="tab active">Favorite</li>
+      <li class="tab">Rails</li>
+      <li class="tab">JavaScript</li>
+      <li class="tab">Front-end</li>
     </ul>
   </div>
 
   <div class="projects-wrapper">
       {% for item in site.data.projects %}
 
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 {{ item.tags }}">
-          <div class="project-box">
-            <img class="project-img" src="{{ item.img }}">
-            <a href="{{ item.url }}"><h2>{{ item.name }}</h2></a>
-            <p class="project-description">{{ item.description }}</p>
+        {% assign tags = item.tags | split: " " %}
+        <div class="project-box col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 {{ item.tags }}
+                    {% if tags[0] == 'favorite' %} visible {% else %} hidden {% endif %}">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <a href="{{ item.url }}">{{ item.name }}</a>
+            </div>
+
+            <div class="panel-body">
+              <img class="project-img" src="{{ item.img }}">
+            </div>
+
+            <div class="panel-footer">
+              <p class="project-description">{{ item.description }}</p>
+            </div>
           </div>
         </div>
 
       {% endfor %}
   </div>
 </div>
+
+<script src="/assets/javascript/projects.js"></script>

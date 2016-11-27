@@ -22,10 +22,6 @@
 // ------------------------------------
 
 #home {
-  @media screen and (min-width: $medium) {
-    margin-top: -40px;
-  }
-
   .image-wrapper {
     background-image: url("/assets/images/campfire-1.jpg");
     // background-image: url("/assets/images/leafy-table.jpg");
@@ -112,8 +108,12 @@
       border-bottom: none;
       height: 35px;
 
+      &:hover {
+        cursor: pointer;
+      }
     }
-    
+
+
     .active {
       border-bottom: 1px solid white;
       margin-bottom: -1px;
@@ -122,6 +122,10 @@
   }
 
   .project-box {
-    padding: 0 10px 20px 0;
+    font-size: 12px;
+
+    .panel-heading {
+      font-size: 14px;
+    }
   }
 }

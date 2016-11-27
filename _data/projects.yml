@@ -14,4 +14,4 @@
   description: The user generates a list of personal accountability standards, reviews them every day, check off whichever they complete that day, and is able to see their statistics over time. Built on Sinatra to practice visual design, CRUD, and RESTful conventions. Currently working on using the generated data to create D3 visualizations for users.
   url: https://github.com/mindplace/accountability-list
   img: /assets/images/accountability.png
-  tags: "sinatra ruby full-stack front-end"
+  tags: "favorite sinatra ruby full-stack front-end"
