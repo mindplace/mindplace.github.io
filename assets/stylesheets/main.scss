@@ -32,7 +32,6 @@ $laptop:           992px;
 @import
     "base",
     "layout",
-    "projects",
     "syntax",
     "thickbox",
     "stack-theme",
@@ -60,11 +59,11 @@ $laptop:           992px;
     margin-top: 70px;
 
     @media screen and (min-width: 992px) {
-      margin-top: 150px;
+      margin-top: 120px;
     }
 
     @media screen and (min-width: $laptop) {
-      margin-top: 100px;
+      margin-top: 70px;
     }
   }
 }

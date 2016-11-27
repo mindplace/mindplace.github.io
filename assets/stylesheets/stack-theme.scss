@@ -45,10 +45,10 @@ h3 {
     color: #666666;
 }
 
-a, a:link, a:active {
-    text-decoration: none;
-    color: #8C8C8C;
-}
+// a, a:link, a:active {
+//     text-decoration: none;
+//     color: #8C8C8C;
+// }
 
 a:hover {
     color: #B3B3B3;
@@ -165,3 +165,7 @@ footer #github {
 
 
 .post-content img, .content img {max-width: 100%}
+
+.post-header p {
+  text-align: center;
+}
