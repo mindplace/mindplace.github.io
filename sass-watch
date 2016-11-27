@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sass --watch assets/stylesheets/main.scss:assets/stylesheets/main-compiled.css
