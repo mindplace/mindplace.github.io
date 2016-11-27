@@ -54,11 +54,12 @@ $laptop:           992px;
 
 #main-wrapper {
   float: right;
+  padding: 0;
 
   #main {
     margin-top: 70px;
 
-    @media screen and (min-width: $medium) {
+    @media screen and (min-width: 992px) {
       margin-top: 150px;
     }
 
