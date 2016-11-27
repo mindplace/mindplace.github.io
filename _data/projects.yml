@@ -1,17 +1,47 @@
-- name: Make Together
-  description: A social media platform that connects designers and developers to have conversations and build projects together. My role involved leading the team, building custom Oauth solution for Dribbble login, Heroku deployment, and integrating others' code into overall project. Built with <a href="https://github.com/LisaBee224">Lisa Buch</a>, <a href="https://github.com/samanthavholmes">Samantha Holmes</a>, and <a href="https://github.com/choff999">Caitlin Hoffman</a>.
-  url: https://github.com/mindplace/make-together
-  img: /assets/images/maketogether.png
-  tags: "rails ruby full-stack javascript front-end"
+- name: Stack For Yourself
+  description: >
+    A compilation of materials to learn web development,
+    presented via a lovely <a href="https://jekyllrb.com/">Jekyll</a> site.
+    Built to share my collection of links, tutorials, and suggested materials.
+  url: https://github.com/mindplace/stack-for-yourself
+  img: /assets/images/stackforyourself.png
+  tags: "front-end"
 
-- name: LES Film Festival
-  description: A fake film festival built to work on our Rails, jQuery, and Bootstrap skills. My role included heavy involvement in crafting the app architecture, creating logic for models, taking ownership for various vertical slices, integrating Bootstrap into our frontend setup, and spearheading Heroku deployment. Built with <a href="https://github.com/jmcolella">John Colella</a> and <a href="https://github.com/katherinebroner">Katherine Broner</a>.
-  url: https://github.com/mindplace/les-film-festival
-  img: /assets/images/les.png
-  tags: "rails ruby full-stack javascript front-end"
+- name: Nautical Distance Calculator
+  url: https://github.com/mindplace/nautical-distances-calculator
+  description: >
+    Uses a variety of great JavaScript libraries to build a lightweight
+    single-page app that calculates distances between two searched locations.
+  img: /assets/images/nauticaldistancecalculator.png
+  tags: "javascript front-end"
 
-- name: Accountability List
-  description: The user generates a list of personal accountability standards, reviews them every day, check off whichever they complete that day, and is able to see their statistics over time. Built on Sinatra to practice visual design, CRUD, and RESTful conventions. Currently working on using the generated data to create D3 visualizations for users.
-  url: https://github.com/mindplace/accountability-list
-  img: /assets/images/accountability.png
-  tags: "favorite sinatra ruby full-stack front-end"
+- name: Thinking Style Quiz
+  url: https://github.com/mindplace/javascript_browser_games
+  description: >
+    A small JavaScript quiz helping you discover your thinking style! I happen
+    to be a nut for personality quizzes, especially when they're delivered
+    via a delightful interface built with <a href="http://materializecss.com/">Materialize</a>.
+  img: /assets/images/thinkingstylequiz.png
+  tags: "javascript front-end"
+
+- name: rails-dribbble-oauth
+  description: >
+    Rails engine gem providing a Ruby wrapper for authenticating users through Dribbble.
+    Plug and play to use!
+  url: https://github.com/mindplace/rails-dribbble-oauth
+  img: /assets/images/railsdribbbleoauth.png
+  tags: "rails ruby"
+
+- name: Bitly clone
+  description: >
+    Small API written in Rails. Accepts a URL and responds with a shortened URL.
+    Keeps track of how many times the shortened URL was used and can deliver a report.
+  url: https://github.com/mindplace/bitly_clone
+  img: /assets/images/bitlyclone.png
+  tags: "rails ruby back-end"
+
+- name: Algorithms
+  description: Lots of algorithms and back-end puzzles solved with Ruby.
+  url: https://github.com/mindplace/mindplace_algorithms
+  img: /assets/images/binarysearch.png
+  tags: "ruby back-end"

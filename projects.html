@@ -7,19 +7,20 @@ permalink: /projects/
 <div id="projects">
   <div class="tabs-wrapper col-xs-12">
     <ul>
-      <li class="tab active">Favorite</li>
+      <li class="tab active">JavaScript</li>
       <li class="tab">Rails</li>
-      <li class="tab">JavaScript</li>
+      <li class="tab">Ruby</li>
       <li class="tab">Front-end</li>
+      <li class="tab">Back-end</li>
     </ul>
   </div>
 
   <div class="projects-wrapper">
-      {% for item in site.data.projects %}
+    {% for item in site.data.projects %}
 
-        {% assign tags = item.tags | split: " " %}
+      {% assign tags = item.tags | split: " " %}
         <div class="project-box col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 {{ item.tags }}
-                    {% if tags[0] == 'favorite' %} visible {% else %} hidden {% endif %}">
+          {% if tags[0] == 'javascript' %} visible {% else %} hidden {% endif %}">
           <div class="panel panel-default">
             <div class="panel-heading">
               <a href="{{ item.url }}">{{ item.name }}</a>
@@ -34,7 +35,6 @@ permalink: /projects/
             </div>
           </div>
         </div>
-
       {% endfor %}
   </div>
 </div>

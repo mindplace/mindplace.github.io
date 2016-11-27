@@ -965,6 +965,11 @@ footer #github {
   font-size: 12px; }
   #projects .project-box .panel-heading {
     font-size: 14px; }
+  @media screen and (min-width: 992px) {
+    #projects .project-box .panel-body {
+      height: 200px; }
+    #projects .project-box .panel-footer {
+      height: 140px; } }
 
 #header {
   display: -moz-flex;
