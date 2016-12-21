@@ -51,10 +51,8 @@
   tags: "ruby back-end"
 
 - name: "Make Together"
-  description: "A social media platform built as a group effort, meant for web designers and web
-    developers to meet each other, post projects they are seeking collaborators on, and have
-    conversations. My role included leading the team and integrating code, building a custom OAuth
-    Dribbble solution, and deployment."
+  description: "A social media platform built for web designers and web
+    developers to collaborate on projects. My role included leading the team, integrating code, building a custom OAuth Dribbble solution, and managing deployment."
   url: https://github.com/mindplace/make-together
   live: http://make-together.herokuapp.com/
   img: /assets/images/maketogether.png
