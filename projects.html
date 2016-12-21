@@ -17,25 +17,36 @@ permalink: /projects/
 
   <div class="projects-wrapper">
     {% for item in site.data.projects %}
-
       {% assign tags = item.tags | split: " " %}
-        <div class="project-box col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 {{ item.tags }}
-          {% if tags[0] == 'javascript' %} visible {% else %} hidden {% endif %}">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <a href="{{ item.url }}">{{ item.name }}</a>
+      <div class="project-box col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 {{ item.tags }}
+        {% if tags[0] == 'javascript' %} visible {% else %} hidden {% endif %}">
+        <div class="panel panel-default">
+          <div class="panel-heading">{{ item.name }}</div>
+
+          <div class="panel-body">
+            <img class="project-img" src="{{ item.img }}">
+          </div>
+
+          <div class="panel-footer">
+            <p class="project-description">{{ item.description }}</p>
+          </div>
+
+          <div class="panel-body bottom-footer-section">
+            <div class="left-code">
+              <a href="{{ item.url }}">See the code</a>
             </div>
 
-            <div class="panel-body">
-              <img class="project-img" src="{{ item.img }}">
-            </div>
+            {% if item.live %}
+              <div class="divider">|</div>
 
-            <div class="panel-footer">
-              <p class="project-description">{{ item.description }}</p>
-            </div>
+              <div class="right-live">
+                <a href="{{ item.live }}">View live</a>
+              </div>
+            {% endif %}
           </div>
         </div>
-      {% endfor %}
+      </div>
+    {% endfor %}
   </div>
 </div>
 

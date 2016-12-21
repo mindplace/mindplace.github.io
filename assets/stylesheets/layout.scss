@@ -198,10 +198,10 @@
     }
 }
 
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
+// .post-meta {
+//     font-size: $small-font-size;
+//     color: $grey-color;
+// }
 
 .post-link {
     display: block;
@@ -215,6 +215,7 @@
  */
 .post-header {
     margin-bottom: $spacing-unit;
+    border-bottom: 2px solid $grey-color;
 }
 
 .post-title {
@@ -229,6 +230,10 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+
+    h2, h3, h4 {
+      margin-top: 1.5em;
+    }
 
     h2 {
         font-size: 32px;

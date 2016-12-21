@@ -1,0 +1,23 @@
+{
+  "name": "esther-leytush-site",
+  "version": "1.0.0",
+  "description": "Esther Leytush's site",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "deploy": "grunt default"
+  },
+  "author": "Esther Leytush",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mindplace/mindplace.github.io"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-responsive-images": "^1.10.1"
+  }
+}
