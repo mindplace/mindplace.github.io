@@ -2,3 +2,5 @@
 .asset-cache/
 _site/
 node_modules/
+assets/stylesheets/main-compiled.css.map
+assets/stylesheets/main-compiled.css
