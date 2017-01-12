@@ -23,9 +23,9 @@
 
 #home {
   .image-wrapper {
-    background-image: url("/assets/images/campfire-1.jpg");
-    // background-image: url("/assets/images/leafy-table.jpg");
-    // background-image: url("/assets/images/foggy-mountains.jpg");
+    background-image: url("/assets/images/dual-screen.jpg");
+    // background-image: url("/assets/images/green-screens.jpg");
+    // background-image: url("/assets/images/partial-comp.jpg");
     background-size: cover;
     background-position: bottom center;
     height: 500px;
@@ -50,6 +50,7 @@
   h3 {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 30px;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: $medium-end) {

@@ -1008,7 +1008,7 @@ footer #github {
 }
 
 #home .image-wrapper {
-  background-image: url("/assets/images/campfire-1.jpg");
+  background-image: url("/assets/images/dual-screen.jpg");
   background-size: cover;
   background-position: bottom center;
   height: 500px;
@@ -1030,6 +1030,7 @@ footer #github {
 #home h3 {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 30px;
+  line-height: 1.5;
 }
 @media screen and (min-width: 758px) {
   #home .hello-world {
