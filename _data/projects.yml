@@ -57,3 +57,10 @@
   live: http://make-together.herokuapp.com/
   img: /assets/images/maketogether.png
   tags: "ruby rails back-end"
+
+- name: "jekyll-seed"
+  description: "A boilerplate framework for starting a new static site using Jekyll, setup with Grunt asset management and cool things like search functionality."
+  live: http://estherleytush.com/jekyll-seed
+  url: https://github.com/mindplace/make-together
+  img: /assets/images/jekyll-seed.jpg
+  tags: "front-end javascript"
