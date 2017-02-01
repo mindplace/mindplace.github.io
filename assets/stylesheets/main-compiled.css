@@ -1111,6 +1111,9 @@ footer #github {
 #contact .contact-page-link {
   font-size: 30px;
 }
+#contact .contact-header {
+  margin-top: 10px;
+}
 
 #header {
   display: -moz-flex;
