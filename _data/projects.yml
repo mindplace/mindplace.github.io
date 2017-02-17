@@ -8,6 +8,16 @@
   img: /assets/images/stackforyourself.png
   tags: "front-end"
 
+- name: Less By Choice
+  description: >
+    A blog built to publish content on minimalism and living a light and deliberate life.
+    Made to practice <a href="http://www.fltdsgn.com/">flat design</a> concepts and create a
+    platform to share thoughts on a topic close to my heart.
+  url: https://github.com/mindplace/less-by-choice
+  live: http://less-by-choice.com/
+  img: /assets/images/less-by-choice.jpg
+  tags: "javascript front-end"
+
 - name: Nautical Distance Calculator
   url: https://github.com/mindplace/nautical-distances-calculator
   live: http://estherleytush.com/nautical-distances-calculator/
@@ -63,4 +73,4 @@
   live: http://estherleytush.com/jekyll-seed
   url: https://github.com/mindplace/make-together
   img: /assets/images/jekyll-seed.jpg
-  tags: "front-end javascript"
+  tags: "javascript front-end"
