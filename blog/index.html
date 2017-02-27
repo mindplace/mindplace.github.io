@@ -19,12 +19,13 @@ title: Blog
     {% endif %}
 
     {% assign total_page_posts = paginator.posts.size %}
-    {% assign starting_num = paginator.page | starting_posts_num %}
-    <span class="page_number"> posts {{ paginator.page | starting_posts_num }} through
+    {% assign starting_num = paginator.page | times: 10 | minus: 9 %}
+
+    <span class="page_number"> posts {{ starting_num }} through
       {% if total_page_posts == 10 %}
-        {{ paginator.page | ending_posts_num }}
+        {{ paginator.page | times: 10 }}
       {% else %}
-        {{ total_page_posts | add_starting_num: starting_num }}
+        {{ starting_num | plus: total_page_posts | minus: 1 }}
       {% endif %}
     </span>
 
