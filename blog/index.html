@@ -1,0 +1,56 @@
+---
+layout: default
+title: Blog
+---
+
+<div>
+  <h1>Everyday Build</h1>
+
+  <hr />
+
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">
+        <button type="button" name="button">&laquo;</button>
+      </a>
+    {% else %}
+      <button type="button" name="button" disabled='disabled'>&laquo;</button>
+    {% endif %}
+
+    <span class="page_number ">Page {{ paginator.page }}</span>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">
+        <button type="button" name="button">&raquo;</button>
+      </a>
+    {% else %}
+      <button type="button" name="button" disabled='disabled'>&raquo;</button>
+    {% endif %}
+  </div>
+
+  <hr />
+
+  <ul class="posts">
+    {% for post in paginator.posts %}
+
+      {% if post == paginator.posts[0] %}
+        <h2 class="dividing-month">{{ post.date | date: '%B %Y' }}</h2>
+      {% endif %}
+
+	    {% if post.next %}
+	      {% capture year %}{{ post.date | date: '%Y %B' }}{% endcapture %}
+	      {% capture nyear %}{{ post.next.date | date: '%Y %B' }}{% endcapture %}
+	      {% if year != nyear %}
+          <h2 class="dividing-month">{{ post.date | date: '%B %Y' }}</h2>
+	      {% endif %}
+	    {% endif %}
+
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i>
+          <span>{{ post.date | date_to_string }}</span></i>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
