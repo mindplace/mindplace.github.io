@@ -9,23 +9,31 @@ title: Blog
   <hr />
 
   <!-- Pagination links -->
-  <div class="pagination">
+  <div class="blog-pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path }}" class="previous">
-        <button type="button" name="button">&laquo;</button>
+        <button class="custom-pagination" type="button" name="button">&laquo;</button>
       </a>
     {% else %}
-      <button type="button" name="button" disabled='disabled'>&laquo;</button>
+      <button class="custom-pagination pagination-disabled" type="button" name="button" disabled='disabled'>&laquo;</button>
     {% endif %}
 
-    <span class="page_number ">Page {{ paginator.page }}</span>
+    {% assign total_page_posts = paginator.posts.size %}
+    {% assign starting_num = paginator.page | starting_posts_num %}
+    <span class="page_number"> posts {{ paginator.page | starting_posts_num }} through
+      {% if total_page_posts == 10 %}
+        {{ paginator.page | ending_posts_num }}
+      {% else %}
+        {{ total_page_posts | add_starting_num: starting_num }}
+      {% endif %}
+    </span>
 
     {% if paginator.next_page %}
       <a href="{{ paginator.next_page_path }}" class="next">
-        <button type="button" name="button">&raquo;</button>
+        <button class="custom-pagination" type="button" name="button">&raquo;</button>
       </a>
     {% else %}
-      <button type="button" name="button" disabled='disabled'>&raquo;</button>
+      <button class="custom-pagination pagination-disabled" type="button" name="button" disabled='disabled'>&raquo;</button>
     {% endif %}
   </div>
 

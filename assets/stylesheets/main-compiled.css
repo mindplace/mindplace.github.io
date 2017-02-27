@@ -1007,6 +1007,21 @@ footer #github {
   padding: 0 0 10px 20px;
 }
 
+.blog-pagination {
+  display: flex;
+  justify-content: space-around;
+}
+.blog-pagination .custom-pagination {
+  width: 80px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+}
+.blog-pagination .pagination-disabled {
+  background-color: #f6f6f6;
+  color: lightgrey;
+}
+
 #home .image-wrapper {
   background-image: url("/assets/images/dual-screen.jpg");
   background-size: cover;
