@@ -114,6 +114,7 @@ The [sample app](https://github.com/mindplace/n_plus_one_blog) built to support 
 [Bullet gem](https://github.com/flyerhzm/bullet)  
 ["The (Silver) Bullet for the N+1 Problem"](https://www.sitepoint.com/silver-bullet-n1-problem/)  
 ["Remove N+1 queries in your Ruby on Rails app"](http://blog.diatomenterprises.com/remove-n1-queries-in-your-ruby-on-rails-app/)  
+["N+1 Queries or Memory Problems: Why Not Solve Both?"](https://blog.heroku.com/solving-n-plus-one-queries)
 ["Buggy Rails Code: The 10 Most Common Mistakes That Rails Developers Make"](https://www.toptal.com/ruby-on-rails/top-10-mistakes-that-rails-programmers-make)  
 ["Avoid the N+1 problem in in Rails by harnessing your database"](http://aspiringwebdev.com/avoid-the-n1-problem-in-rails-by-harnessing-your-database/)  
 ["3 ways to do eager loading (preloading) in Rails 3 & 4"](http://blog.arkency.com/2013/12/rails4-preloading/)  
