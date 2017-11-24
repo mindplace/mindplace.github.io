@@ -4,45 +4,25 @@ title: Contact
 permalink: /contact/
 ---
 <div id="contact" class="home">
-
   <div class="panel panel-default">
     <div class="panel-heading">
       <h1 class="contact-header">Say hello!</h1>
     </div>
 
     <div class="panel-body">
-      <p>I'm a <a href="https://devbootcamp.com/">Dev Bootcamp graduate</a> living in NYC. I'm passionate about making it easier for newcomers to transition into web development, especially career-changers.</p>
-
-      <p>I currenly work in various flavors of Ruby and JavaScript,
-        and spend a lot of time in the front-end. Algorithms, thorny problems, and digging into new,
-        well-defined challenges make me happy. I'm lucky knowing that every day I get to do
-        interesting and worthwhile work.</p>
-
-      <p>This year's focus for me is leveling up my CS fundamendals, and I <a href="/blog">blog about it here</a>.</p>
-
-      <p>One of my favorite things is
-        <a href="http://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html">
-          programmer humor</a>.</p>
-    </div>
-  </div>
-
-  <div class="social panel panel-default panel-body">
       <ul>
-        <li>
-          <a href="mailto:eleytush@gmail.com">
-            <i class="contact-page-link fa fa-envelope-o"></i>
-          </a>
-        </li>
-
         {% for link_value in site.data.social %}
           {% assign link_tag = link_value[0] %}
           {% assign link = site.data.social[link_tag] %}
 
-          <li><a href="{{ link.link }}" target="_blank">
-            <i class="contact-page-link fa {{ link.icon }}"></i></a>
+          <li>
+            <a href="{{ link.link }}" target="_blank">
+              <i class="contact-page-link fa {{ link.icon }}"></i>
+              {{ link.name }}
+            </a>
           </li>
         {% endfor %}
       </ul>
+    </div>
   </div>
-
 </div>

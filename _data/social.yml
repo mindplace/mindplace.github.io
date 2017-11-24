@@ -1,11 +1,19 @@
 twitter:
   link: "https://twitter.com/mindpl_ace"
   icon: fa-twitter
+  name: Twitter
 
 github:
   link: "https://github.com/mindplace"
   icon: fa-github
+  name: Github
 
 linkedin:
   link: "https://www.linkedin.com/in/estherleytush"
   icon: fa-linkedin-square
+  name: LinkedIn
+
+email:
+  link: "mailto:eleytush@gmail.com"
+  icon: fa-envelope-o
+  name: eleytush@gmail.com
