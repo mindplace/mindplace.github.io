@@ -5,8 +5,8 @@ body {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
 
-  background-color: $black;
-  color: $white;
+  background-color: $white;
+  color: $black;
 
   margin: 0;
 }
@@ -21,7 +21,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
 
-  background-image: url(/assets/images/foggy-mountains.jpg);
+  background-image: url(/assets/images/plant.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,7 +30,7 @@ body {
 .Site-content {
   flex: 1;
   padding: 10%;
-  background-color: rgba($black, 0.8);
+  background-color: rgba($white, 0.3);
 }
 
 /**
@@ -51,13 +51,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $light-green;
+  color: $sea-green;
   text-decoration: none;
 
   &:hover, &:active {
     cursor: pointer;
-    color: $sea-green;
-    border-color: $sea-green !important;
+    color: $light-green;
+    border-color: $light-green !important;
   }
 }
 
@@ -104,7 +104,7 @@ a {
   width: 88%;
   padding: 20px 16% 20px 10%;
 
-  background-color: rgba($black, 0.5);
+  background-color: rgba($white, 0.5);
 
   display: flex;
   justify-content: space-between;

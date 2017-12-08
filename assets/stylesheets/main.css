@@ -4,8 +4,8 @@
 body {
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #000000;
   margin: 0;
 }
 
@@ -17,7 +17,7 @@ body {
   position: fixed;
   overflow-y: scroll;
   overflow-x: hidden;
-  background-image: url(/assets/images/foggy-mountains.jpg);
+  background-image: url(/assets/images/plant.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,7 +26,7 @@ body {
 .Site-content {
   flex: 1;
   padding: 10%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /**
@@ -47,13 +47,13 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: #84A98C;
+  color: #2E8562;
   text-decoration: none;
 }
 a:hover, a:active {
   cursor: pointer;
-  color: #2E8562;
-  border-color: #2E8562 !important;
+  color: #84A98C;
+  border-color: #84A98C !important;
 }
 
 #sidebar {
@@ -89,7 +89,7 @@ a:hover, a:active {
   left: 0;
   width: 88%;
   padding: 20px 16% 20px 10%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
@@ -255,9 +255,6 @@ a:hover, a:active {
 
 .posts .post-title {
   margin: 10px;
-}
-.posts h3, .posts .post-title {
-  color: #CAD2C5;
 }
 
 /**
