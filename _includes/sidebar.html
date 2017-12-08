@@ -1,37 +1,14 @@
-<div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-3 col-xl-3">
-  <div class="fixed-condition">
-    <a href="/">
-      <img src="{{ site.url }}/assets/images/headshot.jpg" id="about" height="75px" width="75px">
-    </a>
+<div id="sidebar">
+  <div class="social">
+    <ul>
+      {% for link_value in site.data.social %}
+      {% assign link_tag = link_value[0] %}
+      {% assign link = site.data.social[link_tag] %}
 
-    <h1 class="author-name">{{ site.title }}</h1>
-    <div id="about">
-        <p>I'm a web developer at <a href="http://thebacon.com/about">The Bacon</a>, living in NYC.</p>
-    </div>
-
-    <div class="social">
-        <ul>
-          {% for link_value in site.data.social %}
-            {% assign link_tag = link_value[0] %}
-            {% assign link = site.data.social[link_tag] %}
-
-            <li><a href="{{ link.link }}" target="_blank">
-              <i class="fa {{ link.icon }}"></i></a>
-            </li>
-          {% endfor %}
-        </ul>
-    </div>
-
-    <hr>
-
-    <div class="navbar-links">
-      <ul>
-        <li><a href="/">&nbsp;&raquo; Home</a></li>
-        <li><a id="blog-link" href="/blog">&nbsp;&raquo; Blog</a></li>
-        <li><a id="projects-link" href="/projects">&nbsp;&raquo; Projects</a></li>
-        <li><a id="resume-link" href="https://resume.creddle.io/resume/h8u15yv6b0r">&nbsp;&raquo; Resume</a></li>
-        <li><a id="contact-link" href="/contact">&nbsp;&raquo; Contact</a></li>
-      </ul>
-    </div>
+      <li><a href="{{ link.link }}" target="_blank">
+        <i class="fa {{ link.icon }}"></i></a>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>

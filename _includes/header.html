@@ -1,16 +1,12 @@
-<header id="header">
-  <h1>
-    <a href="/">mindplace</a>
-  </h1>
+<header id="header" class="{% if page.name == 'index.html' %}fade-in{% endif %}">
+  <a href="/">{{ site.title }}</a>
 
   <nav class="links">
-  </nav>
-
-  <nav class="main">
     <ul>
-      <li class="menu">
-        <a class="fa-bars" href="#menu">Menu</a>
-      </li>
+      <li><a id="blog" href="/blog">Blog</a></li>
+      <li><a id="projects">Projects</a></li>
+      <li><a id="resume" href="https://resume.creddle.io/resume/h8u15yv6b0r">Resume</a></li>
+      <li><a id="contact">Contact</a></li>
     </ul>
   </nav>
 </header>

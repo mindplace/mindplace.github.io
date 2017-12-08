@@ -1,0 +1,657 @@
+/**
+ * Basic styling
+ */
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  background-color: #000000;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.Site {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-image: url(/assets/images/foggy-mountains.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Site-content {
+  flex: 1;
+  padding: 10%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+/**
+ * Links
+ */
+a {
+  color: #84A98C;
+  text-decoration: none;
+}
+a:hover, a:active {
+  cursor: pointer;
+  color: #2E8562;
+  border-color: #2E8562 !important;
+}
+
+#sidebar {
+  position: fixed;
+  right: 2%;
+  top: 30%;
+}
+#sidebar ul, #sidebar ol {
+  margin: 0;
+  padding: 0;
+}
+#sidebar ul li, #sidebar ol li {
+  list-style: none;
+  margin: 20px 0;
+  font-size: 20px;
+}
+#sidebar ul li a, #sidebar ol li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #84A98C;
+  border-radius: 50%;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 88%;
+  padding: 20px 16% 20px 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+}
+#header ul, #header ol {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+#header ul li, #header ol li {
+  list-style: none;
+  margin: 0 10px;
+}
+#header ul li a, #header ol li a {
+  opacity: 0.7;
+}
+
+.fade-in {
+  -webkit-animation: fadein 5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 5s;
+  /* Internet Explorer */
+  -o-animation: fadein 5s;
+  /* Opera < 12.1 */
+  animation: fadein 5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#home #panel-1 {
+  height: 90vh;
+}
+#home #panel-1 h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.posts h2 {
+  margin: 22px 0;
+}
+.posts li {
+  padding: 0 0 10px 20px;
+}
+
+.blog-pagination {
+  display: flex;
+  justify-content: space-around;
+}
+.blog-pagination .custom-pagination {
+  width: 80px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+}
+.blog-pagination .pagination-disabled {
+  background-color: #f6f6f6;
+  color: lightgrey;
+}
+
+#projects .tabs-wrapper {
+  margin-bottom: 30px;
+}
+#projects .tabs-wrapper ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #F7F1F1;
+}
+#projects .tabs-wrapper li {
+  padding: 5px 20px;
+  margin: 0 3px 0 0;
+  border: 1px solid #F7F1F1;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom: none;
+  height: 35px;
+}
+#projects .tabs-wrapper li:hover {
+  cursor: pointer;
+}
+#projects .tabs-wrapper .active {
+  border-bottom: 1px solid white;
+  margin-bottom: -1px;
+  height: 36px;
+}
+#projects .project-box .bottom-footer-section {
+  height: 50px !important;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+}
+@media screen and (min-width: 992px) {
+  #projects .project-box .panel-body {
+    height: 250px;
+  }
+  #projects .project-box .panel-footer {
+    height: 140px;
+  }
+}
+
+#contact .social {
+  text-align: center;
+}
+#contact .contact-header {
+  margin-top: 10px;
+}
+
+.posts .post-title {
+  margin: 10px;
+}
+.posts h3, .posts .post-title {
+  color: #CAD2C5;
+}
+
+/**
+ * Syntax highlighting styles
+ */
+pre,
+code {
+  font-size: 15px;
+  border-radius: 3px;
+  background-color: #404040;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+}
+pre > code {
+  border: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.highlight pre {
+  background-color: #404040;
+}
+
+.highlight .hll {
+  background-color: #404040;
+}
+
+.highlight .c {
+  color: #999999;
+  font-style: italic;
+}
+
+/* Comment */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+/* Error */
+.highlight .g {
+  color: #d0d0d0;
+}
+
+/* Generic */
+.highlight .k {
+  color: #6ab825;
+  font-weight: bold;
+}
+
+/* Keyword */
+.highlight .l {
+  color: #d0d0d0;
+}
+
+/* Literal */
+.highlight .n {
+  color: #d0d0d0;
+}
+
+/* Name */
+.highlight .o {
+  color: #d0d0d0;
+}
+
+/* Operator */
+.highlight .x {
+  color: #d0d0d0;
+}
+
+/* Other */
+.highlight .p {
+  color: #d0d0d0;
+}
+
+/* Punctuation */
+.highlight .cm {
+  color: #999999;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+.highlight .cp {
+  color: #cd2828;
+  font-weight: bold;
+}
+
+/* Comment.Preproc */
+.highlight .c1 {
+  color: #999999;
+  font-style: italic;
+}
+
+/* Comment.Single */
+.highlight .cs {
+  color: #e50808;
+  font-weight: bold;
+  background-color: #520000;
+}
+
+/* Comment.Special */
+.highlight .gd {
+  color: #d22323;
+}
+
+/* Generic.Deleted */
+.highlight .ge {
+  color: #d0d0d0;
+  font-style: italic;
+}
+
+/* Generic.Emph */
+.highlight .gr {
+  color: #d22323;
+}
+
+/* Generic.Error */
+.highlight .gh {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+.highlight .gi {
+  color: #589819;
+}
+
+/* Generic.Inserted */
+.highlight .go {
+  color: #cccccc;
+}
+
+/* Generic.Output */
+.highlight .gp {
+  color: #aaaaaa;
+}
+
+/* Generic.Prompt */
+.highlight .gs {
+  color: #d0d0d0;
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+.highlight .gu {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Generic.Subheading */
+.highlight .gt {
+  color: #d22323;
+}
+
+/* Generic.Traceback */
+.highlight .kc {
+  color: #6ab825;
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+.highlight .kd {
+  color: #6ab825;
+  font-weight: bold;
+}
+
+/* Keyword.Declaration */
+.highlight .kn {
+  color: #6ab825;
+  font-weight: bold;
+}
+
+/* Keyword.Namespace */
+.highlight .kp {
+  color: #6ab825;
+}
+
+/* Keyword.Pseudo */
+.highlight .kr {
+  color: #6ab825;
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+.highlight .kt {
+  color: #6ab825;
+  font-weight: bold;
+}
+
+/* Keyword.Type */
+.highlight .ld {
+  color: #d0d0d0;
+}
+
+/* Literal.Date */
+.highlight .m {
+  color: #3677a9;
+}
+
+/* Literal.Number */
+.highlight .s {
+  color: #ed9d13;
+}
+
+/* Literal.String */
+.highlight .na {
+  color: #bbbbbb;
+}
+
+/* Name.Attribute */
+.highlight .nb {
+  color: #24909d;
+}
+
+/* Name.Builtin */
+.highlight .nc {
+  color: #447fcf;
+  text-decoration: underline;
+}
+
+/* Name.Class */
+.highlight .no {
+  color: #40ffff;
+}
+
+/* Name.Constant */
+.highlight .nd {
+  color: #ffa500;
+}
+
+/* Name.Decorator */
+.highlight .ni {
+  color: #d0d0d0;
+}
+
+/* Name.Entity */
+.highlight .ne {
+  color: #bbbbbb;
+}
+
+/* Name.Exception */
+.highlight .nf {
+  color: #447fcf;
+}
+
+/* Name.Function */
+.highlight .nl {
+  color: #d0d0d0;
+}
+
+/* Name.Label */
+.highlight .nn {
+  color: #447fcf;
+  text-decoration: underline;
+}
+
+/* Name.Namespace */
+.highlight .nx {
+  color: #d0d0d0;
+}
+
+/* Name.Other */
+.highlight .py {
+  color: #d0d0d0;
+}
+
+/* Name.Property */
+.highlight .nt {
+  color: #6ab825;
+  font-weight: bold;
+}
+
+/* Name.Tag */
+.highlight .nv {
+  color: #40ffff;
+}
+
+/* Name.Variable */
+.highlight .ow {
+  color: #6ab825;
+  font-weight: bold;
+}
+
+/* Operator.Word */
+.highlight .w {
+  color: #666666;
+}
+
+/* Text.Whitespace */
+.highlight .mf {
+  color: #3677a9;
+}
+
+/* Literal.Number.Float */
+.highlight .mh {
+  color: #3677a9;
+}
+
+/* Literal.Number.Hex */
+.highlight .mi {
+  color: #3677a9;
+}
+
+/* Literal.Number.Integer */
+.highlight .mo {
+  color: #3677a9;
+}
+
+/* Literal.Number.Oct */
+.highlight .sb {
+  color: #ed9d13;
+}
+
+/* Literal.String.Backtick */
+.highlight .sc {
+  color: #ed9d13;
+}
+
+/* Literal.String.Char */
+.highlight .sd {
+  color: #ed9d13;
+}
+
+/* Literal.String.Doc */
+.highlight .s2 {
+  color: #ed9d13;
+}
+
+/* Literal.String.Double */
+.highlight .se {
+  color: #ed9d13;
+}
+
+/* Literal.String.Escape */
+.highlight .sh {
+  color: #ed9d13;
+}
+
+/* Literal.String.Heredoc */
+.highlight .si {
+  color: #ed9d13;
+}
+
+/* Literal.String.Interpol */
+.highlight .sx {
+  color: #ffa500;
+}
+
+/* Literal.String.Other */
+.highlight .sr {
+  color: #ed9d13;
+}
+
+/* Literal.String.Regex */
+.highlight .s1 {
+  color: #ed9d13;
+}
+
+/* Literal.String.Single */
+.highlight .ss {
+  color: #ed9d13;
+}
+
+/* Literal.String.Symbol */
+.highlight .bp {
+  color: #24909d;
+}
+
+/* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #40ffff;
+}
+
+/* Name.Variable.Class */
+.highlight .vg {
+  color: #40ffff;
+}
+
+/* Name.Variable.Global */
+.highlight .vi {
+  color: #40ffff;
+}
+
+/* Name.Variable.Instance */
+.highlight .il {
+  color: #3677a9;
+}
+
+/* Literal.Number.Integer.Long */
+
+/*# sourceMappingURL=main.css.map */

@@ -1,28 +1,25 @@
 @charset "utf-8";
 
 // Site variables
-$base-font-family: 'News Cycle', sans-serif;
-$base-font-size:   18px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-font-family:  'Quicksand', sans-serif;
+$base-font-weight:  300;
 
-$spacing-unit:     30px;
+$header-weight:     400;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$indigo:            #2F3E46;
+$slate-gray:        #354F52;
+$pastel-gray:       #CAD2C5;
+$sea-green:         #2E8562;
+$light-green:       #84A98C;
 
 $black:            #000000;
+$white:            #FFFFFF;
+
 $grey-color:       #F7F1F1;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
-$blue-light:       rgba(88, 131, 127, 1);
-$blue-light-vis:   lighten($blue-light, 20%);
-$blue-dark:        darken($blue-light, 20%);
 
-// Width of the content area
-$content-width:    800px;
+$spacing-unit:      30px;
 
 $palm:             480px;
 $medium:           544px;
@@ -30,58 +27,9 @@ $medium-end:       758px;
 $laptop:           992px;
 
 @import
-    "base",
-    "layout",
-    "syntax",
-    "thickbox",
-    "stack-theme",
-    "sidebar",
-    "pages",
-    "header"
+  "scss/layout",
+  "scss/pages/index",
+  "scss/pages/pages",
+  "scss/pages/blog",
+  "scss/syntax"
 ;
-
-.Site {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  padding: 0 30px;
-}
-
-.Site-content {
-  flex: 1;
-}
-
-#main-wrapper {
-  float: right;
-  padding: 0;
-
-  #main {
-    margin-top: 70px;
-
-    @media screen and (min-width: 992px) {
-      margin-top: 120px;
-    }
-
-    @media screen and (min-width: $laptop) {
-      margin-top: 70px;
-    }
-  }
-}
-
-#sidebar {
-  display: none;
-}
-
-@media screen and (min-width: $laptop) {
-  #header {
-    display: none;
-  }
-
-  #sidebar {
-    display: inline;
-  }
-}
-
-footer {
-  float: right;
-}

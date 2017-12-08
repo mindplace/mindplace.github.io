@@ -10,5 +10,5 @@ include: ['_static']
 paginate: 10
 paginate_path: "/blog/page:num/"
 
-gems:
+plugins:
   - jekyll-paginate
