@@ -1,0 +1,15 @@
+<nav id="nav" class="fade-in">
+  <ul>
+    {% if page.name == 'index.html' %}
+      <li><a href="#intro" class="active">Profile</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+    {% else %}
+      <li><a href="{% if page.name != 'index.html' %}{{ site.baseurl }}/{% endif %}" class="active">Profile</a></li>
+      <li><a href="{% if page.name != 'index.html' %}{{ site.baseurl }}/{% endif %}#projects">Projects</a></li>
+      <li><a href="{% if page.name != 'index.html' %}{{ site.baseurl }}/{% endif %}#resume">Resume</a></li>
+    {% endif %}
+
+    <li><a href="/blog">Blog</a></li>
+  </ul>
+</nav>

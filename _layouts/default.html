@@ -4,21 +4,23 @@
 
   <body>
     <div class="Site">
-      <div class="Site-content">
-        {% include header.html %}
-        {% include sidebar.html %}
+			<div id="wrapper">
+				{% include header.html %}
+        {% include navbar.html %}
 
-        <div id="main-wrapper">
-          <div id="main">
-            {{ content }}
-          </div>
-        </div>
+				<div id="main">
+          {{ content }}
+				</div>
 
         {% include footer.html %}
-      </div>
+			</div>
     </div>
-
-    <script id="dsq-count-scr" src="//estherleytush.disqus.com/count.js" async></script>
-    <script src="/assets/javascript/main.js"></script>
   </body>
+
+  <script src="assets/javascript/jquery.min.js"></script>
+  <script src="assets/javascript/jquery.scrollex.min.js"></script>
+  <script src="assets/javascript/jquery.scrolly.min.js"></script>
+  <script src="assets/javascript/skel.min.js"></script>
+  <script src="assets/javascript/util.js"></script>
+  <script src="assets/javascript/main.js"></script>
 </html>

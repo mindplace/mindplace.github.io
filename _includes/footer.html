@@ -1,11 +1,35 @@
-<div class="row">
-  <div class="footer-wrapper">
-    <footer class="site-footer">
-        <div class="footer-left">&#169; Esther Leytush 2016 - 2017</div>
+<footer id="footer">
 
-        <div class="footer-right">
-          <a class="page-link" href="mailto:{{ site.email }}">{{ site.email }}</a>
-        </div>
-    </footer>
-  </div>
-</div>
+  <section>
+    <!-- <h2>Aliquam sed mauris</h2> -->
+    <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+    <ul class="actions">
+      <li><a href="generic.html" class="button">Learn More</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <!-- <h2>Etiam feugiat</h2> -->
+    <dl class="alt">
+      <dt>Current</dt>
+      <dd>Brooklyn &bull; New York &bull; USA</dd>
+      <dt>Email</dt>
+      <dd><a href="#">{{ site.email }}</a></dd>
+    </dl>
+
+    <ul class="icons">
+      {% for link_value in site.data.social %}
+        {% assign link_tag = link_value[0] %}
+        {% assign link = site.data.social[link_tag] %}
+
+        <li>
+          <a href="{{ link.link }}" target="_blank" class="icon fa {{ link.icon }} alt">
+            <span class="label">{{ link.name }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <p class="copyright">&#169; Esther Leytush 2016 - 2017. All rights reserved.</p>
+</footer>

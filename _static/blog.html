@@ -2,29 +2,23 @@
 layout: default
 title: Blog
 permalink: /blog
+image: "blog.jpg"
+image_alt: "Esther Leytush, web developer"
+first_header: Everyday Build
+sub_header: Ongoing learning.
 ---
 
-<div>
-  <h1>Blog</h1>
+<!-- Posts -->
+{% assign groups = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" %}
+{% for group in groups %}
+  <section class="main align-left">
+    <h3>{{ group.name }}</h3>
 
-  <div class="posts">
-    {% for post in site.posts  %}
-      {% capture this_month %}{{ post.date | date: "%B %Y" }}{% endcapture %}
-      {% capture next_month %}{{ post.previous.date | date: "%B %Y" }}{% endcapture %}
-
-      {% if forloop.first %}
-        <h3 id="{{ this_month }}-ref">{{this_month}}</h3>
-      {% endif %}
-
+    {% for post in group.items %}
       <div class="post-title">
         <a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i>
           <span>{{ post.date | date_to_string }}</span></i>
       </div>
-
-      {% if this_month != next_month %}
-        <h3 id="{{ next_month }}-ref">{{next_month}}</h3>
-      {% endif %}
     {% endfor %}
-  </div>
-
-</div>
+  </section>
+{% endfor %}

@@ -1,12 +1,11 @@
-<header id="header" class="{% if page.name == 'index.html' %}fade-in{% endif %}">
-  <a href="/">{{ site.title }}</a>
-
-  <nav class="links">
-    <ul>
-      <li><a id="blog" href="/blog">Blog</a></li>
-      <li><a id="projects">Projects</a></li>
-      <li><a id="resume" href="https://resume.creddle.io/resume/h8u15yv6b0r">Resume</a></li>
-      <li><a id="contact">Contact</a></li>
-    </ul>
-  </nav>
+<header id="header" class="alt">
+  <span class="logo">
+    {% if page.image %}
+      <img src="/assets/images/{{ page.image }}" alt="{{ page.image_alt }}">
+    {% else %}
+      <img src="/assets/logo.svg" alt="" />
+    {% endif %}
+  </span>
+  <h1>{{ page.first_header }}</h1>
+  <p>{{ page.sub_header }}</p>
 </header>

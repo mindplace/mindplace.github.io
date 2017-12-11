@@ -1,4 +1,5 @@
 - name: Stack For Yourself
+  desc_id: stack
   description: >
     A compilation of materials to learn web development,
     presented via a lovely <a href="https://jekyllrb.com/">Jekyll</a> site.
@@ -7,37 +8,40 @@
   live: http://stackforyourself.com/
   img: /assets/images/stackforyourself.png
   tags: "front-end"
+  class: "style1"
+  icon: "fa-coffee"
 
-- name: Less By Choice
-  description: >
-    A blog built to publish content on minimalism and living a light and deliberate life.
-    Made to practice <a href="http://www.fltdsgn.com/">flat design</a> concepts and create a
-    platform to share thoughts on a topic close to my heart.
-  url: https://github.com/mindplace/less-by-choice
-  live: http://less-by-choice.com/
-  img: /assets/images/less-by-choice.jpg
-  tags: "javascript front-end"
+# - name: Less By Choice
+#   description: >
+#     A blog built to publish content on minimalism and living a light and deliberate life.
+#     Made to practice <a href="http://www.fltdsgn.com/">flat design</a> concepts and create a
+#     platform to share thoughts on a topic close to my heart.
+#   url: https://github.com/mindplace/less-by-choice
+#   live: http://less-by-choice.com/
+#   img: /assets/images/less-by-choice.jpg
+#   tags: "javascript front-end"
 
-- name: Nautical Distance Calculator
-  url: https://github.com/mindplace/nautical-distances-calculator
-  live: http://estherleytush.com/nautical-distances-calculator/
-  description: >
-    Uses a variety of great JavaScript libraries to build a lightweight
-    single-page app that calculates distances between two searched locations.
-  img: /assets/images/nauticaldistancecalculator.png
-  tags: "javascript front-end"
+# - name: Nautical Distance Calculator
+#   url: https://github.com/mindplace/nautical-distances-calculator
+#   live: http://estherleytush.com/nautical-distances-calculator/
+#   description: >
+#     Uses a variety of great JavaScript libraries to build a lightweight
+#     single-page app that calculates distances between two searched locations.
+#   img: /assets/images/nauticaldistancecalculator.png
+#   tags: "javascript front-end"
 
-- name: Thinking Style Quiz
-  url: https://github.com/mindplace/javascript_browser_games
-  live: https://mindplace.github.io/javascript_browser_games/thinking-style-quiz/
-  description: >
-    A small JavaScript quiz helping you discover your thinking style! I happen
-    to be a nut for personality quizzes, especially when they're delivered
-    via a delightful interface built with <a href="http://materializecss.com/">Materialize</a>.
-  img: /assets/images/thinkingstylequiz.png
-  tags: "javascript front-end"
+# - name: Thinking Style Quiz
+#   url: https://github.com/mindplace/javascript_browser_games
+#   live: https://mindplace.github.io/javascript_browser_games/thinking-style-quiz/
+#   description: >
+#     A small JavaScript quiz helping you discover your thinking style! I happen
+#     to be a nut for personality quizzes, especially when they're delivered
+#     via a delightful interface built with <a href="http://materializecss.com/">Materialize</a>.
+#   img: /assets/images/thinkingstylequiz.png
+#   tags: "javascript front-end"
 
-- name: rails-dribbble-oauth
+- name: Dribbble OAuth
+  desc_id: dribbble
   description: >
     Rails engine gem providing a Ruby wrapper for authenticating users through Dribbble.
     Plug and play to use!
@@ -45,32 +49,51 @@
   live: https://rubygems.org/gems/rails-dribbble-oauth
   img: /assets/images/railsdribbbleoauth.png
   tags: "rails ruby"
+  class: "style2"
+  icon: "fa-laptop"
 
-- name: Bitly clone
-  description: >
-    Small API written in Rails. Accepts a URL and responds with a shortened URL.
-    Keeps track of how many times the shortened URL was used and can deliver a report.
-  url: https://github.com/mindplace/bitly_clone
-  img: /assets/images/bitlyclone.png
-  tags: "rails ruby back-end"
+# - name: Bitly clone
+#   description: >
+#     Small API written in Rails. Accepts a URL and responds with a shortened URL.
+#     Keeps track of how many times the shortened URL was used and can deliver a report.
+#   url: https://github.com/mindplace/bitly_clone
+#   img: /assets/images/bitlyclone.png
+#   tags: "rails ruby back-end"
+#   class: "style3"
+#   icon: "fa-code"
+
+- name: encrypt-string
+  desc_id: encrypt
+  description: Simple UI permitting user to encrypt and decrypt strings using Crypto-JS.
+  url: https://github.com/mindplace/encrypt-string-with-javascript
+  live: http://estherleytush.com/encrypt-string-with-javascript/
+  tags: "javascript front-end"
+  class: "style3"
+  icon: "fa-code"
 
 - name: Algorithms
+  desc_id: algorithms
   description: Lots of algorithms and back-end puzzles solved with Ruby.
   url: https://github.com/mindplace/mindplace_algorithms
   img: /assets/images/binarysearch.png
   tags: "ruby back-end"
+  class: "style4"
+  icon: "fa-diamond"
 
-- name: "Make Together"
-  description: "A social media platform built for web designers and web
-    developers to collaborate on projects. My role included leading the team, integrating code, building a custom OAuth Dribbble solution, and managing deployment."
-  url: https://github.com/mindplace/make-together
-  live: http://make-together.herokuapp.com/
-  img: /assets/images/maketogether.png
-  tags: "ruby rails back-end"
+# - name: "Make Together"
+#   description: "A social media platform built for web designers and web
+#     developers to collaborate on projects. My role included leading the team, integrating code, building a custom OAuth Dribbble solution, and managing deployment."
+#   url: https://github.com/mindplace/make-together
+#   live: http://make-together.herokuapp.com/
+#   img: /assets/images/maketogether.png
+#   tags: "ruby rails back-end"
 
 - name: "jekyll-seed"
+  desc_id: seed
   description: "A boilerplate framework for starting a new static site using Jekyll, setup with Grunt asset management and cool things like search functionality."
   live: http://estherleytush.com/jekyll-seed
   url: https://github.com/mindplace/make-together
   img: /assets/images/jekyll-seed.jpg
   tags: "javascript front-end"
+  class: "style5"
+  icon: "fa-book"

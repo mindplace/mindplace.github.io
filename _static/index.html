@@ -2,26 +2,96 @@
 layout: default
 permalink: /
 name: 'index'
+image: "computer.jpg"
+image_alt: "Esther Leytush, web developer"
+first_header: Esther Leytush
+sub_header: Web developer, JavaScript enthusiast, Ruby lover.
 ---
 
-<div id="home">
+<!-- <div id="home">
   <div class="image-wrapper">
     <div class="hello-world">
 
-      <div id="panel-1">
-        <p>good code matters</p>
-        <h1 class="index-header">Hi there, I'm Esther</h1>
-        <h2>I'm a web developer.</h2>
-      </div>
 
       <div class="index-tagline">
-        <p>I work in various flavors of Ruby and JavaScript, and spend a lot of time in the front-end.</p>
-        <p>Algorithms, thorny problems, and digging into new, well-defined challenges make me happy.</p>
+
         <p>This year's focus for me is learning Node.js and deepening my knowledge base.</p>
+
         <p>But most importantly, I'm always working on being a better dev.</p>
+
         <p>One of my favorite things is <a href="http://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html"> programmer humor</a>.
         </p>
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<section id="intro" class="main">
+  <div class="spotlight">
+    <div class="content">
+      <header class="major">
+        <h2>Hi! I'm Esther.</h2>
+      </header>
+
+      <p>I'm an Engineering Team Lead at <a href="https://www.thebacon.com" target="blank">The Bacon</a>.</p>
+      <p>I write in Ruby and JavaScript. Algorithms, thorny problems, and working accross the stack make me happy.</p>
+    </div>
+    <span class="image"><img src="/assets/images/headshot.jpg" alt="" /></span>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="main special">
+  <header class="major">
+    <h2>Projects</h2>
+  </header>
+
+  <ul class="statistics">
+    {% for item in site.data.projects %}
+      {% assign tags = item.tags | split: " " %}
+      <a href="#show-{{ item.desc_id }}" class="{{ item.class }}">
+        <li >
+          <span class="icon {{ item.icon }}"></span>
+            {{ item.name }}
+        </li>
+      </a>
+    {% endfor %}
+  </ul>
+
+  <!-- <span>
+    {% for item in site.data.projects %}
+    <div class="project {% unless forloop.first %}hidden{% endunless %}">
+      <div class="description-area content align-left">
+        <p id="{{ item.desc_id }}">{{ item.description }}</p>
+
+        <ul class="actions">
+          <li><a href="{{ item.live }}" class="button">View Live</a></li>
+          <li><a href="{{ item.url }}" class="button">Code</a></li>
+        </ul>
+      </div>
+      <span class="image"><img src="{{ item.img }}" alt="" /></span>
+    </div>
+    {% endfor %}
+  </span> -->
+
+  <footer class="major">
+    <ul class="actions">
+      <li><a href="https://github.com/mindplace?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=" target="blank" class="button">More Projects</a></li>
+    </ul>
+  </footer>
+</section>
+
+<!-- Resume -->
+<section id="resume" class="main special">
+  <header class="major mobile-hidden">
+    <a href="/static/eleytush_resume.pdf" download="eleytush_resume.pdf" target="blank">
+      <img class="resume-image" src="/assets/images/eleytush_resume.jpg" alt="Esther Leytush resume">
+    </a>
+  </header>
+
+  <footer class="major desktop-hidden">
+    <ul class="actions">
+      <li><a href="generic.html" class="button special">Resume</a></li>
+    </ul>
+  </footer>
+</section>

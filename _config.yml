@@ -6,9 +6,3 @@ testurl: "localhost:4000" # the subpath of your site, e.g. /blog
 url: "http://estherleytush.com" # the base hostname & protocol for your site
 
 include: ['_static']
-
-paginate: 10
-paginate_path: "/blog/page:num/"
-
-plugins:
-  - jekyll-paginate
