@@ -87,10 +87,6 @@
 	}
 
 	@include breakpoint(small) {
-		display: none;
-
-		& + #main {
-			padding-top: 0;
-		}
+		max-width: 100%; 
 	}
 }
