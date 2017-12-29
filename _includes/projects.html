@@ -1,0 +1,85 @@
+<div id="projects" class="content-container">
+  <header class="section-container">
+    <h2>Projects</h2>
+    <p class="subtitle">This year I'm focusing on deepening my JavaScript knowledge, and diving into React, Node.js, and the wonderfully complexifying JavaScript ecosystem.</p>
+  </header>
+
+  <!-- {% for item in site.data.projects %}
+    {% assign tags = item.tags | split: " " %}
+    <a href="#show-{{ item.desc_id }}" class="{{ item.class }}">
+      <span class="fa {{ item.icon }}"></span>
+      {{ item.name }}
+      <p id="{{ item.desc_id }}">{{ item.description }}</p>
+    </a>
+    <li><a href="{{ item.live }}" class="button">View Live</a></li>
+    <li><a href="{{ item.url }}" class="button">Code</a></li>
+    <span class="image"><img src="{{ item.img }}" alt="" /></span>
+  {% endfor %} -->
+
+  <div class="tile is-vertical box">
+    {% assign stack = site.data.projects["stack"] %}
+    <p class="title">{{ stack.name }}</p>
+    <p class="subtitle">{{ stack.description }}</p>
+  </div>
+
+  <div class="tile is-ancestor">
+    <div class="tile is-vertical is-7">
+      <div class="tile">
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-child box">
+            <p class="title">Vertical...</p>
+            <p class="subtitle">Top tile</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title">Wide tile</p>
+          <p class="subtitle">Aligned with the right tile</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <div class="content">
+          <p class="title">Tall tile</p>
+          <p class="subtitle">With even more content</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <div class="tile is-ancestor">
+    <div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title">Side column</p>
+        <p class="subtitle">With some content</p>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        </div>
+      </article>
+    </div>
+    <div class="tile is-parent is-8">
+      <article class="tile is-child box">
+        <p class="title">Main column</p>
+        <p class="subtitle">With some content</p>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- More projects -->
+  <div class="buttons is-centered">
+    <a href="https://github.com/mindplace?utf8=%E2%9C%93&tab=repositories&q=&type=source&language=" target="blank" class="button is-primary">View More Projects on Github</a>
+  </div>
+</div>

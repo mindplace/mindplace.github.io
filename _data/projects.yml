@@ -1,5 +1,5 @@
-- name: Stack For Yourself
-  desc_id: stack
+stack:
+  name: Stack For Yourself
   description: >
     A compilation of materials to learn web development,
     presented via a lovely <a href="https://jekyllrb.com/">Jekyll</a> site.
@@ -8,8 +8,56 @@
   live: http://stackforyourself.com/
   img: /assets/images/stackforyourself.png
   tags: "front-end"
-  class: "style1"
-  icon: "fa-coffee"
+
+dribbble:
+  name: Dribbble OAuth
+  description: >
+    Rails engine gem providing a Ruby wrapper for authenticating users through Dribbble.
+    Plug and play to use!
+  url: https://github.com/mindplace/rails-dribbble-oauth
+  live: https://rubygems.org/gems/rails-dribbble-oauth
+  img: /assets/images/railsdribbbleoauth.png
+  tags: "rails ruby"
+
+encrypt:
+  name: encrypt-string
+  description: Simple UI permitting user to encrypt and decrypt strings using Crypto-JS.
+  url: https://github.com/mindplace/encrypt-string-with-javascript
+  live: http://estherleytush.com/encrypt-string-with-javascript/
+  tags: "javascript front-end"
+
+algorithms:
+  name: Algorithms
+  description: Lots of algorithms and back-end puzzles solved with Ruby.
+  url: https://github.com/mindplace/mindplace_algorithms
+  img: /assets/images/binarysearch.png
+  tags: "ruby back-end"
+
+jekyll:
+  name: "jekyll-seed"
+  description: "A boilerplate framework for starting a new static site using Jekyll, setup with Grunt asset management and cool things like search functionality."
+  live: http://estherleytush.com/jekyll-seed
+  url: https://github.com/mindplace/make-together
+  img: /assets/images/jekyll-seed.jpg
+  tags: "javascript front-end"
+
+# - name: Bitly clone
+#   description: >
+#     Small API written in Rails. Accepts a URL and responds with a shortened URL.
+#     Keeps track of how many times the shortened URL was used and can deliver a report.
+#   url: https://github.com/mindplace/bitly_clone
+#   img: /assets/images/bitlyclone.png
+#   tags: "rails ruby back-end"
+#   class: "style3"
+#   icon: "fa-code"
+
+# - name: "Make Together"
+#   description: "A social media platform built for web designers and web
+#     developers to collaborate on projects. My role included leading the team, integrating code, building a custom OAuth Dribbble solution, and managing deployment."
+#   url: https://github.com/mindplace/make-together
+#   live: http://make-together.herokuapp.com/
+#   img: /assets/images/maketogether.png
+#   tags: "ruby rails back-end"
 
 # - name: Less By Choice
 #   description: >
@@ -39,61 +87,3 @@
 #     via a delightful interface built with <a href="http://materializecss.com/">Materialize</a>.
 #   img: /assets/images/thinkingstylequiz.png
 #   tags: "javascript front-end"
-
-- name: Dribbble OAuth
-  desc_id: dribbble
-  description: >
-    Rails engine gem providing a Ruby wrapper for authenticating users through Dribbble.
-    Plug and play to use!
-  url: https://github.com/mindplace/rails-dribbble-oauth
-  live: https://rubygems.org/gems/rails-dribbble-oauth
-  img: /assets/images/railsdribbbleoauth.png
-  tags: "rails ruby"
-  class: "style2"
-  icon: "fa-laptop"
-
-# - name: Bitly clone
-#   description: >
-#     Small API written in Rails. Accepts a URL and responds with a shortened URL.
-#     Keeps track of how many times the shortened URL was used and can deliver a report.
-#   url: https://github.com/mindplace/bitly_clone
-#   img: /assets/images/bitlyclone.png
-#   tags: "rails ruby back-end"
-#   class: "style3"
-#   icon: "fa-code"
-
-- name: encrypt-string
-  desc_id: encrypt
-  description: Simple UI permitting user to encrypt and decrypt strings using Crypto-JS.
-  url: https://github.com/mindplace/encrypt-string-with-javascript
-  live: http://estherleytush.com/encrypt-string-with-javascript/
-  tags: "javascript front-end"
-  class: "style3"
-  icon: "fa-code"
-
-- name: Algorithms
-  desc_id: algorithms
-  description: Lots of algorithms and back-end puzzles solved with Ruby.
-  url: https://github.com/mindplace/mindplace_algorithms
-  img: /assets/images/binarysearch.png
-  tags: "ruby back-end"
-  class: "style4"
-  icon: "fa-diamond"
-
-# - name: "Make Together"
-#   description: "A social media platform built for web designers and web
-#     developers to collaborate on projects. My role included leading the team, integrating code, building a custom OAuth Dribbble solution, and managing deployment."
-#   url: https://github.com/mindplace/make-together
-#   live: http://make-together.herokuapp.com/
-#   img: /assets/images/maketogether.png
-#   tags: "ruby rails back-end"
-
-- name: "jekyll-seed"
-  desc_id: seed
-  description: "A boilerplate framework for starting a new static site using Jekyll, setup with Grunt asset management and cool things like search functionality."
-  live: http://estherleytush.com/jekyll-seed
-  url: https://github.com/mindplace/make-together
-  img: /assets/images/jekyll-seed.jpg
-  tags: "javascript front-end"
-  class: "style5"
-  icon: "fa-book"

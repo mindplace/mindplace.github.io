@@ -2,16 +2,23 @@
 layout: default
 title: Blog
 permalink: /blog
-image: "blog.jpg"
-image_alt: "Esther Leytush, web developer"
 first_header: Everyday Build
 sub_header: Ongoing learning.
 ---
 
+<section class="hero is-primary blog-hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">{{ page.first_header }}</h1>
+      <p class="subtitle">{{ page.sub_header }}</p>
+    </div>
+  </div>
+</section>
+
 <!-- Posts -->
 {% assign groups = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" %}
 {% for group in groups %}
-  <section class="main align-left">
+  <section class="container">
     <h3>{{ group.name }}</h3>
 
     {% for post in group.items %}
@@ -21,4 +28,6 @@ sub_header: Ongoing learning.
       </div>
     {% endfor %}
   </section>
+
+  <hr>
 {% endfor %}

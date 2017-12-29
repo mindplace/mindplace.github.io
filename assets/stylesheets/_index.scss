@@ -1,0 +1,24 @@
+// Index
+.index {
+  margin-top: 2.5rem;
+}
+
+.resume-image {
+  border: 1px solid $primary-hover;
+  border-radius: 4px;
+}
+
+// Blog
+.blog-hero {
+  margin: 0 -34% 1.5rem;
+  padding: 0px 34%;
+
+  .hero-body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.post-title {
+  margin-bottom: 10px;
+}

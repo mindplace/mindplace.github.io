@@ -2,7 +2,8 @@
 title: Esther Leytush
 email: eleytush@gmail.com
 
-testurl: "localhost:4000" # the subpath of your site, e.g. /blog
-url: "http://estherleytush.com" # the base hostname & protocol for your site
+testurl: "localhost:4000"
+url: "http://estherleytush.com"
+baseurl: ""
 
 include: ['_static']

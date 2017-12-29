@@ -1,143 +1,99 @@
-/*
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+'use strict';
 
-(function($) {
-	skel.breakpoints({
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 360px)'
-	});
+document.addEventListener('DOMContentLoaded', function () {
 
-	$(function() {
+  // Scrolling
 
-		var	$window = $(window),
-			$body = $('body'),
-			$main = $('#main');
+  var navbarEl = document.getElementById('navbar');
+  var specialShadow = document.getElementById('specialShadow');
+  var NAVBAR_HEIGHT = 52;
+  var THRESHOLD = 52;
+  var navbarOpen = false;
+  var horizon = NAVBAR_HEIGHT;
+  var whereYouStoppedScrolling = 0;
+  var scrollFactor = 0;
+  var currentTranslate = 0;
 
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+  function upOrDown(lastY, currentY) {
+    if (currentY >= lastY) {
+      return goingDown(currentY);
+    }
+    return goingUp(currentY);
+  }
 
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 100);
-			});
+  function goingDown(currentY) {
+    var trigger = NAVBAR_HEIGHT;
+    whereYouStoppedScrolling = currentY;
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+    if (currentY > horizon) {
+      horizon = currentY;
+    }
 
-		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
-			});
+    translateHeader(currentY, false);
+  }
 
-		// Nav.
-			var $nav = $('#nav');
+  function goingUp(currentY) {
+    var trigger = 0;
 
-			if ($nav.length > 0) {
+    if (currentY < whereYouStoppedScrolling - NAVBAR_HEIGHT) {
+      horizon = currentY + NAVBAR_HEIGHT;
+    }
 
-				// Shrink effect.
-					$main
-						.scrollex({
-							mode: 'top',
-							enter: function() {
-								$nav.addClass('alt');
-							},
-							leave: function() {
-								$nav.removeClass('alt');
-							},
-						});
+    translateHeader(currentY, true);
+  }
 
-				// Links.
-					var $nav_a = $nav.find('a');
+  function constrainDelta(delta) {
+    return Math.max(0, Math.min(delta, NAVBAR_HEIGHT));
+  }
 
-					$nav_a
-						.scrolly({
-							speed: 1000,
-							offset: function() { return $nav.height(); }
-						})
-						.on('click', function() {
+  function translateHeader(currentY, upwards) {
+    // let topTranslateValue;
+    var translateValue = void 0;
 
-							var $this = $(this);
+    if (upwards && currentTranslate == 0) {
+      translateValue = 0;
+    } else if (currentY <= NAVBAR_HEIGHT) {
+      translateValue = currentY * -1;
+    } else {
+      var delta = constrainDelta(Math.abs(currentY - horizon));
+      translateValue = delta - NAVBAR_HEIGHT;
+    }
 
-							// External link? Bail.
-								if ($this.attr('href').charAt(0) != '#')
-									return;
+    if (translateValue != currentTranslate) {
+      var navbarStyle = '\n        transform: translateY(' + translateValue + 'px);\n      ';
+      currentTranslate = translateValue;
+      navbarEl.setAttribute('style', navbarStyle);
+    }
 
-							// Deactivate all links.
-								$nav_a
-									.removeClass('active')
-									.removeClass('active-locked');
+    if (currentY > THRESHOLD * 2) {
+      scrollFactor = 1;
+    } else if (currentY > THRESHOLD) {
+      scrollFactor = (currentY - THRESHOLD) / THRESHOLD;
+    } else {
+      scrollFactor = 0;
+    }
 
-							// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-								$this
-									.addClass('active')
-									.addClass('active-locked');
+    var translateFactor = 1 + translateValue / NAVBAR_HEIGHT;
+    specialShadow.style.opacity = scrollFactor;
+    specialShadow.style.transform = 'scaleY(' + translateFactor + ')';
+  }
 
-						})
-						.each(function() {
+  translateHeader(window.scrollY, false);
 
-							var	$this = $(this);
+  var ticking = false;
+  var lastY = 0;
 
-							try {
-								var id = $this.attr('href'),
-										$section = $(id);
-							} catch(err) {
-								return;
-							}
+  window.addEventListener('scroll', function () {
+    var currentY = window.scrollY;
 
-							// No section for this link? Bail.
-								if ($section.length < 1)
-									return;
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        upOrDown(lastY, currentY);
+        ticking = false;
+        lastY = currentY;
+      });
+    }
 
-							// Scrollex.
-								$section.scrollex({
-									mode: 'middle',
-									initialize: function() {
-
-										// Deactivate section.
-											if (skel.canUse('transition'))
-												$section.addClass('inactive');
-
-									},
-									enter: function() {
-
-										// Activate section.
-											$section.removeClass('inactive');
-
-										// No locked links? Deactivate all links and activate this section's one.
-											if ($nav_a.filter('.active-locked').length == 0) {
-
-												$nav_a.removeClass('active');
-												$this.addClass('active');
-
-											}
-
-										// Otherwise, if this section's link is the one that's locked, unlock it.
-											else if ($this.hasClass('active-locked'))
-												$this.removeClass('active-locked');
-
-									}
-								});
-
-						});
-
-			}
-
-		// Scrolly.
-			$('.scrolly').scrolly({
-				speed: 1000
-			});
-
-	});
-
-})(jQuery);
+    ticking = true;
+  });
+});

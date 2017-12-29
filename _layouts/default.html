@@ -4,23 +4,18 @@
 
   <body>
     <div class="Site">
-			<div id="wrapper">
-				{% include header.html %}
-        {% include navbar.html %}
+      {% include navbar.html %}
 
-				<div id="main">
+      <div class="content">
+        <div id="main" class="container">
           {{ content }}
-				</div>
+        </div>
+      </div>
 
-        {% include footer.html %}
-			</div>
+      {% include footer.html %}
     </div>
   </body>
 
-  <script src="assets/javascript/jquery.min.js"></script>
-  <script src="assets/javascript/jquery.scrollex.min.js"></script>
-  <script src="assets/javascript/jquery.scrolly.min.js"></script>
-  <script src="assets/javascript/skel.min.js"></script>
-  <script src="assets/javascript/util.js"></script>
-  <script src="assets/javascript/main.js"></script>
+  <script src="{{ site.baseurl }}/assets/javascript/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/javascript/main.js"></script>
 </html>
