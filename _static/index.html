@@ -10,14 +10,16 @@ sub_header: Web developer, JavaScript enthusiast, Ruby lover.
 
 <div class="index">
   <!-- Topper -->
-  <div class="content-container">
+  <div class="topper content-container">
     <h1>Hi! I'm Esther.</h1>
 
     <p>I'm an Engineering Team Lead at <a href="https://www.thebacon.com" target="blank">The Bacon</a>.</p>
-    <p>I write in Ruby and JavaScript. Algorithms, thorny problems, and working across the stack make me happy.</p>
+    <p>I write in Ruby and JavaScript.<br>Algorithms, thorny problems, and working across the stack make me happy.</p>
   </div>
 
   <!-- Resume -->
+  <section class="hero parallax index-hero"></section>
+
   <div class="content-container">
     <a href="{{ site.baseurl }}/static/eleytush_resume.pdf" download="eleytush_resume.pdf" target="blank">
       <img class="resume-image" src="/assets/images/eleytush_resume.jpg" alt="Esther Leytush resume">
@@ -28,13 +30,17 @@ sub_header: Web developer, JavaScript enthusiast, Ruby lover.
     </div>
   </div>
 
+  <section class="hero parallax index-hero"></section>
+
   <!-- Projects -->
   {% include projects.html %}
 
-  <!-- Another section -->
-  <div class="content-container">
-    <p>Can you tell I love beautiful images?</p>
+  <section class="hero parallax index-hero"></section>
 
-    <p>I also love <a href="http://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html"> programmer humor</a>.</p>
+  <!-- Another section -->
+  <div class="content-container has-text-centered">
+    <h2>Can you tell I love <a href="https://unsplash.com" target="blank">beautiful images</a>?</h2>
+
+    <p>I also love <a href="http://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html">programmer humor</a>.</p>
   </div>
 </div>

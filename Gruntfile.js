@@ -11,7 +11,7 @@ module.exports = function(grunt) {
       convertLarge: {
         options: {
           sizes: [{
-            width: 1200
+            width: 1300
           }]
         },
         files: [{

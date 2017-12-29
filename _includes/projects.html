@@ -1,9 +1,4 @@
 <div id="projects" class="content-container">
-  <header class="section-container">
-    <h2>Projects</h2>
-    <p class="subtitle">This year I'm focusing on deepening my JavaScript knowledge, and diving into React, Node.js, and the wonderfully complexifying JavaScript ecosystem.</p>
-  </header>
-
   <!-- {% for item in site.data.projects %}
     {% assign tags = item.tags | split: " " %}
     <a href="#show-{{ item.desc_id }}" class="{{ item.class }}">
@@ -11,15 +6,24 @@
       {{ item.name }}
       <p id="{{ item.desc_id }}">{{ item.description }}</p>
     </a>
-    <li><a href="{{ item.live }}" class="button">View Live</a></li>
-    <li><a href="{{ item.url }}" class="button">Code</a></li>
+
     <span class="image"><img src="{{ item.img }}" alt="" /></span>
   {% endfor %} -->
+
+  <header id="projects" class="section-container">
+    <h2>Projects</h2>
+    <p class="subtitle">This year I'm focusing on deepening my JavaScript knowledge, and diving into React, Node.js, and the wonderfully complexifying JavaScript ecosystem.</p>
+  </header>
 
   <div class="tile is-vertical box">
     {% assign stack = site.data.projects["stack"] %}
     <p class="title">{{ stack.name }}</p>
     <p class="subtitle">{{ stack.description }}</p>
+
+    <div class="buttons">
+      <a href="{{ stack.live }}" target="blank" class="button is-primary is-outlined">View Live</a>
+      <a href="{{ stack.url }}" target="blank" class="button is-success is-outlined">View Repo</a>
+    </div>
   </div>
 
   <div class="tile is-ancestor">
@@ -29,6 +33,11 @@
           <article class="tile is-child box">
             <p class="title">Vertical...</p>
             <p class="subtitle">Top tile</p>
+
+            <div class="buttons">
+              <a href="{{ stack.live }}" target="blank" class="button is-primary is-outlined">View Live</a>
+              <a href="{{ stack.url }}" target="blank" class="button is-success is-outlined">View Repo</a>
+            </div>
           </article>
         </div>
       </div>
@@ -39,6 +48,11 @@
           <p class="subtitle">Aligned with the right tile</p>
           <div class="content">
             <!-- Content -->
+          </div>
+
+          <div class="buttons">
+            <a href="{{ stack.live }}" target="blank" class="button is-primary is-outlined">View Live</a>
+            <a href="{{ stack.url }}" target="blank" class="button is-success is-outlined">View Repo</a>
           </div>
         </article>
       </div>
@@ -51,6 +65,11 @@
           <p class="subtitle">With even more content</p>
           <div class="content">
             <!-- Content -->
+          </div>
+
+          <div class="buttons">
+            <a href="{{ stack.live }}" target="blank" class="button is-primary is-outlined">View Live</a>
+            <a href="{{ stack.url }}" target="blank" class="button is-success is-outlined">View Repo</a>
           </div>
         </div>
       </article>
@@ -65,14 +84,25 @@
         <div class="content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
         </div>
+
+        <div class="buttons">
+          <a href="{{ stack.live }}" target="blank" class="button is-primary is-outlined">View Live</a>
+          <a href="{{ stack.url }}" target="blank" class="button is-success is-outlined">View Repo</a>
+        </div>
       </article>
     </div>
+
     <div class="tile is-parent is-8">
       <article class="tile is-child box">
         <p class="title">Main column</p>
         <p class="subtitle">With some content</p>
         <div class="content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        </div>
+
+        <div class="buttons">
+          <a href="{{ stack.live }}" target="blank" class="button is-primary is-outlined">View Live</a>
+          <a href="{{ stack.url }}" target="blank" class="button is-success is-outlined">View Repo</a>
         </div>
       </article>
     </div>

@@ -1311,8 +1311,8 @@ a.box:active {
 }
 
 .button:focus:not(:active), .button.is-focused:not(:active) {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .button:active, .button.is-active {
@@ -1857,8 +1857,8 @@ a.box:active {
 }
 
 .button.is-link:focus:not(:active), .button.is-link.is-focused:not(:active) {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .button.is-link:active, .button.is-link.is-active {
@@ -1956,8 +1956,8 @@ a.box:active {
 }
 
 .button.is-info:focus:not(:active), .button.is-info.is-focused:not(:active) {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .button.is-info:active, .button.is-info.is-active {
@@ -2776,8 +2776,8 @@ a.box:active {
 .textarea:active,
 .textarea.is-active {
   border-color: #589383;
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .input[disabled],
@@ -2900,8 +2900,8 @@ a.box:active {
 .textarea.is-link.is-focused,
 .textarea.is-link:active,
 .textarea.is-link.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .input.is-info,
@@ -2914,8 +2914,8 @@ a.box:active {
 .textarea.is-info.is-focused,
 .textarea.is-info:active,
 .textarea.is-info.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .input.is-success,
@@ -3142,8 +3142,8 @@ a.box:active {
 
 .select select:focus, .select select.is-focused, .select select:active, .select select.is-active {
   border-color: #589383;
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .select select[disabled] {
@@ -3245,8 +3245,8 @@ a.box:active {
 }
 
 .select.is-link select:focus, .select.is-link select.is-focused, .select.is-link select:active, .select.is-link select.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .select.is-info select {
@@ -3254,8 +3254,8 @@ a.box:active {
 }
 
 .select.is-info select:focus, .select.is-info select.is-focused, .select.is-info select:active, .select.is-info select.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
-  box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(115, 171, 156, 0.25);
 }
 
 .select.is-success select {
@@ -3499,8 +3499,8 @@ a.box:active {
 
 .file.is-link:focus .file-cta, .file.is-link.is-focused .file-cta {
   border-color: transparent;
-  -webkit-box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.25);
-  box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0.5em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0.5em rgba(115, 171, 156, 0.25);
   color: #fff;
 }
 
@@ -3524,8 +3524,8 @@ a.box:active {
 
 .file.is-info:focus .file-cta, .file.is-info.is-focused .file-cta {
   border-color: transparent;
-  -webkit-box-shadow: 0 0 0.5em rgba(32, 156, 238, 0.25);
-  box-shadow: 0 0 0.5em rgba(32, 156, 238, 0.25);
+  -webkit-box-shadow: 0 0 0.5em rgba(115, 171, 156, 0.25);
+  box-shadow: 0 0 0.5em rgba(115, 171, 156, 0.25);
   color: #fff;
 }
 
@@ -11112,12 +11112,11 @@ a:hover, a:active {
 
 .Site {
   margin-top: 3.25rem;
-  padding: 0 2.5rem 2.5rem;
-  overflow: hidden;
+  padding: 0 2.5rem;
 }
 @media screen and (min-width: 450px) {
   .Site {
-    padding: 0 20% 2.5rem;
+    padding: 0 20%;
   }
 }
 
@@ -11132,18 +11131,54 @@ a:hover, a:active {
 }
 
 .content-container {
-  margin-bottom: 5.5rem;
+  margin: 4.5rem 0;
 }
 
 .section-container {
   margin: 1.5rem 0;
 }
 
+.copyright {
+  font-size: 12px;
+}
+
 .index {
   margin-top: 2.5rem;
 }
-
-.resume-image {
+.index .topper {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0 8rem;
+}
+.index .topper h1 {
+  margin-left: -40px;
+  margin-bottom: 40px;
+}
+.index .index-hero {
+  height: 400px;
+  margin: 0 -34% 1.5rem;
+  padding: 0px 34%;
+  background-color: transparent;
+}
+.index .index-hero .hero-body {
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.index .index-hero .parallax {
+  transition: all 2s;
+  -ms-transform: translate(0px, 100px);
+  /* IE 9 */
+  -webkit-transform: translate(0px, 100px);
+  /* Safari */
+  transform: translate(0px, 100px);
+  /* Standard syntax */
+}
+.index .resume-image {
   border: 1px solid #73ab9c;
   border-radius: 4px;
 }
@@ -11151,6 +11186,11 @@ a:hover, a:active {
 .blog-hero {
   margin: 0 -34% 1.5rem;
   padding: 0px 34%;
+  background-image: url(/assets/images/foggy-mountains.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .blog-hero .hero-body {
   padding-left: 0;

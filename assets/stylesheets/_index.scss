@@ -1,17 +1,66 @@
 // Index
 .index {
   margin-top: 2.5rem;
+
+  .topper {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem 0 8rem;
+
+    h1 {
+      margin-left: -40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .index-hero {
+    height: 400px;
+
+    margin: 0 -34% 1.5rem;
+    padding: 0px 34%;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-color: transparent; 
+
+    .hero-body {
+      padding-left: 0;
+      padding-right: 0;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+
+    // &.first { background-image: url(/assets/images/north.jpg); }
+    // &.second { background-image: url(/assets/images/phone-flower.jpg); }
+    // &.third { background-image: url(/assets/images/stars.jpg); }
+
+    .parallax {
+      transition: all 2s;
+      -ms-transform: translate(0px,100px); /* IE 9 */
+      -webkit-transform: translate(0px,100px); /* Safari */
+      transform: translate(0px,100px); /* Standard syntax */
+    }
+  }
+
+  .resume-image {
+    border: 1px solid $primary-hover;
+    border-radius: 4px;
+  }
 }
 
-.resume-image {
-  border: 1px solid $primary-hover;
-  border-radius: 4px;
-}
 
 // Blog
 .blog-hero {
   margin: 0 -34% 1.5rem;
   padding: 0px 34%;
+  background-image: url(/assets/images/foggy-mountains.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
   .hero-body {
     padding-left: 0;

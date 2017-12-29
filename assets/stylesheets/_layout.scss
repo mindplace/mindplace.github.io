@@ -3,13 +3,11 @@ a:hover, a:active { color: lighten($primary-color, 20%); }
 
 .Site {
   margin-top: 3.25rem;
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 2.5rem;
 
   @media screen and (min-width: $mobile-starts) {
-    padding: 0 20% 2.5rem;
+    padding: 0 20%;
   }
-
-  overflow: hidden;
 }
 
 #navbar {
@@ -21,5 +19,7 @@ a:hover, a:active { color: lighten($primary-color, 20%); }
   }
 }
 
-.content-container { margin-bottom: 5.5rem; }
+.content-container { margin: 4.5rem 0; }
 .section-container { margin: 1.5rem 0; }
+
+.copyright { font-size: 12px; }

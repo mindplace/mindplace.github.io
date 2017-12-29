@@ -1,33 +1,23 @@
-<!-- <footer id="footer">
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="has-text-centered section-container">
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p>Brooklyn, New York, USA</p>
+    </div>
 
-  <section>
-    <p>Do you need mentorship? Are you looking for a developer? Reach out! Maybe we can help each other.</p>
-    <ul class="actions">
-      <li><a href="mailto:eleytush@gmail.com" class="button">Email Me</a></li>
-    </ul>
-  </section>
-
-  <section>
-    <dl class="alt">
-      <dt>Current</dt>
-      <dd>Brooklyn &bull; New York &bull; USA</dd>
-      <dt>Email</dt>
-      <dd><a href="#">{{ site.email }}</a></dd>
-    </dl>
-
-    <ul class="icons">
+    <div class="buttons is-centered">
       {% for link_value in site.data.social %}
         {% assign link_tag = link_value[0] %}
         {% assign link = site.data.social[link_tag] %}
 
-        <li>
-          <a href="{{ link.link }}" target="_blank" class="icon fa {{ link.icon }} alt">
-            <span class="label">{{ link.name }}</span>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
+        <a href="{{ link.link }}" target="_blank" class="button is-outlined">
+          <span class="icon"><i class="fa {{ link.icon }}"></i></span>
+          <span>{{ link.name }}</span>
+        </a>
 
-  <p class="copyright">&#169; Esther Leytush 2016 - 2017. All rights reserved.</p>
-</footer> -->
+      {% endfor %}
+    </div>
+
+    <p class="copyright has-text-centered">&#169; Esther Leytush 2016 - 2017</p>
+  </div>
+</footer>

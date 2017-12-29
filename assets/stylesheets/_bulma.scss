@@ -1382,8 +1382,8 @@ a.box:active {
 }
 
 .button:focus:not(:active), .button.is-focused:not(:active) {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .button:active, .button.is-active {
@@ -1928,8 +1928,8 @@ a.box:active {
 }
 
 .button.is-link:focus:not(:active), .button.is-link.is-focused:not(:active) {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .button.is-link:active, .button.is-link.is-active {
@@ -2027,8 +2027,8 @@ a.box:active {
 }
 
 .button.is-info:focus:not(:active), .button.is-info.is-focused:not(:active) {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .button.is-info:active, .button.is-info.is-active {
@@ -2849,8 +2849,8 @@ a.box:active {
 .textarea:active,
 .textarea.is-active {
   border-color: $primary-color;
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .input[disabled],
@@ -2973,8 +2973,8 @@ a.box:active {
 .textarea.is-link.is-focused,
 .textarea.is-link:active,
 .textarea.is-link.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .input.is-info,
@@ -2987,8 +2987,8 @@ a.box:active {
 .textarea.is-info.is-focused,
 .textarea.is-info:active,
 .textarea.is-info.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .input.is-success,
@@ -3215,8 +3215,8 @@ a.box:active {
 
 .select select:focus, .select select.is-focused, .select select:active, .select select.is-active {
   border-color: $primary-color;
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .select select[disabled] {
@@ -3318,8 +3318,8 @@ a.box:active {
 }
 
 .select.is-link select:focus, .select.is-link select.is-focused, .select.is-link select:active, .select.is-link select.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .select.is-info select {
@@ -3327,8 +3327,8 @@ a.box:active {
 }
 
 .select.is-info select:focus, .select.is-info select.is-focused, .select.is-info select:active, .select.is-info select.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(32, 156, 238, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .select.is-success select {
@@ -3572,8 +3572,8 @@ a.box:active {
 
 .file.is-link:focus .file-cta, .file.is-link.is-focused .file-cta {
   border-color: transparent;
-  -webkit-box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.25);
-          box-shadow: 0 0 0.5em rgba(50, 115, 220, 0.25);
+  -webkit-box-shadow: 0 0 0.5em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0.5em rgba($primary-hover, 0.25);
   color: #fff;
 }
 
@@ -3597,8 +3597,8 @@ a.box:active {
 
 .file.is-info:focus .file-cta, .file.is-info.is-focused .file-cta {
   border-color: transparent;
-  -webkit-box-shadow: 0 0 0.5em rgba(32, 156, 238, 0.25);
-          box-shadow: 0 0 0.5em rgba(32, 156, 238, 0.25);
+  -webkit-box-shadow: 0 0 0.5em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0.5em rgba($primary-hover, 0.25);
   color: #fff;
 }
 
