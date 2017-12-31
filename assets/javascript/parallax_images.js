@@ -30,7 +30,27 @@ function fallbackImages(){
 
     { src: base + "lady.jpg",
       user: "Miles Tan",
-      photoLink: "https://unsplash.com/photos/RFgO9B_OR4g" }
+      photoLink: "https://unsplash.com/photos/RFgO9B_OR4g" },
+
+    { src: base + "wolf.jpg",
+      user: "Marek Szturk",
+      photoLink: "https://unsplash.com/photos/BiSFSSQtAmg" },
+
+    { src: base + "stones.jpg",
+      user: "Danny Postma",
+      photoLink: "https://unsplash.com/photos/XqtJY5gTo5k" },
+
+    { src: base + "coupola.jpg",
+      user: "Skiathos Greece",
+      photoLink: "https://unsplash.com/photos/IRaJVADIVAE" },
+
+    { src: base + "gardens.jpg",
+      user: "贝莉儿 NG",
+      photoLink: "https://unsplash.com/photos/dqXiw7nCb9Q" },
+
+    { src: base + "coffee.jpg",
+      user: "AJ Garcia",
+      photoLink: "https://unsplash.com/photos/i_6Y2V81ceA" }
   ];
 
   shuffle(availableImages);
@@ -74,7 +94,7 @@ function manageParallax(){
       var image = availableImages[index],
       imageSRC = image.src,
       user = image.user,
-      referralText = "?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+      referralText = "?utm_source=personal_site&utm_medium=referral&utm_content=creditCopyText",
       photoLink = image.photoLink + referralText,
       unsplash = "https://unsplash.com/" + referralText;
 
@@ -87,7 +107,7 @@ function manageParallax(){
       $(item).append(attributionElement);
 
       function clearCover(){
-        var attribution = "Photo by <a href='" + photoLink + "' target='blank'>" + user + "</a> on <a href='" + unsplash + "' target='blank'>Unsplash</a>";
+        var attribution = "Photo by <a href='" + photoLink + "' target='_blank'>" + user + "</a> on <a href='" + unsplash + "' target='_blank'>Unsplash</a>";
         $(item).find(".attribution").append(attribution);
         $(item).addClass("parallax-loaded");
       };

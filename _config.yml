@@ -2,7 +2,7 @@
 title: Esther Leytush
 email: eleytush@gmail.com
 
-url: "http://estherleytush.com"
-baseurl: ""
+url: "https://estherleytush.com"
+baseurl: "/"
 
 include: ['_static']
