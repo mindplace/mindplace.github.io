@@ -6,18 +6,16 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <!-- Fonts -->
+  <!-- Fonts, FontAwesome-->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet">
-
-  <!-- Font awesome icons -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
         rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
         crossorigin="anonymous">
 
-  <!-- Stylesheets (rest are included in main.scss) -->
-  <link rel="stylesheet" href="{{ site.url }}/assets/stylesheets/main.css">
+  <!-- Stylesheets (everything is included in main.scss) -->
+  <link rel="stylesheet" href="/assets/stylesheets/main.css">
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/assets/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 </head>
