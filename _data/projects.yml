@@ -2,7 +2,7 @@ stack:
   name: Stack For Yourself
   description: >
     A compilation of materials to learn web development,
-    presented via a lovely <a href="https://jekyllrb.com/" target="blank">Jekyll</a> site.
+    presented via a lovely <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> site.
     Built to share my collection of links, tutorials, and suggested materials.
   url: https://github.com/mindplace/stack-for-yourself
   live: http://stackforyourself.com/

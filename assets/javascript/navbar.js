@@ -95,34 +95,8 @@ function addScrollEffectToNavbar(){
   });
 };
 
-function manageParallax(){
-  function shuffle(array) {
-    var j, x, i;
-    for (i = array.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = array[i];
-        array[i] = array[j];
-        array[j] = x;
-    }
-  }
-
-  var availableImages = ["lady.jpg", "mountain.jpg", "north.jpg", "phone-flower.jpg", "stars.jpg"]
-  shuffle(availableImages);
-
-  var parallaxItems = $('.parallax');
-  $.each(parallaxItems, function(index, item){
-    var imageSRC = '/assets/images/' + availableImages[index];
-
-    $(item).parallax({
-      imageSrc: imageSRC,
-      speed: 0.8
-    });
-  })
-};
-
 $(document).ready(function () {
 
   addScrollEffectToNavbar();
-  manageParallax();
 
 });

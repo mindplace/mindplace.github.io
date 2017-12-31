@@ -22,22 +22,6 @@
     }
   }
 
-  .index-hero {
-    height: 400px;
-
-    margin: 0 -34% 1.5rem;
-    padding: 0px 34%;
-    background-color: transparent;
-
-    .hero-body {
-      padding-left: 0;
-      padding-right: 0;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-    }
-  }
-
   .resume-image {
     border: 1px solid $primary-hover;
     border-radius: 4px;
@@ -61,30 +45,8 @@
   }
 }
 
+// Blog and posts
 
-// Blog
-.blog-hero {
-  margin: 0 -34% 1.5rem;
-  padding: 0px 34%;
-  background-image: url(/assets/images/foggy-mountains.jpg);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+.post-title { margin-bottom: 10px; }
 
-  .hero-body {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.post-title {
-  margin-bottom: 10px;
-}
-
-// Post pages
-#post {
-  article {
-    margin-bottom: 1.5rem; 
-  }
-}
+#post article { margin-bottom: 1.5rem; }

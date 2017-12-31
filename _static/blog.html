@@ -6,28 +6,30 @@ first_header: Everyday Build
 sub_header: Ongoing learning.
 ---
 
-<section class="hero is-primary blog-hero">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">{{ page.first_header }}</h1>
-      <p class="subtitle">{{ page.sub_header }}</p>
-    </div>
-  </div>
-</section>
+<div class="content-container">
+  <h1 class="title">{{ page.first_header }}</h1>
+  <p class="subtitle">{{ page.sub_header }}</p>
+</div>
+
+<section class="hero parallax parallax-hero"></section>
 
 <!-- Posts -->
-{% assign groups = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" %}
-{% for group in groups %}
-  <section class="container">
-    <h3>{{ group.name }}</h3>
+<div class="content-container">
+  {% assign groups = site.posts | group_by_exp: "post", "post.date | date: '%b %Y'" %}
+  {% for group in groups %}
+    <section class="section-container">
+      <h3>{{ group.name }}</h3>
 
-    {% for post in group.items %}
+      {% for post in group.items %}
       <div class="post-title">
-        <a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i>
-          <span>{{ post.date | date_to_string }}</span></i>
+        <a href="{{ post.url }}">&raquo; {{ post.title }}</a>
+        <!-- &raquo; <i><span>{{ post.date | date_to_string }}</span></i> -->
       </div>
-    {% endfor %}
-  </section>
+      {% endfor %}
+    </section>
 
-  <hr>
-{% endfor %}
+    {% if group != groups.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+</div>
