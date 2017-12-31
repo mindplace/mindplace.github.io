@@ -11102,6 +11102,10 @@ label.panel-block:hover {
   color: #099;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 a {
   color: #589383;
 }
@@ -11114,7 +11118,7 @@ a:hover, a:active {
   margin-top: 3.25rem;
   padding: 0 2.5rem;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 769px) {
   .Site {
     padding: 0 20%;
   }
@@ -11145,6 +11149,10 @@ a:hover, a:active {
 .index {
   margin-top: 2.5rem;
 }
+.index img {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
 .index .topper {
   height: 60vh;
   display: flex;
@@ -11152,9 +11160,11 @@ a:hover, a:active {
   justify-content: center;
   margin: 2rem 0 8rem;
 }
-.index .topper h1 {
-  margin-left: -40px;
-  margin-bottom: 40px;
+@media screen and (min-width: 769px) {
+  .index .topper h1 {
+    margin-left: -40px;
+    margin-bottom: 40px;
+  }
 }
 .index .index-hero {
   height: 400px;
@@ -11169,18 +11179,22 @@ a:hover, a:active {
   justify-content: flex-end;
   flex-direction: column;
 }
-.index .index-hero .parallax {
-  transition: all 2s;
-  -ms-transform: translate(0px, 100px);
-  /* IE 9 */
-  -webkit-transform: translate(0px, 100px);
-  /* Safari */
-  transform: translate(0px, 100px);
-  /* Standard syntax */
-}
 .index .resume-image {
   border: 1px solid #73ab9c;
   border-radius: 4px;
+}
+.index .tile .content.row-content img, .index .tile .content.row-content p {
+  display: inline;
+}
+.index .tile .content.row-content img {
+  float: left;
+  margin-right: 20px;
+  max-height: 170px;
+  object-fit: cover;
+}
+.index #projects .title .icon {
+  color: gainsboro;
+  margin-right: 5px;
 }
 
 .blog-hero {
@@ -11199,6 +11213,10 @@ a:hover, a:active {
 
 .post-title {
   margin-bottom: 10px;
+}
+
+#post article {
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

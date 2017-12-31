@@ -2,6 +2,11 @@
 .index {
   margin-top: 2.5rem;
 
+  img {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
+
   .topper {
     height: 60vh;
     display: flex;
@@ -9,9 +14,11 @@
     justify-content: center;
     margin: 2rem 0 8rem;
 
-    h1 {
-      margin-left: -40px;
-      margin-bottom: 40px;
+    @media screen and (min-width: $tablet-starts){
+      h1 {
+        margin-left: -40px;
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -20,10 +27,7 @@
 
     margin: 0 -34% 1.5rem;
     padding: 0px 34%;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    background-color: transparent; 
+    background-color: transparent;
 
     .hero-body {
       padding-left: 0;
@@ -32,22 +36,28 @@
       justify-content: flex-end;
       flex-direction: column;
     }
-
-    // &.first { background-image: url(/assets/images/north.jpg); }
-    // &.second { background-image: url(/assets/images/phone-flower.jpg); }
-    // &.third { background-image: url(/assets/images/stars.jpg); }
-
-    .parallax {
-      transition: all 2s;
-      -ms-transform: translate(0px,100px); /* IE 9 */
-      -webkit-transform: translate(0px,100px); /* Safari */
-      transform: translate(0px,100px); /* Standard syntax */
-    }
   }
 
   .resume-image {
     border: 1px solid $primary-hover;
     border-radius: 4px;
+  }
+
+  .tile .content.row-content {
+    img, p { display: inline; }
+    img {
+      float: left;
+      margin-right: 20px;
+      max-height: 170px;
+      object-fit: cover;
+    }
+  }
+
+  #projects {
+    .title .icon {
+      color: darken(whitesmoke, 10%);
+      margin-right: 5px;
+    }
   }
 }
 
@@ -70,4 +80,11 @@
 
 .post-title {
   margin-bottom: 10px;
+}
+
+// Post pages
+#post {
+  article {
+    margin-bottom: 1.5rem; 
+  }
 }

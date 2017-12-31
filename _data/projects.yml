@@ -7,31 +7,36 @@ stack:
   url: https://github.com/mindplace/stack-for-yourself
   live: http://stackforyourself.com/
   img: /assets/images/stackforyourself.png
-  tags: "front-end"
+  tags: "static site generators ? jekyll ? javascript ? firebase ? front-end"
+  icon: "fa-laptop"
 
 dribbble:
-  name: Dribbble OAuth
+  name: Rails Dribbble OAuth gem
   description: >
     Rails engine gem providing a Ruby wrapper for authenticating users through Dribbble.
     Plug and play to use!
   url: https://github.com/mindplace/rails-dribbble-oauth
   live: https://rubygems.org/gems/rails-dribbble-oauth
   img: /assets/images/railsdribbbleoauth.png
-  tags: "rails ruby"
+  tags: "rails ? ruby ? gems ? back-end"
+  icon: "fa-diamond"
 
 encrypt:
   name: encrypt-string
-  description: Simple UI permitting user to encrypt and decrypt strings using Crypto-JS.
+  description: Simple UI permitting user to encrypt and decrypt strings using Crypto.js.
   url: https://github.com/mindplace/encrypt-string-with-javascript
+  img: /assets/images/encrypt.jpg
   live: http://estherleytush.com/encrypt-string-with-javascript/
-  tags: "javascript front-end"
+  tags: "javascript ? front-end ? security"
+  icon: "fa-lock"
 
 algorithms:
   name: Algorithms
-  description: Lots of algorithms and back-end puzzles solved with Ruby.
+  description: Various algorithms and puzzles solved with languages like Ruby, Python, and JavaScript, with tests.
   url: https://github.com/mindplace/mindplace_algorithms
   img: /assets/images/binarysearch.png
-  tags: "ruby back-end"
+  tags: "back-end ? tests"
+  icon: "fa-code"
 
 jekyll:
   name: "jekyll-seed"
@@ -39,7 +44,19 @@ jekyll:
   live: http://estherleytush.com/jekyll-seed
   url: https://github.com/mindplace/make-together
   img: /assets/images/jekyll-seed.jpg
-  tags: "javascript front-end"
+  tags: "javascript ? front-end ? jekyll ? design ? static site generators"
+  icon: "fa-code-fork"
+
+hangman:
+  name: "Hangman"
+  description: "A browser-based interactive Hangman game, built to practice vanilla JavaScript, writing Jasmine tests, and visual design."
+  live: http://estherleytush.com/hangman/
+  url: https://github.com/mindplace/hangman
+  img: /assets/images/hangman.jpg
+  tags: "javascript ? design ? front-end ? jasmine"
+
+
+
 
 # - name: Bitly clone
 #   description: >

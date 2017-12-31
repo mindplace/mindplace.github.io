@@ -1,11 +1,14 @@
+body { overflow-x: hidden; }
+
 a { color: $primary-color; }
 a:hover, a:active { color: lighten($primary-color, 20%); }
 
 .Site {
   margin-top: 3.25rem;
+
   padding: 0 2.5rem;
 
-  @media screen and (min-width: $mobile-starts) {
+  @media screen and (min-width: $tablet-starts) {
     padding: 0 20%;
   }
 }
