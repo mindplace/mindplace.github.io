@@ -11136,7 +11136,7 @@ iframe {
 #navbar {
   padding: 0 1.5rem;
 }
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 769px) {
   #navbar {
     padding-left: calc(20% - 1rem);
     padding-right: calc(20% - 1rem);

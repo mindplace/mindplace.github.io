@@ -3,6 +3,6 @@ title: Esther Leytush
 email: eleytush@gmail.com
 
 url: "https://estherleytush.com"
-baseurl: "/"
+baseurl: ""
 
 include: ['_static']

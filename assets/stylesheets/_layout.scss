@@ -22,7 +22,7 @@ iframe { max-width: 100%; }
 #navbar {
   padding: 0 1.5rem;
 
-  @media screen and (min-width: $mobile-starts) {
+  @media screen and (min-width: $tablet-starts) {
     padding-left: calc(20% - 1rem);
     padding-right: calc(20% - 1rem);
   }
