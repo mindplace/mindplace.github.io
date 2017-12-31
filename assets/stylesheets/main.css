@@ -11114,6 +11114,15 @@ a:hover, a:active {
   color: #93beb2;
 }
 
+iframe {
+  max-width: 100%;
+}
+
+.button {
+  height: 100%;
+  white-space: unset;
+}
+
 .Site {
   margin-top: 3.25rem;
   padding: 0 2.5rem;

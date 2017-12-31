@@ -25,7 +25,7 @@ def index
   @posts = Post.order(created_at: :desc).limit(10)
 end
 ```
-
+<br>
 ```html
  <!-- From the post index page view: -->
 
