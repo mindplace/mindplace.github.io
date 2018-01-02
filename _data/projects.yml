@@ -5,7 +5,7 @@ stack:
     presented via a lovely <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> site.
     Built to share my collection of links, tutorials, and suggested materials.
   url: https://github.com/mindplace/stack-for-yourself
-  live: http://stackforyourself.com/
+  live: https://stackforyourself.com/
   img: /assets/images/stackforyourself.png
   tags: "static site generators ? jekyll ? javascript ? firebase ? front-end"
   icon: "fa-laptop"
@@ -26,7 +26,7 @@ encrypt:
   description: Simple UI permitting user to encrypt and decrypt strings using Crypto.js.
   url: https://github.com/mindplace/encrypt-string-with-javascript
   img: /assets/images/encrypt.jpg
-  live: http://estherleytush.com/encrypt-string-with-javascript/
+  live: https://mindplace.github.io/encrypt-string-with-javascript/
   tags: "javascript ? front-end ? security"
   icon: "fa-lock"
 
@@ -41,8 +41,8 @@ algorithms:
 jekyll:
   name: "jekyll-seed"
   description: "A boilerplate framework for starting a new static site using Jekyll, setup with Grunt asset management and cool things like search functionality."
-  live: http://estherleytush.com/jekyll-seed
-  url: https://github.com/mindplace/make-together
+  live: http://mindplace.github.io/jekyll-seed
+  url: https://github.com/mindplace/jekyll-seed/
   img: /assets/images/jekyll-seed.jpg
   tags: "javascript ? front-end ? jekyll ? design ? static site generators"
   icon: "fa-code-fork"
@@ -50,7 +50,7 @@ jekyll:
 hangman:
   name: "Hangman"
   description: "A browser-based interactive Hangman game, built to practice vanilla JavaScript, writing Jasmine tests, and visual design."
-  live: http://estherleytush.com/hangman/
+  live: http://mindplace.github.io/hangman/
   url: https://github.com/mindplace/hangman
   img: /assets/images/hangman.jpg
   tags: "javascript ? design ? front-end ? jasmine"
