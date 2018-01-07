@@ -1829,8 +1829,8 @@ a.box:active {
 }
 
 .button.is-primary:focus:not(:active), .button.is-primary.is-focused:not(:active) {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .button.is-primary:active, .button.is-primary.is-active {
@@ -2959,8 +2959,8 @@ a.box:active {
 .textarea.is-primary.is-focused,
 .textarea.is-primary:active,
 .textarea.is-primary.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .input.is-link,
@@ -3309,8 +3309,8 @@ a.box:active {
 }
 
 .select.is-primary select:focus, .select.is-primary select.is-focused, .select.is-primary select:active, .select.is-primary select.is-active {
-  -webkit-box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
-          box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
+  -webkit-box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0 0.125em rgba($primary-hover, 0.25);
 }
 
 .select.is-link select {
@@ -3547,8 +3547,8 @@ a.box:active {
 
 .file.is-primary:focus .file-cta, .file.is-primary.is-focused .file-cta {
   border-color: transparent;
-  -webkit-box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.25);
-          box-shadow: 0 0 0.5em rgba(0, 209, 178, 0.25);
+  -webkit-box-shadow: 0 0 0.5em rgba($primary-hover, 0.25);
+          box-shadow: 0 0 0.5em rgba($primary-hover, 0.25);
   color: #fff;
 }
 
