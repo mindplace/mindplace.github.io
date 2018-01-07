@@ -57,41 +57,32 @@ function fallbackImages(){
   return availableImages;
 };
 
-var photos = fallbackImages();
+$(document).ready(function(){
 
-function getImages(){
   var param = "8537fc6f3f82700ac356a09754ceac2d9c32286598268e44e09304e5e271cd52",
-      photoCount = 3;
-
-  $.ajax({ url: "https://api.unsplash.com/photos/random?query=landscape&count=" + photoCount + "&client_id=" + param })
-    .done(function(response){
+      parallaxItems = $('.parallax'),
+      photoCount = parallaxItems.length,
       photos = [];
 
-      response.forEach(function(item){
-        var photo = {
-          src: item.urls.regular,
-          user: item.user.name,
-          photoLink: item.links.html
-        }
+  var getPhotos = $.ajax({
+        url: "https://api.unsplash.com/photos/random?query=landscape&count=" + photoCount + "&client_id=" + param
+      }).done(function(response){
+        response.forEach(function(item){
+          var photo = {
+            src: item.urls.regular,
+            user: item.user.name,
+            photoLink: item.links.html
+          }
 
-        photos.push(photo);
+          photos.push(photo);
+        });
+      }).error(function(response){
+        photos = fallbackImages();
       });
 
-    }).error(function(response){
-      return photos;
-    })
-
-  return photos;
-};
-
-function manageParallax(){
-  var availableImages = getImages();
-
-  $(document).ajaxStop(function(){ // wait for the photos to return from unsplash
-    var parallaxItems = $('.parallax');
-
+  Promise.all([ getPhotos ]).then(function() {
     $.each(parallaxItems, function(index, item){
-      var image = availableImages[index],
+      var image = photos[index],
       imageSRC = image.src,
       user = image.user,
       referralText = "?utm_source=personal_site&utm_medium=referral&utm_content=creditCopyText",
@@ -115,10 +106,5 @@ function manageParallax(){
       setTimeout(clearCover, 400)
     });
   });
-};
-
-$(document).ready(function(){
-
-  manageParallax();
 
 });
