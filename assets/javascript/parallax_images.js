@@ -80,7 +80,7 @@ $(document).ready(function(){
         photos = fallbackImages();
       });
 
-  Promise.all([ getPhotos ]).then(function() {
+  function appendPhotos(){
     $.each(parallaxItems, function(index, item){
       var image = photos[index],
       imageSRC = image.src,
@@ -103,8 +103,21 @@ $(document).ready(function(){
         $(item).addClass("parallax-loaded");
       };
 
-      setTimeout(clearCover, 400)
+      setTimeout(clearCover, 400);
     });
+  };
+
+  Promise.all([ getPhotos ]).then(function() {
+    appendPhotos();
+  });
+
+  // Handler for when Unsplash API is down 
+  window.addEventListener("unhandledrejection", function(e) {
+    e.preventDefault();
+    var reason = e.detail.reason;
+    var promise = e.detail.promise;
+
+    appendPhotos();
   });
 
 });
