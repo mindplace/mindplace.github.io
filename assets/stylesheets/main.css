@@ -11123,6 +11123,10 @@ iframe {
   white-space: unset;
 }
 
+.is-full-width {
+  width: 100%;
+}
+
 .Site {
   margin-top: 3.25rem;
   padding: 0 2.5rem;
@@ -11207,8 +11211,7 @@ iframe {
   margin-top: 2.5rem;
 }
 .index img {
-  border: 1px solid lightgray;
-  border-radius: 5px;
+  border: 1px solid #e1e1e1;
 }
 .index .topper {
   height: 60vh;
@@ -11224,8 +11227,14 @@ iframe {
   }
 }
 .index .resume-image {
-  border: 1px solid #73ab9c;
-  border-radius: 4px;
+  border: 1px solid #e1e1e1;
+  border-radius: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: .3s;
+  margin-bottom: 10px;
+}
+.index .resume-image:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 .index .tile .content.row-content img, .index .tile .content.row-content p {
   display: inline;
@@ -11239,14 +11248,6 @@ iframe {
 .index #projects .title .icon {
   color: gainsboro;
   margin-right: 5px;
-}
-.index #beautiful-images-reload-button {
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
 }
 
 .post-title {
