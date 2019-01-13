@@ -6,7 +6,7 @@ stack:
     Built to share my collection of links, tutorials, and suggested materials.
   url: https://github.com/mindplace/stack-for-yourself
   live: https://stackforyourself.com/
-  img: /assets/images/stackforyourself.png
+  img: /assets/images/projects/stackforyourself.png
   tags: "static site generators ? jekyll ? javascript ? firebase ? front-end"
   icon: "fa-laptop"
 
@@ -17,7 +17,7 @@ dribbble:
     Plug and play to use!
   url: https://github.com/mindplace/rails-dribbble-oauth
   live: https://rubygems.org/gems/rails-dribbble-oauth
-  img: /assets/images/railsdribbbleoauth.png
+  img: /assets/images/projects/railsdribbbleoauth.png
   tags: "rails ? ruby ? gems ? back-end"
   icon: "fa-diamond"
 
@@ -25,7 +25,7 @@ encrypt:
   name: encrypt-string
   description: Simple UI permitting user to encrypt and decrypt strings using Crypto.js.
   url: https://github.com/mindplace/encrypt-string-with-javascript
-  img: /assets/images/encrypt.jpg
+  img: /assets/images/projects/encrypt.jpg
   live: https://mindplace.github.io/encrypt-string-with-javascript/
   tags: "javascript ? front-end ? security"
   icon: "fa-lock"
@@ -34,7 +34,7 @@ algorithms:
   name: Algorithms
   description: Various algorithms and puzzles solved with languages like Ruby, Python, and JavaScript, with tests.
   url: https://github.com/mindplace/mindplace_algorithms
-  img: /assets/images/binarysearch.png
+  img: /assets/images/projects/binarysearch.png
   tags: "back-end ? tests"
   icon: "fa-code"
 
@@ -43,7 +43,7 @@ jekyll:
   description: "A boilerplate framework for starting a new static site using Jekyll, setup with Grunt asset management and cool things like search functionality."
   live: http://mindplace.github.io/jekyll-seed
   url: https://github.com/mindplace/jekyll-seed/
-  img: /assets/images/jekyll-seed.jpg
+  img: /assets/images/projects/jekyll-seed.jpg
   tags: "javascript ? front-end ? jekyll ? design ? static site generators"
   icon: "fa-code-fork"
 
@@ -52,18 +52,15 @@ hangman:
   description: "A browser-based interactive Hangman game, built to practice vanilla JavaScript, writing Jasmine tests, and visual design."
   live: http://mindplace.github.io/hangman/
   url: https://github.com/mindplace/hangman
-  img: /assets/images/hangman.jpg
+  img: /assets/images/projects/hangman.jpg
   tags: "javascript ? design ? front-end ? jasmine"
-
-
-
 
 # - name: Bitly clone
 #   description: >
 #     Small API written in Rails. Accepts a URL and responds with a shortened URL.
 #     Keeps track of how many times the shortened URL was used and can deliver a report.
 #   url: https://github.com/mindplace/bitly_clone
-#   img: /assets/images/bitlyclone.png
+#   img: /assets/images/projects/bitlyclone.png
 #   tags: "rails ruby back-end"
 #   class: "style3"
 #   icon: "fa-code"
@@ -73,7 +70,7 @@ hangman:
 #     developers to collaborate on projects. My role included leading the team, integrating code, building a custom OAuth Dribbble solution, and managing deployment."
 #   url: https://github.com/mindplace/make-together
 #   live: http://make-together.herokuapp.com/
-#   img: /assets/images/maketogether.png
+#   img: /assets/images/projects/maketogether.png
 #   tags: "ruby rails back-end"
 
 # - name: Less By Choice
@@ -83,7 +80,7 @@ hangman:
 #     platform to share thoughts on a topic close to my heart.
 #   url: https://github.com/mindplace/less-by-choice
 #   live: http://less-by-choice.com/
-#   img: /assets/images/less-by-choice.jpg
+#   img: /assets/images/projects/less-by-choice.jpg
 #   tags: "javascript front-end"
 
 # - name: Nautical Distance Calculator
@@ -92,7 +89,7 @@ hangman:
 #   description: >
 #     Uses a variety of great JavaScript libraries to build a lightweight
 #     single-page app that calculates distances between two searched locations.
-#   img: /assets/images/nauticaldistancecalculator.png
+#   img: /assets/images/projects/nauticaldistancecalculator.png
 #   tags: "javascript front-end"
 
 # - name: Thinking Style Quiz
@@ -102,5 +99,5 @@ hangman:
 #     A small JavaScript quiz helping you discover your thinking style! I happen
 #     to be a nut for personality quizzes, especially when they're delivered
 #     via a delightful interface built with <a href="http://materializecss.com/">Materialize</a>.
-#   img: /assets/images/thinkingstylequiz.png
+#   img: /assets/images/projects/thinkingstylequiz.png
 #   tags: "javascript front-end"

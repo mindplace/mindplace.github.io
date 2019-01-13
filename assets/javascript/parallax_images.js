@@ -9,9 +9,13 @@ function shuffle(array) {
 };
 
 function fallbackImages(){
-  var base = '/assets/images/';
+  var base = '/assets/images/parallax_fallback/';
 
   var availableImages = [
+    { src: base + "coupola.jpg",
+      user: "Skiathos Greece",
+      userLink: "https://unsplash.com/photos/IRaJVADIVAE" },
+
     { src: base + "mountain.jpg",
       user: "Samuel Scrimshaw",
       userLink: "https://unsplash.com/photos/2oFdVd00xOg" },
@@ -20,37 +24,13 @@ function fallbackImages(){
       user: "Martin Jernberg",
       userLink: "https://unsplash.com/photos/UdURxHDhrgY" },
 
-    { src: base + "phone-flower.jpg",
-      user: "Tyler Mullins",
-      userLink: "https://unsplash.com/photos/H-lDpIVIlBM" },
-
     { src: base + "stars.jpg",
       user: "Nathan Anderson",
       userLink: "https://unsplash.com/photos/L-7cP4p5hik" },
 
-    { src: base + "lady.jpg",
-      user: "Miles Tan",
-      userLink: "https://unsplash.com/photos/RFgO9B_OR4g" },
-
-    { src: base + "wolf.jpg",
-      user: "Marek Szturk",
-      userLink: "https://unsplash.com/photos/BiSFSSQtAmg" },
-
     { src: base + "stones.jpg",
       user: "Danny Postma",
       userLink: "https://unsplash.com/photos/XqtJY5gTo5k" },
-
-    { src: base + "coupola.jpg",
-      user: "Skiathos Greece",
-      userLink: "https://unsplash.com/photos/IRaJVADIVAE" },
-
-    { src: base + "gardens.jpg",
-      user: "贝莉儿 NG",
-      userLink: "https://unsplash.com/photos/dqXiw7nCb9Q" },
-
-    { src: base + "coffee.jpg",
-      user: "AJ Garcia",
-      userLink: "https://unsplash.com/photos/i_6Y2V81ceA" }
   ];
 
   shuffle(availableImages);
