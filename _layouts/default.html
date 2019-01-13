@@ -4,7 +4,7 @@
 
   <body>
     <div class="Site">
-      {% include navbar.html %}
+      {% if page.name != 'index.html' %}{% include navbar.html %}{% endif %}
 
       <div class="content">
         <div id="main" class="container">
@@ -17,7 +17,10 @@
   </body>
 
   <script src="{{ site.url }}/assets/javascript/jquery.min.js"></script>
-  <script src="{{ site.url }}/assets/javascript/navbar.js"></script>
+
+  {% if page.name != 'index.html' %}
+    <script src="{{ site.url }}/assets/javascript/navbar.js"></script>
+  {% endif %}
 
   <script src="{{ site.url }}/assets/javascript/bluebird.min.js"></script>
   <script src="{{ site.url }}/assets/javascript/parallax.min.js"></script>

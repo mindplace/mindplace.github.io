@@ -6,3 +6,9 @@ url: "https://estherleytush.com"
 baseurl: ""
 
 include: ['_static']
+
+me:
+  role: 'Software Engineer'
+  company: 'Betterment'
+  company_url: "https://www.betterment.com/invite/estherleytush"
+  
