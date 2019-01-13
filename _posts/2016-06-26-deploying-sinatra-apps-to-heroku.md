@@ -1,8 +1,7 @@
 ---
-published: true
+published: false
 layout: post
 title: Deploying Sinatra apps to Heroku
-date: 2016-06-26
 comments: true
 ---
 I've deployed various Rails apps to Heroku, but never tried deploying a Sinatra app. At first glance, the process should be similar: add some gems, create new Heroku app via command line, push up, and run database setup commands. Let's see if that prediction holds true.
@@ -40,7 +39,7 @@ Looks great. Opening to make sure it's up...
 $ heroku open
 ```
 
-![throne-overthrow.png](/assets/blog/throne-overthrow.png)
+![throne-overthrow.png](/assets/images/blog/throne-overthrow.png)
 <i>Jon Snow says, 'Wat are dis?'</i>
 
 It's all there! Awesome and painless.

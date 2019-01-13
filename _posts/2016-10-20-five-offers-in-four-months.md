@@ -1,5 +1,4 @@
 ---
-published: true
 comments: true
 title: 'Five offers in four months'
 layout: post

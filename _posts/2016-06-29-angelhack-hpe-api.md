@@ -1,17 +1,15 @@
 ---
-published: true
 comments: true
 title: "AngelHack Brooklyn 2016: Using HPE's Haven OnDemand API to build Curator"
-date: 2016-06-29T00:00:00.000Z
 layout: post
 ---
 [Curator](https://github.com/mindplace/Curator-a-) won at [AngelHack Brooklyn 2016](http://angelhack.com/portfolio-item/brooklyn-usa-may-7-8-2016/) for best use of [HPE Haven OnDemand](https://dev.havenondemand.com/apis)'s API!
 
-![curator](/assets/blog/curator.png)
+![curator](/assets/images/blog/curator.png)
 
 We built [Curator](https://github.com/mindplace/Curator-a-) as a Rails app. It uses the Reddit API and the NYTimes API to pull text data when queried with a search term, then makes a call to an [HPE's concept-extraction API](https://dev.havenondemand.com/apis/extractconcepts#overview) that parses the text data. These concepts are returned to the frontend, where the jQuery library [jQCloud](https://github.com/lucaong/jQCloud) uses it to create beautiful word clouds displaying how the media vs individuals feel about the given search query. Here's some sample results when queried with 'Clinton':
 
-![clinton-query-curator](/assets/blog/curator-clinton.png)
+![clinton-query-curator](/assets/images/blog/curator-clinton.png)
 
 Let's take a look at how Curator works. Most of the work happens in our backend controller when a user triggers a search:
 

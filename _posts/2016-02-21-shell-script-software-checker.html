@@ -19,7 +19,7 @@ to create a conditional flow. Both of these assumptions helped a lot with googli
 I found <a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html">this
 awesome resource</a> and used it as a command cheatsheet. I decided to use this one
 to test if <code>ARGV</code>s were empty:</p>
-<p><img src="/assets/blog/bash-command.jpg"></p>
+<p><img src="/assets/images/blog/bash-command.jpg"></p>
 <p>That's where my confusion, still unresolved, comes in. I passed it <code>$@</code>, or
 what I understand is the <code>ARGV</code> array, and expected that <code>[ -s $@ ]</code> would fail because
 an empty array does not have a size greater than zero. But instead it works, and prints

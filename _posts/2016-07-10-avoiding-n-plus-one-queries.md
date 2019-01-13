@@ -1,5 +1,4 @@
 ---
-published: true
 comments: true
 title: 'Avoiding N+1 Queries'
 layout: post

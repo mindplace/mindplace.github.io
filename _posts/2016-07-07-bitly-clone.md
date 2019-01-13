@@ -1,9 +1,7 @@
 ---
-published: true
 comments: true
 title: Bitly clone API in Rails
 layout: post
-date: 2016-07-07
 ---
 
 
