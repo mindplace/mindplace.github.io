@@ -35,7 +35,9 @@ function fallbackImages(){
 
 $(document).ready(function(){
 
-  var clientId = "${functions.config().unsplash.token}";
+  var clientId = functions.config().unsplash.token;
+  console.log(clientId)
+  
   var parallaxItems = $('.parallax');
   var photoCount = parallaxItems.length;
   var photos = [];
