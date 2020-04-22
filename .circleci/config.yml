@@ -13,11 +13,13 @@ jobs:
           name: Node dependencies
           command: sudo npm install -g firebase-tools
       - run:
-          name: Build
+          name: Jekyll build
           command: bundle exec jekyll build --verbose
       - run:
-          name: Deploy
+          name: Firebase functions install
           command: cd functions && npm install
+      - run:
+          name: Firebnase deploy
           command: firebase deploy --token=$FIREBASE_TOKEN --non-interactive
 
 workflows:
