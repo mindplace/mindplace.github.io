@@ -12,10 +12,6 @@ function fallbackImages(){
   var base = '/assets/images/parallax_fallback/';
 
   var availableImages = [
-    { src: base + "coupola.jpg",
-      user: "Skiathos Greece",
-      userLink: "https://unsplash.com/photos/IRaJVADIVAE" },
-
     { src: base + "mountain.jpg",
       user: "Samuel Scrimshaw",
       userLink: "https://unsplash.com/photos/2oFdVd00xOg" },
@@ -45,7 +41,7 @@ $(document).ready(function(){
       photos = [];
 
   var getPhotos = $.ajax({
-        url: "https://api.unsplash.com/photos/random?query=landscape&count=" + photoCount + "&client_id=" + param
+        url: "https://api.unsplash.com/photos/random?query=mountains&count=" + photoCount + "&client_id=" + param
       }).done(function(response){
         response.forEach(function(item){
           var photo = {
