@@ -48,11 +48,10 @@ function fallbackImages() {
 function buildPhotosFetcher() {
   var parallaxItems = $('.parallax');
   var photoCount = parallaxItems.length;
-  // var clientId = firebase.functions.config().unsplash.token;
-  var clientId = "8537fc6f3f82700ac356a09754ceac2d9c32286598268e44e09304e5e271cd52"
+  var param = "8537fc6f3f82700ac356a09754ceac2d9c32286598268e44e09304e5e271cd52";
 
   return $.ajax({
-    url: "https://api.unsplash.com/photos/random?query=mountains&count=" + photoCount + "&client_id=" + clientId
+    url: "https://api.unsplash.com/photos/random?query=mountains&count=" + photoCount + "&client_id=" + param
   }).done(function(response){
     return response;
   }).error(function(response){
@@ -83,6 +82,7 @@ function appendPhotos(photos){
 };
 
 $(document).ready(function() {
+
   Promise.all(buildPhotosFetcher()).then(function(result) {
     appendPhotos(result);
   });
