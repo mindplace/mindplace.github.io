@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 # --- Gems list ---
 
-gem "jekyll", "~> 3.8.4"
-gem "sassc"
+gem "jekyll", "~> 4.0.0"
 gem "rake"
