@@ -82,7 +82,6 @@ function appendPhotos(photos){
 };
 
 $(document).ready(function() {
-
   Promise.all(buildPhotosFetcher()).then(function(result) {
     appendPhotos(result);
   });
