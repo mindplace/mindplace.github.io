@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Ruby dependencies
-          command: bundle update --bundler && bundle install
+          command: bundle install
       - run:
           name: Node dependencies
           command: sudo npm install -g firebase-tools
