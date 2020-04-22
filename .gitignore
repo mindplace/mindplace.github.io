@@ -1,2 +1,5 @@
 .sass-cache/
 _site/
+.firebase/
+.jekyll-cache/
+.runtimeconfig.json

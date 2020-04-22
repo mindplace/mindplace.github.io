@@ -6,96 +6,90 @@ function shuffle(array) {
     array[i] = array[j];
     array[j] = x;
   }
+  return array;
 };
 
-function fallbackImages(){
+function fallbackImages() {
   var base = '/assets/images/parallax_fallback/';
-
   var availableImages = [
-    { src: base + "mountain.jpg",
-      user: "Samuel Scrimshaw",
-      userLink: "https://unsplash.com/photos/2oFdVd00xOg" },
-
-    { src: base + "north.jpg",
-      user: "Martin Jernberg",
-      userLink: "https://unsplash.com/photos/UdURxHDhrgY" },
-
-    { src: base + "stars.jpg",
-      user: "Nathan Anderson",
-      userLink: "https://unsplash.com/photos/L-7cP4p5hik" },
-
-    { src: base + "stones.jpg",
-      user: "Danny Postma",
-      userLink: "https://unsplash.com/photos/XqtJY5gTo5k" },
+    {
+      urls: { regular: base + "mountain.jpg" },
+      user: {
+        name: "Samuel Scrimshaw",
+        links: { html: "https://unsplash.com/photos/2oFdVd00xOg" },
+      },
+    },
+    {
+      urls: { regular: base + "north.jpg" },
+      user: {
+        name: "Martin Jernberg",
+        links: { html: "https://unsplash.com/photos/UdURxHDhrgY" },
+      },
+    },
+    {
+      urls: { regular: base + "stars.jpg" },
+      user: {
+        name: "Nathan Anderson",
+        links: { html: "https://unsplash.com/photos/L-7cP4p5hik" },
+      },
+    },
+    {
+      urls: { regular: base + "stones.jpg" },
+      user: {
+        name: "Danny Postma",
+        links: { html: "https://unsplash.com/photos/XqtJY5gTo5k" },
+      },
+    },
   ];
 
-  shuffle(availableImages);
-  return availableImages;
+  return shuffle(availableImages);
 };
 
-$(document).ready(function(){
-
-  var clientId = functions.config().unsplash.token;
-  console.log(clientId)
-  
+function buildPhotosFetcher() {
   var parallaxItems = $('.parallax');
   var photoCount = parallaxItems.length;
-  var photos = [];
+  // var clientId = firebase.functions.config().unsplash.token;
+  var clientId = "8537fc6f3f82700ac356a09754ceac2d9c32286598268e44e09304e5e271cd52"
 
-  var getPhotos = $.ajax({
-        url: "https://api.unsplash.com/photos/random?query=mountains&count=" + photoCount + "&client_id=" + clientId
-      }).done(function(response){
-        response.forEach(function(item){
-          var photo = {
-            src: item.urls.regular,
-            user: item.user.name,
-            userLink: item.user.links.html
-          }
+  return $.ajax({
+    url: "https://api.unsplash.com/photos/random?query=mountains&count=" + photoCount + "&client_id=" + clientId
+  }).done(function(response){
+    return response;
+  }).error(function(response){
+    return fallbackImages();
+  });
+};
 
-          photos.push(photo);
-        });
-      }).error(function(response){
-        photos = fallbackImages();
-      });
+function clearCover(userLink, image, parallaxItem, unsplashLink){
+  var attribution = "Photo by <a href='" + userLink + "' target='_blank'>" + image.user.name + "</a> on <a href='" + unsplashLink + "' target='_blank'>Unsplash</a>";
+  $(parallaxItem).find(".attribution").append(attribution);
+  $(parallaxItem).addClass("parallax-loaded");
+};
 
-  function appendPhotos(){
-    $.each(parallaxItems, function(index, item){
-      var image = photos[index],
-      imageSRC = image.src,
-      user = image.user,
-      referralText = "?utm_source=personal_site&utm_medium=referral&utm_content=creditCopyText",
-      userLink = image.userLink + referralText,
-      unsplash = "https://unsplash.com/" + referralText;
+function appendPhotos(photos){
+  var parallaxItems = $('.parallax');
+  var referralText = "?utm_source=personal_site&utm_medium=referral&utm_content=creditCopyText";
+  var unsplashLink = "https://unsplash.com/" + referralText;
 
-      $(item).parallax({
-        imageSrc: imageSRC,
-        speed: 0.8
-      });
+  $.each(parallaxItems, function(index, parallaxItem){
+    var image = photos[index];
+    var userLink = image.user.links.html + referralText;
+    var imageSrc = image.urls.regular + referralText;
 
-      var attributionElement = "<span class='attribution'></span>";
-      $(item).append(attributionElement);
+    $(parallaxItem).append("<span class='attribution'></span>");
+    $(parallaxItem).parallax({ imageSrc: imageSrc, speed: 0.8 });
+    setTimeout(clearCover(userLink, image, parallaxItem, unsplashLink), 400);
+  });
+};
 
-      function clearCover(){
-        var attribution = "Photo by <a href='" + userLink + "' target='_blank'>" + user + "</a> on <a href='" + unsplash + "' target='_blank'>Unsplash</a>";
-        $(item).find(".attribution").append(attribution);
-        $(item).addClass("parallax-loaded");
-      };
-
-      setTimeout(clearCover, 400);
-    });
-  };
-
-  Promise.all([ getPhotos ]).then(function() {
-    appendPhotos();
+$(document).ready(function() {
+  Promise.all(buildPhotosFetcher()).then(function(result) {
+    appendPhotos(result);
   });
 
   // Handler for when Unsplash API is down
   window.addEventListener("unhandledrejection", function(e) {
     e.preventDefault();
-    var reason = e.detail.reason;
-    var promise = e.detail.promise;
-
-    appendPhotos();
+    appendPhotos(fallbackImages());
   });
-
 });
