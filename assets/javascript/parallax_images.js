@@ -45,13 +45,18 @@ function fallbackImages() {
   return shuffle(availableImages);
 };
 
+function keywordSearch() {
+  var keywords = ["forest-mountain", "river", "nature", "tea", "books", "space"];
+  return shuffle(keywords)[0];
+}
+
 function buildPhotosFetcher() {
   var parallaxItems = $('.parallax');
   var photoCount = parallaxItems.length;
   var param = "8537fc6f3f82700ac356a09754ceac2d9c32286598268e44e09304e5e271cd52";
 
   return $.ajax({
-    url: "https://api.unsplash.com/photos/random?query=mountains&count=" + photoCount + "&client_id=" + param
+    url: "https://api.unsplash.com/photos/random?query=" + keywordSearch() + "&count=" + photoCount + "&client_id=" + param
   }).done(function(response){
     return response;
   }).error(function(response){
@@ -69,8 +74,10 @@ function appendPhotos(photos){
     var userLink = image.user.links.html + referralText;
     var imageSrc = image.urls.full + referralText;
 
-    var attribution = "Photo by <a href='" + userLink + "' target='_blank'>" + image.user.name + "</a> on <a href='" + unsplashLink + "' target='_blank'>Unsplash</a>";
-    $(parallaxItem).find(".attribution").append(attribution);
+    $(parallaxItem).find(".attribution .artist-link").attr('href', userLink);
+    $(parallaxItem).find(".attribution .artist-link").text(image.user.name);
+    $(parallaxItem).find(".attribution .unsplash-link").attr('href', unsplashLink);
+    $(parallaxItem).removeClass("parallax-loaded");
     $(parallaxItem).find('img').attr('src', imageSrc)
   });
 };
@@ -84,14 +91,18 @@ function enableParallaxOnImage(e) {
   $(imageParallaxContainer).addClass("parallax-loaded");
 };
 
-$(document).ready(function() {
-  document.querySelectorAll('.parallax img').forEach(function(image) {
-    image.addEventListener('load', enableParallaxOnImage)
-  });
-
+function fetchAndAttachImages(){
   Promise.all(buildPhotosFetcher()).then(function(result) {
     appendPhotos(result);
   });
+};
+
+$(document).ready(function() {
+  document.querySelectorAll('.parallax img').forEach(function(image) {
+    image.addEventListener('load', enableParallaxOnImage);
+  });
+
+  fetchAndAttachImages();
 
   // Handler for when Unsplash API is down
   window.addEventListener("unhandledrejection", function(e) {
