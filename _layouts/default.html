@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-
   <body>
     <div class="Site">
       {% if page.name != 'index.html' %}{% include navbar.html %}{% endif %}
@@ -14,15 +13,13 @@
     </div>
 
     {% include footer.html %}
-  </body>
 
-  <script src="{{ site.url }}/assets/javascript/jquery.min.js"></script>
-
-  {% if page.name != 'index.html' %}
+    <script src="{{ site.url }}/assets/javascript/jquery.min.js"></script>
+    {% if page.name != 'index.html' %}
     <script src="{{ site.url }}/assets/javascript/navbar.js"></script>
-  {% endif %}
-
-  <script src="{{ site.url }}/assets/javascript/bluebird.min.js"></script>
-  <script src="{{ site.url }}/assets/javascript/parallax.min.js"></script>
-  <script src="{{ site.url }}/assets/javascript/parallax_images.js"></script>
+    {% endif %}
+    <script src="{{ site.url }}/assets/javascript/bluebird.min.js"></script>
+    <script src="{{ site.url }}/assets/javascript/parallax.min.js"></script>
+    <script src="{{ site.url }}/assets/javascript/parallax_images.js"></script>
+  </body>
 </html>

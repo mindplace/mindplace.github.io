@@ -13,28 +13,28 @@ function fallbackImages() {
   var base = '/assets/images/parallax_fallback/';
   var availableImages = [
     {
-      urls: { regular: base + "mountain.jpg" },
+      urls: { full: base + "mountain.jpg" },
       user: {
         name: "Samuel Scrimshaw",
         links: { html: "https://unsplash.com/photos/2oFdVd00xOg" },
       },
     },
     {
-      urls: { regular: base + "north.jpg" },
+      urls: { full: base + "north.jpg" },
       user: {
         name: "Martin Jernberg",
         links: { html: "https://unsplash.com/photos/UdURxHDhrgY" },
       },
     },
     {
-      urls: { regular: base + "stars.jpg" },
+      urls: { full: base + "stars.jpg" },
       user: {
         name: "Nathan Anderson",
         links: { html: "https://unsplash.com/photos/L-7cP4p5hik" },
       },
     },
     {
-      urls: { regular: base + "stones.jpg" },
+      urls: { full: base + "stones.jpg" },
       user: {
         name: "Danny Postma",
         links: { html: "https://unsplash.com/photos/XqtJY5gTo5k" },
@@ -59,12 +59,6 @@ function buildPhotosFetcher() {
   });
 };
 
-function clearCover(userLink, image, parallaxItem, unsplashLink){
-  var attribution = "Photo by <a href='" + userLink + "' target='_blank'>" + image.user.name + "</a> on <a href='" + unsplashLink + "' target='_blank'>Unsplash</a>";
-  $(parallaxItem).find(".attribution").append(attribution);
-  $(parallaxItem).addClass("parallax-loaded");
-};
-
 function appendPhotos(photos){
   var parallaxItems = $('.parallax');
   var referralText = "?utm_source=personal_site&utm_medium=referral&utm_content=creditCopyText";
@@ -73,15 +67,28 @@ function appendPhotos(photos){
   $.each(parallaxItems, function(index, parallaxItem){
     var image = photos[index];
     var userLink = image.user.links.html + referralText;
-    var imageSrc = image.urls.regular + referralText;
+    var imageSrc = image.urls.full + referralText;
 
-    $(parallaxItem).append("<span class='attribution'></span>");
-    $(parallaxItem).parallax({ imageSrc: imageSrc, speed: 0.8 });
-    setTimeout(clearCover(userLink, image, parallaxItem, unsplashLink), 400);
+    var attribution = "Photo by <a href='" + userLink + "' target='_blank'>" + image.user.name + "</a> on <a href='" + unsplashLink + "' target='_blank'>Unsplash</a>";
+    $(parallaxItem).find(".attribution").append(attribution);
+    $(parallaxItem).find('img').attr('src', imageSrc)
   });
 };
 
+function enableParallaxOnImage(e) {
+  var image = $(e.target);
+  var imageParallaxContainer = $(image).parents()[0];
+  var imageSrc = $(image).attr('src');
+  $(imageParallaxContainer).parallax({ imageSrc: imageSrc, speed: 0.8 });
+  $(image).hide();
+  $(imageParallaxContainer).addClass("parallax-loaded");
+};
+
 $(document).ready(function() {
+  document.querySelectorAll('.parallax img').forEach(function(image) {
+    image.addEventListener('load', enableParallaxOnImage)
+  });
+
   Promise.all(buildPhotosFetcher()).then(function(result) {
     appendPhotos(result);
   });
