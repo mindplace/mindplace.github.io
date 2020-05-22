@@ -1,11 +1,9 @@
-{% assign download_location = "esther_leytush_software_engineer_resume.pdf" %}
-
 <div class="content-container">
-  <a href="{{ site.baseurl }}/_static/{{ download_location }}" download="{{ download_location }}" target="_blank">
+  <a href="{{ site.baseurl }}/_static/{{ site.resume.download_url }}" download="{{ site.resume.download_url }}" target="_blank">
     <img class="resume-image" src="/assets/images/esther_leytush_software_engineer_resume.jpg" alt="Esther Leytush resume">
   </a>
   <div class="buttons is-centered">
-    <a href="{{ site.baseurl }}/_static/{{ download_location }}" download="{{ download_location }}" target="_blank" class="button is-primary">
+    <a href="{{ site.baseurl }}/_static/{{ site.resume.download_url }}" download="{{ site.resume.download_url }}" target="_blank" class="button is-primary">
       Download Resume
     </a>
   </div>

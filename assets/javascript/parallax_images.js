@@ -46,7 +46,7 @@ function fallbackImages() {
 };
 
 function keywordSearch() {
-  var keywords = ["forest-mountain", "river", "nature", "tea", "books", "space"];
+  var keywords = ["forest-mountain", "nature", "tea", "books"];
   return shuffle(keywords)[0];
 }
 
