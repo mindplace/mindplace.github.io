@@ -1,3 +1,5 @@
+{% include parallax.html %}
+
 <div id="projects" class="content-container">
   <header class="section-container">
     <h2>Projects</h2>
@@ -18,10 +20,8 @@
             </p>
 
             <p class="subtitle">
-              <p class="subtitle">
-                {% assign tags = encrypt.tags | split: " ? " %}
-                {% for tag in tags %}<span class="tag">{{ tag }}</span> {% endfor %}
-              </p>
+              {% assign tags = encrypt.tags | split: " ? " %}
+              {% for tag in tags %}<span class="tag">{{ tag }}</span> {% endfor %}
             </p>
 
             <div class="content">
