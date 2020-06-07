@@ -4,22 +4,17 @@
   <body>
     <div class="Site">
       {% if page.name != 'index.html' %}{% include navbar.html %}{% endif %}
-
-      <div class="content">
-        <div id="main" class="container">
-          {{ content }}
-        </div>
-      </div>
+      {{ content }}
     </div>
 
     {% include footer.html %}
 
-    <script src="{{ site.url }}/assets/javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/javascript/jquery.min.js"></script>
     {% if page.name != 'index.html' %}
-    <script src="{{ site.url }}/assets/javascript/navbar.js"></script>
+      <script type="text/javascript" src="{{ site.url }}/assets/javascript/navbar.js"></script>
     {% endif %}
-    <script src="{{ site.url }}/assets/javascript/bluebird.min.js"></script>
-    <script src="{{ site.url }}/assets/javascript/parallax.min.js"></script>
-    <script src="{{ site.url }}/assets/javascript/parallax_images.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/javascript/bluebird.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/javascript/parallax.min.js"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/javascript/fallback_images.json"></script>
+    <script type="text/javascript" src="{{ site.url }}/assets/javascript/parallax_images.js"></script>
   </body>
-</html>

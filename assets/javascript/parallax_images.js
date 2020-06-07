@@ -9,46 +9,26 @@ function shuffle(array) {
   return array;
 };
 
-function fallbackImages() {
-  var base = '/assets/images/parallax_fallback/';
-  var availableImages = [
-    {
-      urls: { full: base + "mountain.jpg" },
-      user: {
-        name: "Samuel Scrimshaw",
-        links: { html: "https://unsplash.com/photos/2oFdVd00xOg" },
-      },
-    },
-    {
-      urls: { full: base + "north.jpg" },
-      user: {
-        name: "Martin Jernberg",
-        links: { html: "https://unsplash.com/photos/UdURxHDhrgY" },
-      },
-    },
-    {
-      urls: { full: base + "stars.jpg" },
-      user: {
-        name: "Nathan Anderson",
-        links: { html: "https://unsplash.com/photos/L-7cP4p5hik" },
-      },
-    },
-    {
-      urls: { full: base + "stones.jpg" },
-      user: {
-        name: "Danny Postma",
-        links: { html: "https://unsplash.com/photos/XqtJY5gTo5k" },
-      },
-    },
-  ];
+function imageSize() {
+  if (window.innerWidth > 1080) {
+    return 'full';
+  } else if (window.innerWidth > 600) {
+    return 'regular';
+  } else {
+    return 'small';
+  }
+};
 
-  return shuffle(availableImages);
+async function fallbackImages() {
+  return $.getJSON("/assets/javascript/fallback_images.json", function(data) {
+    return shuffle(data);
+  });
 };
 
 function keywordSearch() {
   var keywords = ["forest-mountain", "nature", "tea", "books"];
   return shuffle(keywords)[0];
-}
+};
 
 function buildPhotosFetcher() {
   var parallaxItems = $('.parallax');
@@ -72,7 +52,7 @@ function appendPhotos(photos){
   $.each(parallaxItems, function(index, parallaxItem){
     var image = photos[index];
     var userLink = image.user.links.html + referralText;
-    var imageSrc = image.urls.full + referralText;
+    var imageSrc = image.urls[imageSize()] + referralText;
 
     $(parallaxItem).find(".attribution .artist-link").attr('href', userLink);
     $(parallaxItem).find(".attribution .artist-link").text(image.user.name);
@@ -107,6 +87,8 @@ $(document).ready(function() {
   // Handler for when Unsplash API is down
   window.addEventListener("unhandledrejection", function(e) {
     e.preventDefault();
-    appendPhotos(fallbackImages());
+    Promise.resolve(fallbackImages()).then(function(images) {
+      appendPhotos(images);
+    });
   });
 });
