@@ -68,21 +68,15 @@ iframe { max-width: 100%; }
 
 .parallax {
   position: relative;
+  padding: 0;
 
-  &::before {
-    content: "";
+  .parallax-loading-screen {
     position: absolute;
-    height: 100%;
+    height: calc(100% - 15px);
     width: 100%;
-    top: -1;
+    top: 15px;
     left: 0;
     z-index: 3;
     background-color: $primary-color;
-    opacity: 1;
-    transition: all 1s ease-in-out;
-  }
-
-  &.parallax-loaded::before {
-    opacity: 0;
   }
 }

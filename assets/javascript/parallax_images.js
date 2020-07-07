@@ -26,7 +26,7 @@ async function fallbackImages() {
 };
 
 function keywordSearch() {
-  var keywords = ["forest-mountain", "nature", "tea", "books"];
+  var keywords = ["mountain", "forest", "landscape", "sky", "plants"];
   return shuffle(keywords)[0];
 };
 
@@ -57,18 +57,16 @@ function appendPhotos(photos){
     $(parallaxItem).find(".attribution .artist-link").attr('href', userLink);
     $(parallaxItem).find(".attribution .artist-link").text(image.user.name);
     $(parallaxItem).find(".attribution .unsplash-link").attr('href', unsplashLink);
-    $(parallaxItem).removeClass("parallax-loaded");
-    $(parallaxItem).find('img').attr('src', imageSrc)
+    $(parallaxItem).find('img').attr('src', imageSrc);
   });
 };
 
 function enableParallaxOnImage(e) {
-  var image = $(e.target);
-  var imageParallaxContainer = $(image).parents()[0];
-  var imageSrc = $(image).attr('src');
-  $(imageParallaxContainer).parallax({ imageSrc: imageSrc, speed: 0.8 });
-  $(image).hide();
-  $(imageParallaxContainer).addClass("parallax-loaded");
+  Promise.resolve(new simpleParallax(e.target)).then(function(){
+    var parent = $(e.target).parents().parents()[0];
+    var cover = $(parent).find('.parallax-loading-screen')[0];
+    $(cover).fadeOut(8000);
+  });
 };
 
 function fetchAndAttachImages(){
