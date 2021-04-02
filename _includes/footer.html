@@ -4,7 +4,6 @@
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       <p>Denver, Colorado, USA</p>
     </div>
-
     <div class="buttons is-centered">
       {% for link_value in site.data.social %}
         {% assign link_tag = link_value[0] %}
@@ -14,10 +13,8 @@
           <span class="icon"><i class="fa {{ link.icon }}"></i></span>
           <span>{{ link.name }}</span>
         </a>
-
       {% endfor %}
     </div>
-
-    <p class="copyright has-text-centered">&#169; Esther Leytush 2020</p>
+    <p class="copyright has-text-centered">&#169; Esther Leytush 2021</p>
   </div>
 </footer>

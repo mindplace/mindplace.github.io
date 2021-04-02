@@ -9,16 +9,6 @@ function shuffle(array) {
   return array;
 };
 
-function imageSize() {
-  if (window.innerWidth > 1080) {
-    return 'full';
-  } else if (window.innerWidth > 600) {
-    return 'regular';
-  } else {
-    return 'small';
-  }
-};
-
 async function fallbackImages() {
   return $.getJSON("/assets/javascript/fallback_images.json", function(data) {
     return shuffle(data);
@@ -52,20 +42,24 @@ function appendPhotos(photos){
   $.each(parallaxItems, function(index, parallaxItem){
     var image = photos[index];
     var userLink = image.user.links.html + referralText;
-    var imageSrc = image.urls[imageSize()] + referralText;
+    var imageSrc = image.urls['regular'] + referralText;
 
+    $(parallaxItem).attr('id', index);
     $(parallaxItem).find(".attribution .artist-link").attr('href', userLink);
     $(parallaxItem).find(".attribution .artist-link").text(image.user.name);
     $(parallaxItem).find(".attribution .unsplash-link").attr('href', unsplashLink);
-    $(parallaxItem).find('img').attr('src', imageSrc);
-  });
-};
 
-function enableParallaxOnImage(e) {
-  Promise.resolve(new simpleParallax(e.target)).then(function(){
-    var parent = $(e.target).parents().parents()[0];
-    var cover = $(parent).find('.parallax-loading-screen')[0];
-    $(cover).fadeOut(8000);
+    function clearCover() {
+      var item = document.getElementById(index);
+      setTimeout(function() {
+        $(item).parent().css('background-color', 'transparent');
+      }, 2000);
+    }
+
+    $(parallaxItem).parallax(
+      { imageSrc: imageSrc, speed: 0.8 },
+      clearCover,
+    );
   });
 };
 
@@ -76,11 +70,10 @@ function fetchAndAttachImages(){
 };
 
 $(document).ready(function() {
-  document.querySelectorAll('.parallax img').forEach(function(image) {
-    image.addEventListener('load', enableParallaxOnImage);
+  // fetchAndAttachImages();
+  Promise.resolve(fallbackImages()).then(function(images) {
+    appendPhotos(images);
   });
-
-  fetchAndAttachImages();
 
   // Handler for when Unsplash API is down
   window.addEventListener("unhandledrejection", function(e) {
