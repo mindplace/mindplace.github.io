@@ -8,9 +8,8 @@ baseurl: ""
 include: ['_static']
 
 me:
-  role: 'Software Engineer'
-  company: 'Betterment'
-  company_url: "https://www.betterment.com/invite/estherleytush"
+  company: 'Brightside'
+  company_url: "https://www.brightside.com/"
 
 resume:
   download_url: esther_leytush_software_engineer_resume.pdf
