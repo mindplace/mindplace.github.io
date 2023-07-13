@@ -7,9 +7,5 @@ baseurl: ""
 
 include: ['_static']
 
-me:
-  company: 'Brightside'
-  company_url: "https://www.brightside.com/"
-
 resume:
   download_url: esther_leytush_software_engineer_resume.pdf
